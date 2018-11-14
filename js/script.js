@@ -357,10 +357,40 @@
         function Calendar() {
             $('.calendar-input,.caneldar').datepicker({
                 showOtherMonths: true,
-                selectOtherMonths: true,
-                dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wen', 'Thu', 'Fri', 'Sta']
+                selectOtherMonths: true
             });
         }
+        $.datepicker.regional['it'] = {
+            clearText: 'Svuota', clearStatus: 'Annulla',
+            closeText: 'Chiudi', closeStatus: 'Chiudere senza modificare',
+            prevText: '&#x3c;Prec', prevStatus: 'Mese precedente',
+            prevBigText: '&#x3c;&#x3c;', prevBigStatus: 'Mostra l\'anno precedente',
+            nextText: 'Succ&#x3e;', nextStatus: 'Mese successivo',
+            nextBigText: '&#x3e;&#x3e;', nextBigStatus: 'Mostra l\'anno successivo',
+            currentText: 'Oggi', currentStatus: 'Mese corrente',
+            monthNames: ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno',
+                'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'],
+            monthNamesShort: ['Gen', 'Feb', 'Mar', 'Apr', 'Mag', 'Giu',
+                'Lug', 'Ago', 'Set', 'Ott', 'Nov', 'Dic'],
+            monthStatus: 'Seleziona un altro mese', yearStatus: 'Seleziona un altro anno',
+            weekHeader: 'Sm', weekStatus: 'Settimana dell\'anno',
+            dayNames: ['Domenica', 'Luned&#236', 'Marted&#236', 'Mercoled&#236', 'Gioved&#236', 'Venerd&#236', 'Sabato'],
+            dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab'],
+            dayNamesMin: ['Do', 'Lu', 'Ma', 'Me', 'Gio', 'Ve', 'Sa'],
+            dayStatus: 'Usa DD come primo giorno della settimana', dateStatus: '\'Seleziona\' D, M d',
+            dateFormat: 'dd/mm/yy', firstDay: 1,
+            initStatus: 'Scegliere una data', isRTL: false};
+        $.datepicker.setDefaults($.datepicker.regional['it']);
+
+        /* Vincolo data secondo caleedario */
+        $(".arrivocal").change(function () {
+            //Aggiungo 7gg alla data selezionata
+            var currentDate = $(this).datepicker('getDate');
+            currentDate.setDate(currentDate.getDate());
+            $(".partenzacal").datepicker('setDate', currentDate);
+            $(".partenzacal").datepicker("destroy"); //distruggo
+            $(".partenzacal").datepicker({minDate: currentDate, dateFormat: "dd/mm/yy", showButtonPanel: false, "firstDay": 1});//reinizializzo
+        });
 
         /*===== BANNER SLIDE =====*/
         function BannerSlide() {
@@ -1116,6 +1146,8 @@
         anteprima('.desc-cut', 278);
         anteprima('.desc-cut', 278);
         anteprima('.magazine-body', 1000);
+        anteprima('.post .post-text p', 180);
+
 
         /*===== Social Share =====*/
         $('.home-sales-bar-bg-share').on("click", function () {
@@ -1209,11 +1241,11 @@
 
         /*===== Slide payment =====*/
 
-        $("div.supplementi, div.assicurazione, div.servizi").on("click", function () {
+        $(document).on("click", "div.supplementi, div.assicurazione, div.servizi, div.tipocamera", function () {
             var classeSel = $(this).attr("class");
             var selector = 'div.' + classeSel + '-box';
-            $(selector).slideToggle();
-            $(this).find('i').toggleClass('fa-chevron-down').toggleClass("fa-chevron-up");
+            $(this).closest('div.row').find(selector).slideToggle();
+            $(this).closest('div.row').find('div.' + classeSel + ' i').toggleClass('fa-chevron-down').toggleClass("fa-chevron-up");
         });
 
         $("div.struttura-selezionata, div.dettagli-volo").on("click", function () {
@@ -1222,6 +1254,28 @@
             $(selector).slideToggle();
             $(this).find("i[class*='-square-o']").toggleClass('fa-plus-square-o').toggleClass('fa-minus-square-o');
         });
+
+        $(document).on("click", ".camera-edit", function () {
+            $(this).closest('div.row').find('div.box-personalizza').slideToggle();
+            $(this).closest('div.row').find(".camera-edit i[class*='-square-o']").toggleClass('fa-plus-square-o').toggleClass('fa-minus-square-o');
+        });
+
+        /*===== Slide ospiti camera =====*/
+
+        $(document).on("click", "div.ospiti-camera-singola", function () {
+            $(this).closest('div.camere-list').find('div.ospiti-list').slideToggle();
+        });
+
+        $(document).on("click", "div.singolo-ospite-trigger-data", function () {
+            $(this).closest('div.singoli-ospiti-container').find('div.dati-ospite').slideToggle();
+            $(this).closest('div.singoli-ospiti-container').find("i[class*='fa-chevron-']").toggleClass('fa-chevron-down').toggleClass("fa-chevron-up");
+        });
+
+        /*===== Info box =====*/
+        $(document).on("click", ".box-info span", function () {
+            $(this).closest('div.box-info').find('div.box-info-inner').slideToggle();
+        });
+
 
         /*===== Tooltip =====*/
         $('.right-info').tooltip({
@@ -1313,8 +1367,14 @@
             });
         }
 
-
-
+        /*===== Modal lista =====*/
+        $(".lista-modal-button").click(function () {
+            $("#lista-modal").modal();
+        });
+        $("#lista-modal .modal-content .modal-body ol li").click(function () {
+            $(this).children('div.cont-child-li').slideToggle();
+            $(this).children('i').toggleClass('fa-caret-down').toggleClass('fa-caret-up');
+        });
 
     });
 })(jQuery);
@@ -1344,7 +1404,7 @@ if ($(window).width() > 768) {
             }
         }
     });
-}*/
+}
 
 
 /*===== Deferring video =====*/

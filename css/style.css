@@ -37,6 +37,7 @@
     28.  Barra Prezzi
     29.  Tab
     30.  Review
+    31.  Datepicker
 
 --------------------------------------------------------------------------------*/
 
@@ -388,7 +389,7 @@ body.menu-active {
     padding-right: 60px;
     padding-left: 20px;
     background-position: right 20px center;
-    background-image: url('../images/icon-arrow-blue.png');
+    background-image: url('../images/icon-arrow-button.png');
 }
 .awe-btn.arrow-right:hover {
     background-position: right 10px center;
@@ -412,7 +413,7 @@ body.menu-active {
     padding-right: 20px;
     padding-left: 60px;
     background-position: left 20px center;
-    background-image: url('../images/icon-arrow-left-blue.png');
+    background-image: url('../images/icon-arrow-left-button.png');
 }
 .awe-btn.arrow-left:hover {
     background-position: left 10px center;
@@ -806,11 +807,11 @@ body.menu-active {
     background: url('../images/icon-arrow-blue.png') no-repeat 50% 50%;
 }
 .ui-datepicker .ui-datepicker-header .ui-datepicker-title {
-    color: #333333;
+    color: #e91e63;
     font-family: 'Open sans';
     font-weight: 600;
     font-size: 18px;
-    line-height: 48px;
+    line-height: 40px;
     margin: 0 45px;
 }
 .ui-datepicker .ui-datepicker-calendar {
@@ -820,13 +821,14 @@ body.menu-active {
     font-weight: 600;
     font-family: 'Open sans';
     font-size: 14px;
-    padding: 20px 3px 15px 3px;
+    padding: 10px 3px 10px 3px;
+    color: #092d40;
 }
 .ui-datepicker .ui-datepicker-calendar td {
     text-align: center;
 }
 .ui-datepicker .ui-datepicker-calendar td a {
-    margin: 5px 0;
+    margin: 2px 0;
     display: inline-block;
     border: 1px solid #aeaeb3;
     width: 37px;
@@ -857,7 +859,7 @@ body.menu-active {
 }
 .ui-datepicker .ui-datepicker-calendar td.ui-datepicker-current-day a {
     border-width: 0;
-    background-color: #7da9f8;
+    background-color: #e91e63;
     color: #fff;
 }
 .ui-datepicker .ui-datepicker-calendar td.ui-datepicker-other-month a {
@@ -1415,7 +1417,7 @@ blockquote:before {
 .form-field i{
     margin-right: 5px;
     color: #91af24;
-    font-size: 1.3em;
+    font-size: 1em;
 }
 .form-field label{
     cursor: pointer;
@@ -1742,6 +1744,12 @@ footer .social-icons{
     }
     .container-prima-riga{
         height: 51px;
+    }
+    .icon-pay-services{
+        float: left;
+        width: 15%;
+        text-align: center;
+        padding: 15px 0 0;
     }
 }
 @media (max-width: 767px) {
@@ -2072,6 +2080,15 @@ p.Title-best{
     text-align: center;
     color: gray;
     font-weight: 300;
+}
+/* FIX Altezze div - bootstrap -col */
+.equal {
+    display: flex;
+    flex-wrap: wrap;
+}
+.equal > div[class*='col-'] {
+    display: flex;
+    flex-direction: column;
 }
 
 /* 03.2 Region
@@ -2678,6 +2695,9 @@ li#login-button:hover, li#login-button ul li:hover {
 .form-cn .form-search .form-field label {
     font-size: 14px;
     padding-right: 30px;
+}
+label.destinazione-ricerca{
+    padding-right: 121px;
 }
 .form-cn .form-search .form-field label span {
     font-size: 18px;
@@ -3478,7 +3498,7 @@ li#login-button:hover, li#login-button ul li:hover {
     display: block;
     top: 0;
     right: 0;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.45);
     width: 50%;
     bottom: 0;
     content: '';
@@ -3657,6 +3677,76 @@ li#login-button:hover, li#login-button ul li:hover {
 }
 .subscribe .follow-us .follow-group a {
     margin-top: 10px;
+}
+.lista-modal-button{
+    position: absolute;
+    z-index: 5;
+    font-weight: 600;
+    margin: 0;
+    top: 32%;
+    right: 0px;
+    background: white;
+    padding: 0 10px 0 20px;
+    cursor: pointer;
+}
+.caret-right{
+    float: right;
+    color: #051720;
+}
+.cont-child-li{
+    display: none;
+}
+#lista-modal .modal-content .modal-body ol {
+    padding-left: 0;
+    margin-bottom: 0;
+    font-weight: 800;
+}
+#lista-modal .modal-content .modal-body ol li {
+    list-style: none;
+    border-bottom: 1px solid #eaeaea;
+    padding: 10px 0;
+    text-transform: uppercase;
+    color: #051720;
+    cursor: pointer;
+}
+#lista-modal .modal-content .modal-body ol li:last-child {
+    border-bottom: none;
+}
+#lista-modal .modal-content .modal-body ol li a {
+    padding: 10px 10px 10px 30px;
+    display: block;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: grey;
+    font-weight: 300;
+}
+#lista-modal .modal-content .modal-body ol li a:before {
+    content: "\f041";
+    padding-right: 5px;
+    color: #e62264;
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+}
+#lista-modal .modal-dialog .modal-content .modal-header button.close {
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #91af24;
+    filter: alpha(opacity=20);
+    opacity: 1;
+    text-shadow: none;
+}
+#lista-modal .modal-content .modal-header {
+    min-height: 16.43px;
+    padding: 15px;
+    background: #051720;
+    border-bottom: 1px solid #e5e5e5;
+    color: #fff;
+}
+#lista-modal .modal-body {
+    padding: 5px 15px;
 }
 
 /* 07. Hotel Page
@@ -7292,7 +7382,7 @@ a.link-go-to-pay:before {
     display: inline-block;
     padding:12px 15px;
     border-right: 1px solid #dedede;
-    .-webkit-transition: all .25s ease;
+    -webkit-transition: all .25s ease;
     -moz-transition: all .25s ease;
     -ms-transition: all .25s ease;
     -o-transition: all .25s ease;
@@ -7378,7 +7468,7 @@ a.link-go-to-pay:before {
     outline: none;
     border: 0;
     padding: 9px 0;
-    background-color: transparent;
+    background-color: white;
     color: #666666;
     font-family: Georgia;
     font-style: italic;
@@ -7429,8 +7519,8 @@ a.link-go-to-pay:before {
     -o-transform: translate(-50%, -50%);
 }
 .widget .title-sidebar {
-    color: #111111;
-    margin: 0;
+    color: #092d40;
+    margin: 0 0 10px;
     padding: 0;
     font-size: 24px;
 }
@@ -7473,7 +7563,7 @@ h4.title-sidebar2:before {
 }
 .widget_categories ul li:hover:before,
 .widget_archive ul li:hover:before {
-    color: #049905;
+    color: #91af24;
     left: 5px;
 }
 .widget_categories ul li:before,
@@ -7481,7 +7571,7 @@ h4.title-sidebar2:before {
     content: '\f178';
     left: 0;
     position: absolute;
-    color: #000;
+    color: #e62264;
     top: 16px;
     font-family: 'FontAwesome';
     font-size: 10px;
@@ -7505,7 +7595,7 @@ h4.title-sidebar2:before {
 }
 .widget_categories ul li a:hover,
 .widget_archive ul li a:hover {
-    color: #049905;
+    color: #91af24;
 }
 .widget_categories ul li ul,
 .widget_archive ul li ul {
@@ -7577,8 +7667,8 @@ h4.title-sidebar2:before {
     -o-transition: all 0.2s linear;
 }
 .widget_tag_cloud .tagcloud a:hover {
-    color: #049905;
-    border-color: #049905;
+    color: #e62264;
+    border-color: #e62264;
 }
 .widget_archive {
     margin-top: 55px;
@@ -7615,7 +7705,7 @@ h4.title-sidebar2:before {
     opacity: 1;
 }
 .author-date a {
-    color: #049905;
+    color: #e62264;
     font-size: 13px;
     text-transform: uppercase;
     text-decoration: none;
@@ -7703,6 +7793,7 @@ h4.title-sidebar2:before {
     font-family: 'Open sans';
     margin: 40px 0 0 0;
 }
+.post .leggitutto,
 .post .post-text p a {
     font-style: italic;
     color: #888888;
@@ -8513,7 +8604,6 @@ h4.title-sidebar2:before {
 }
 .payment-form ul {
     list-style: none;
-    margin: 10px 0 0 0;
     padding: 0;
     overflow: hidden;
 }
@@ -8588,7 +8678,6 @@ h4.title-sidebar2:before {
 }
 .payment-form .submit {
     background: url('../images/bg-border-v.png') repeat-x top left;
-    padding-top: 30px;
 }
 .payment-form .submit .awe-btn {
     margin-top: 20px;
@@ -8602,11 +8691,11 @@ h4.title-sidebar2:before {
 }
 .icon-pay-services{
     float: left;
-    width: 15%;
+    width: 9%;
     text-align: center;
     padding: 15px 0 0;
 }
-.supplementi, .assicurazione, .servizi{
+.supplementi, .assicurazione, .servizi, .tipocamera{
     height: 75px;
     margin-top: 10px;
     border-radius: 3px;
@@ -8615,7 +8704,7 @@ h4.title-sidebar2:before {
     position: relative;
     cursor: pointer;
 }
-.supplementi-box, .assicurazione-box, .servizi-box{
+.supplementi-box, .assicurazione-box, .servizi-box, .tipocamera-box{
     margin-top: 10px;
     border-radius: 3px;
     border: 1px solid #ededed;
@@ -8624,7 +8713,7 @@ h4.title-sidebar2:before {
     display: none;
     padding: 10px;
 }
-.supplementi span, .assicurazione span, .servizi span{
+.supplementi span, .assicurazione span, .servizi span, .tipocamera span, .camera-edit span{
     font-size: 20px;
     text-transform: uppercase;
     font-weight: 300;
@@ -8632,23 +8721,23 @@ h4.title-sidebar2:before {
     display: block;
     padding: 9px 0 0;
 }
-.supplementi-box span, .assicurazione-box span, .servizi-box span{
+.supplementi-box span, .assicurazione-box span, .tipocamera-box span, .servizi-box span{
     font-size: 15px;
     text-transform: uppercase;
     font-weight: 300;
     color: #092d40;
     padding: 5px 0 0 10px;
 }
-.supplementi i, .assicurazione i, .servizi i{
+.supplementi i, .assicurazione i, .servizi i, .tipocamera i{
     position: absolute;
     top: 30px;
     right: 10px;
 }
-.supplementi-box ol, .assicurazione-box ol, .servizi-box ol {
+.supplementi-box ol, .assicurazione-box ol, .servizi-box ol, .tipocamera-box ol {
     list-style: none;
     margin-top: 3px;
 }
-.supplementi-box ol li span, .assicurazione-box ol li span, .servizi-box ol li span {
+.supplementi-box ol li span, .assicurazione-box ol li span, .servizi-box ol li span, .tipocamera-box ol li span {
     padding: 0 10px;
     background-color: #ffffff;
     font-weight: 300;
@@ -8656,23 +8745,24 @@ h4.title-sidebar2:before {
     font-size: 14px;
     text-transform: none;
 }
-.supplementi-box ol li span.price, .assicurazione-box ol li span.price, .servizi-box ol li span.price {
+.supplementi-box ol li span.price, .assicurazione-box ol li span.price, .servizi-box ol li span.price, .tipocamera-box ol li span.price {
     background-color: #fff;
     float: right;
     padding: 0 10px;
     font-weight: 400;
     color: #092d40;
     font-family: 'BebasNeuewebfont' !important;
-    font-size: 1.3em;
+    font-size: 1.2em;
 }
-.supplementi-box ol li, .assicurazione-box ol li, .servizi-box ol li, .total ol li{
+.supplementi-box ol li, .assicurazione-box ol li, .servizi-box ol li, .tipocamera-box ol li, .total ol li{
     display: block;
     position: relative;
     background: url(../images/bg-dots.png) transparent 0 17px repeat-x;
     margin-bottom: 5px;
 }
 .total{
-    margin: 30px 0 0;
+    background: #e7f1f7;
+    padding: 18px 0;
 }
 .total ol{
     margin: 10px 10px 10px 0;
@@ -8681,7 +8771,7 @@ h4.title-sidebar2:before {
     border-top: 1px dotted gainsboro;
 }
 .total span{
-    background: #fff;
+    background: #e7f1f7;
     padding: 0 10px 0 0;
 }
 .total span.price{
@@ -8690,8 +8780,8 @@ h4.title-sidebar2:before {
     font-weight: 400;
     color: #092d40;
     font-family: 'BebasNeuewebfont' !important;
-    background-color: #fff;
-    font-size: 1.3em;
+    background-color: #e7f1f7;
+    font-size: 1.2em;
 }
 .title-total{
     padding: 0 10px 0 0;
@@ -8743,20 +8833,34 @@ h4.title-sidebar2:before {
     border: 1px solid gainsboro;
     cursor: pointer;
 }
+.camera-edit {
+    border-bottom: 1px solid gainsboro;
+    padding: 10px 15px;
+    position: relative;
+    border: 1px solid gainsboro;
+    cursor: pointer;
+}
+.box-personalizza h3{
+    color: #092d40;
+}
+div.camera-edit i.fa-plus-square-o,
 div.struttura-selezionata i.fa-plus-square-o,
 div.dettagli-volo i.fa-plus-square-o,
 div.struttura-selezionata i.fa-minus-square-o,
-div.dettagli-volo i.fa-minus-square-o {
+div.dettagli-volo i.fa-minus-square-o,
+div.camera-edit i.fa-minus-square-o{
     position: absolute;
     top: calc(50% - 11px);
     right: 10px;
     font-size: 1.5em;
     color: #e62264;
 }
+div.camera-edit i.fa-plus-square-o:after,
 div.struttura-selezionata i.fa-plus-square-o:after,
 div.dettagli-volo i.fa-plus-square-o:after,
 div.struttura-selezionata i.fa-minus-square-o:after,
-div.dettagli-volo i.fa-minus-square-o:after  {
+div.dettagli-volo i.fa-minus-square-o:after,
+div.camera-edit i.fa-minus-square-o:after{
     content: "INFO";
     display: block;
     font-size: 0.5em;
@@ -8778,13 +8882,22 @@ div.dettagli-volo-box{
     border-radius: 50%;
 }
 .float-camera{
-    float: left;
+    float: right;
     max-width: 100px;
     overflow: hidden;
     margin-right: 10px;
 }
 .camera-type{
-
+    padding: 15px 0 0;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #91af24;
+}
+.camera-type small{
+    color: grey;
+}
+.slides-payment{
+    margin-top: 0px;
 }
 flight-details span{
     margin: 10px 0;
@@ -8813,8 +8926,15 @@ flight-details span{
     border-top: 0.5px solid #91af24;
 }
 .box-personalizza{
-    background-color: #f4c604;
+    background-color: #eaeaea;
     padding-bottom: 30px;
+    display: none;
+    margin-top: 10px;
+    border-top: 1px solid #bdbdbd;
+    border-bottom: 1px solid #bdbdbd;
+}
+.camere-spacing{
+    margin: 0 0 10px;
 }
 .short{
     border-top: 1px solid #e6e6e6;
@@ -8822,6 +8942,7 @@ flight-details span{
 .icons-prenotazione{
     border-top: 1px solid #e6e6e6;
     padding: 9px 0;
+    text-align: right;
 }
 .icons-prenotazione span{
     color: #092d40;
@@ -8831,6 +8952,166 @@ flight-details span{
 }
 .color-gray{
     color: grey !important;
+}
+.composition-cam{
+    margin: 20px 0 0;
+}
+.separator-p-camera{
+    border-bottom: 1px solid #d8d8d8;
+    padding: 0 0 7px;
+    color: grey;
+}
+.ospiti-camera-singola{
+    border-bottom: 1px solid gainsboro;
+    padding: 10px 15px;
+    position: relative;
+    border: 1px solid gainsboro;
+    cursor: pointer;
+    margin: 10px 0;
+}
+.ospiti-camera-singola i{
+    position: absolute;
+    top: calc(50% - 11px);
+    right: 10px;
+    font-size: 1.5em;
+    color: #092d40;
+}
+.ospiti-list{
+    display: none;
+}
+.dati-ospite{
+    display: none;
+}
+.camere-list{
+
+}
+.dati-ospite{
+    padding: 10px;
+    margin: 0 0 15px;
+    border-right: 1px solid #dedede;
+    border-left: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+}
+.singolo-ospite-trigger-data{
+    padding: 10px 15px;
+    border: 1px solid #e2e2e2;
+    background: #f1f1f1;
+    margin-top: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.singolo-ospite-trigger-data i.fa-chevron-down, .singolo-ospite-trigger-data i.fa-chevron-up{
+    position: absolute;
+    top: calc(50% - 8px);
+    right: 10px;
+    color: #929292;
+}
+.payment-form ul.policy-rules li{
+    float: none;
+    width: 100%;
+    padding: 5px 0;
+    text-align: left;
+}
+.payment-form ul.policy-rules li input[type=checkbox]{
+    margin: 10px !important;
+}
+.payment-form ul.policy-rules{
+    padding: 20px;
+    background: #efefef;
+    border: 1px solid gainsboro;
+}
+.coupon-code-inner{
+    padding: 10px 0;
+    background: #092d40;
+    color: #fff;
+    height: 70px;
+}
+.coupon-code-inner input[type=text]{
+    border: 1px solid #dedede;
+    padding: 14px 20px 14px 60px;
+    color: #333333;
+    width: 100%;
+    font-family: 'Open sans';
+    outline: none;
+    position: relative;
+}
+.inputWithIcon {
+    position: relative;
+}
+
+.inputWithIcon i {
+    position: absolute;
+    left: 28px;
+    top: 10px;
+    padding: 9px 8px;
+    color: #3a5766;
+    transition: 0.3s;
+}
+.box-info, .box-info span{
+    color: #092d40;
+    cursor: pointer;
+    font-weight: 500;
+}
+.box-info-inner{
+    margin-top: 10px;
+    color: grey;
+    display: none;
+    text-align: justify;
+    padding: 10px;
+    background: #e7f1f7;
+    font-size: 0.9em;
+    border: 1px solid #d3e0e6;
+}
+.price-big{
+    margin-right: 3%;
+    width: 30.333333%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.price-big span{
+    text-align: center;
+    display: block;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 3em;
+    border-bottom: 2px solid;
+    margin-bottom: 10px;
+    background: #91af24;
+}
+.price-big p{
+    text-align: center;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    color: #91af24;
+}
+.camere-spacing .col-lg-12{
+    padding-left: 0px ;
+}
+p.info-box-static{
+    font-size: 0.8em !important;
+    padding-left: 50px;
+    text-align: left !important;
+    position: relative;
+}
+p.info-box-static i{
+    position: absolute;
+    top: calc(50% - 8px);
+    left: 10px;
+    color: black;
+}
+p.tel-payment{
+    padding-left: 50px;
+    text-align: left;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    color: #91af24;
+    position: relative;
+}
+p.tel-payment i{
+    position: absolute;
+    top: calc(50% - 8px);
+    left: 10px;
+    color: black;
 }
 /* 18. Cart
  --------------------------------------------------------------------------------*/
@@ -10458,6 +10739,9 @@ footer .back-under {
     .element-sc .element-cn .element-btn li {
         width: 25%;
     }
+    .price-big{
+        display: none;
+    }
 }
 @media (max-width: 991px) {
     /* Banner */
@@ -11964,6 +12248,9 @@ footer .back-under {
     .form-cn .form-search .form-field label span {
         font-size: 14px;
     }
+    .star-review-page {
+        font-size: 0.8em;
+    }
     /* Form Hotel */
     .form-hotel .form-search .field-date {
         width: 100%;
@@ -13248,6 +13535,18 @@ a.read-more-review:before{
     height: 220px;
     margin-bottom: 15px;
 }
+.review-cont p:before{
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+.review-cont p:after{
+    color: transparent;
+    content: close-quote;
+}
 .header-rew {
     height: 120px;
     margin: 0px 0px 20px;
@@ -13354,6 +13653,9 @@ div.scrivi-recensione{
 @media (max-width: 991px) {
     div.scrivi-recensione{
         padding: 21px 10px !important;
+    }
+    .form-field label span {
+        font-size: 0.9em;
     }
 }
 @media (max-width: 767px) {

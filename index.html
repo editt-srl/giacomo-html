@@ -10,7 +10,7 @@
         <meta name="format-detection" content="telephone=no">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <!-- Font Google -->
-        <link href='http://fonts.googleapis.com/css?family=Lato:300,400%7COpen+Sans:300,400,600' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Lato:300,400%7COpen+Sans:300,400,600' rel='stylesheet' type='text/css'>
         <!-- End Font Google -->
         <!-- Library CSS -->
         <link rel="stylesheet" href="css/library/font-awesome.min.css">
@@ -216,14 +216,15 @@
                             <div class="form-cn form-hotel tab-pane active in" id="form-hotel">
                                 <div class="form-search clearfix">
                                     <div class="form-field field-destination">
-                                        <label for="destination"><span>Destination:</span> Country, City, Airport, Area, Landmark</label>
+                                        <label for="destination" class="destinazione-ricerca"><span>Destination:</span> Country, City, Airport, Area, Landmark</label>
                                         <input type="text" id="destination" class="field-input">
+                                        <span class="lista-modal-button">Lista <i class="fa fa-list-ul" aria-hidden="true"></i></span>
                                     </div>
                                     <div class="form-field field-date">
-                                        <input type="text" class="field-input calendar-input" placeholder="Check in">
+                                        <input type="text" class="field-input calendar-input arrivocal" placeholder="Check in">
                                     </div>
                                     <div class="form-field field-date">
-                                        <input type="text" class="field-input calendar-input" placeholder="Check out">
+                                        <input type="text" class="field-input calendar-input partenzacal" placeholder="Check out">
                                     </div>
                                     <div class="form-field field-select">
                                         <div class="select">
@@ -557,7 +558,7 @@
                     <div class="sales-cn">
                         <h2 class="Title-h2-best">Prodotti in vetrina</h2>
                         <p class="Title-best">Le migliori soluzioni per progettare il tua vacanza. Ogni giorno proposte diverse e offerte allettanti.</p>
-                        <div class="row">
+                        <div class="row equal">
                             <!-- HostSales Item -->
                             <div class="col-xs-6 col-md-4">
                                 <div class="sales-item">
@@ -877,7 +878,7 @@
                     <!-- Hot Sales Content -->
                     <div class="container">
                         <div class="sales-cn">
-                            <div class="row">
+                            <div class="row equal">
                                 <!-- HostSales Item -->
                                 <div class="col-xs-6 col-md-4">
                                     <div class="sales-item">
@@ -902,6 +903,24 @@
                                         <div class="home-sales-bar-bg-share-region">
                                             <div>Le Rosette resort</div>
                                             <span>Parghelia</span>
+                                        </div>
+                                        <div class="home-sales-bar-bg-button-region">
+                                            €345
+                                        </div>
+                                    </div>
+                                    <div class="home-sales-bar-bg-region">
+                                        <div class="home-sales-bar-bg-share-region">
+                                            <div>Aquilia Resort</div>
+                                            <span>Badolato</span>
+                                        </div>
+                                        <div class="home-sales-bar-bg-button-region">
+                                            €345
+                                        </div>
+                                    </div>
+                                    <div class="home-sales-bar-bg-region">
+                                        <div class="home-sales-bar-bg-share-region">
+                                            <div>Aquilia Resort</div>
+                                            <span>Badolato</span>
                                         </div>
                                         <div class="home-sales-bar-bg-button-region">
                                             €345
@@ -1057,6 +1076,15 @@
 
                                             </div>
                                         </figure>
+                                    </div>
+                                    <div class="home-sales-bar-bg-region">
+                                        <div class="home-sales-bar-bg-share-region">
+                                            <div>Le Rosette resort</div>
+                                            <span>Parghelia</span>
+                                        </div>
+                                        <div class="home-sales-bar-bg-button-region">
+                                            €345
+                                        </div>
                                     </div>
                                     <div class="home-sales-bar-bg-region">
                                         <div class="home-sales-bar-bg-share-region">
@@ -1698,6 +1726,79 @@
                 </div>
             </section>
             <!-- End Confidence and Subscribe  -->
+
+            <!-- Modal LISTA-->
+            <div id="lista-modal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Scegli la tua destinazine..</h4>
+                        </div>
+                        <div class="modal-body">
+                            <ol>
+                                <li>Nostri prodotti
+                                    <i class="fa fa-lg fa-caret-down caret-right" aria-hidden="true"></i>
+                                    <div class="cont-child-li">
+                                        <a href="#" class="modal-lista" title="">Best</a>
+                                        <a href="#" class="modal-lista" title="">Travel</a>
+                                        <a href="#" class="modal-lista" title="">Experience</a>
+                                    </div>
+                                </li>
+                                <li>Mare
+                                    <i class="fa fa-lg fa-caret-down caret-right" aria-hidden="true"></i>
+                                    <div class="cont-child-li">
+                                        <a href="#" class="modal-lista" title="">Calabria</a>
+                                        <a href="#" class="modal-lista" title="">Basilicata</a>
+                                        <a href="#" class="modal-lista" title="">Puglia</a>
+                                        <a href="#" class="modal-lista" title="">Sicilia</a>
+                                        <a href="#" class="modal-lista" title="">Campania</a>
+                                        <a href="#" class="modal-lista" title="">Sardegna</a>
+                                    </div>
+                                </li>
+                                <li>Montagna
+                                    <i class="fa fa-lg fa-caret-down caret-right" aria-hidden="true"></i>
+                                    <div class="cont-child-li">
+                                        <a href="#" class="modal-lista" title="">Catanzaro</a>
+                                        <a href="#" class="modal-lista" title="">Reggio Calabria</a>
+                                        <a href="#" class="modal-lista" title="">Cosenza</a>
+                                        <a href="#" class="modal-lista" title="">Tutte</a>
+                                    </div>
+                                </li>
+                                <li>Estero
+                                    <i class="fa fa-lg fa-caret-down caret-right" aria-hidden="true"></i>
+                                    <div class="cont-child-li">
+                                        <a href="#" class="modal-lista" title="">Albania</a>
+                                        <a href="#" class="modal-lista" title="">Altro</a>
+                                    </div>
+                                </li>
+                                <li>Crociere
+                                    <i class="fa fa-lg fa-caret-down caret-right" aria-hidden="true"></i>
+                                    <div class="cont-child-li">
+                                        <a href="#" class="modal-lista" title="">Catanzaro</a>
+                                        <a href="#" class="modal-lista" title="">Reggio Calabria</a>
+                                        <a href="#" class="modal-lista" title="">Cosenza</a>
+                                        <a href="#" class="modal-lista" title="">Tutte</a>
+                                    </div>
+                                </li>
+                                <li>Benessere
+                                    <i class="fa fa-lg fa-caret-down caret-right" aria-hidden="true"></i>
+                                    <div class="cont-child-li">
+                                        <a href="#" class="modal-lista" title="">Catanzaro</a>
+                                        <a href="#" class="modal-lista" title="">Reggio Calabria</a>
+                                        <a href="#" class="modal-lista" title="">Cosenza</a>
+                                        <a href="#" class="modal-lista" title="">Tutte</a>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- \Modal LISTA-->
 
             <!-- Footer -->
             <footer>
