@@ -392,6 +392,14 @@
             $(".partenzacal").datepicker({minDate: currentDate, dateFormat: "dd/mm/yy", showButtonPanel: false, "firstDay": 1});//reinizializzo
         });
 
+        $('.calendar-data-nascita').datepicker({
+            showOtherMonths: true,
+            selectOtherMonths: true,
+            changeMonth: true,
+            changeYear: true,
+            yearRange: "-100:+0"
+        });
+
         /*===== BANNER SLIDE =====*/
         function BannerSlide() {
             if ($('#banner-slide').length > 0) {
@@ -506,6 +514,34 @@
             }
 
         }
+
+        /*=====  Cecked Fattura =====*/
+        $('#fatturazione').click(function () {
+            if ($(this).is(':checked')) {
+                $('.dati-fatturazione').slideToggle();
+            } else {
+                $('.dati-fatturazione').slideToggle();
+            }
+        });
+
+        /*=====  Payment Methods Change  =====*/
+        $('ul.pay-li li input[type=radio]').click(function () {
+            var typePay = $(this).attr('data-trigger-box');
+
+            switch (typePay) {
+                case "carta":
+                    $('div#bonifico').slideUp();
+                    $('div#carta').slideDown();
+                    break;
+                case "bonifico":
+                    $('div#carta').slideUp();
+                    $('div#bonifico').slideDown();
+                    break;
+                default:
+                    $('div#carta').slideUp();
+                    $('div#bonifico').slideUp();
+            }
+        });
 
         /*=====  Price Slider =====*/
         function PriceSlider() {
@@ -1081,53 +1117,27 @@
         }
 
         /*===== Carousel =====*/
-        $('.owl-carousel').owlCarousel({
+        $('.owl-carousel-collection').owlCarousel({
             loop: true,
             margin: 10,
             autoplay: true,
             autoplayTimeout: 1000,
             autoplayHoverPause: true,
-            responsiveClass: true,
-            responsive: {
-                0: {
-                    items: 1,
-                    nav: true
-                },
-                600: {
-                    items: 3,
-                    nav: false
-                },
-                1000: {
-                    items: 5,
-                    nav: true,
-                    loop: true
-                }
-            }
+            navigation: true,
+            navigationText: ['<div class="prev-collection"><i class="fa fa-chevron-left"></i></div>', '<div class="next-collection"><i class="fa fa-chevron-right"></i></div>'],
+            itemsCustom: [[320, 1], [480, 1], [768, 3], [992, 3], [1200, 4], [1600, 5]]
         });
 
         /*===== Carousel Recensioni =====*/
         $('.owl-carousel-recensioni').owlCarousel({
-            items: 4,
             loop: true,
             margin: 10,
             autoplay: true,
             autoplayTimeout: 1000,
             autoplayHoverPause: true,
-            responsiveClass: true,
-            responsive: {
-                0: {
-                    items: 1,
-                    nav: true
-                },
-                600: {
-                    items: 2,
-                    nav: false
-                },
-                1000: {
-                    items: 3,
-                    nav: true
-                }
-            }
+            navigation: true,
+            navigationText: ['<div class="prev"><i class="fa fa-chevron-left"></i></div>', '<div class="next"><i class="fa fa-chevron-right"></i></div>'],
+            itemsCustom: [[320, 1], [480, 1], [768, 3], [992, 3], [1200, 4], [1600, 5]]
         });
 
         /*===== Tagliare testo anteprima =====*/
@@ -1149,6 +1159,12 @@
         anteprima('.post .post-text p', 180);
 
 
+
+        /*===== Random persone connesse 1 - 10 =====*/
+        setInterval(function () {
+            $(".person-on-page").html(Math.floor(Math.random() * 4) + 1);
+        }, 35000);
+
         /*===== Social Share =====*/
         $('.home-sales-bar-bg-share').on("click", function () {
             $(this).animate({width: "100%"}, 200);
@@ -1162,7 +1178,6 @@
         });
 
         /*===== Altezza automatica slider =====*/
-
         jQuery(document).ready(function ($) {
             var cut = ($('.logo').outerHeight()) + ($('#first-offer').outerHeight());
             var win = $(window).height();
@@ -1170,19 +1185,6 @@
             $('#slider-banner').css({minHeight: total});
             $(window).resize(function () {
                 $('#slider-banner').css({minHeight: total});
-            });
-        });
-
-        /*===== Gallery =====*/
-        $(document).ready(function () {
-            $('.adaptive').lightSlider({
-                adaptiveHeight: true,
-                item: 1,
-                slideMargin: 0,
-                pauseOnHover: true,
-                controls: true,
-                pager: false,
-                loop: true
             });
         });
 
@@ -1240,7 +1242,6 @@
         });
 
         /*===== Slide payment =====*/
-
         $(document).on("click", "div.supplementi, div.assicurazione, div.servizi, div.tipocamera", function () {
             var classeSel = $(this).attr("class");
             var selector = 'div.' + classeSel + '-box';
@@ -1261,7 +1262,6 @@
         });
 
         /*===== Slide ospiti camera =====*/
-
         $(document).on("click", "div.ospiti-camera-singola", function () {
             $(this).closest('div.camere-list').find('div.ospiti-list').slideToggle();
         });
@@ -1275,6 +1275,10 @@
         $(document).on("click", ".box-info span", function () {
             $(this).closest('div.box-info').find('div.box-info-inner').slideToggle();
         });
+        $(document).on("click", ".camera-details", function () {
+            $('.camera-details-inner').slideToggle();
+        });
+
 
 
         /*===== Tooltip =====*/

@@ -18,6 +18,7 @@
         <link rel="stylesheet" href="css/library/jquery-ui.min.css">
         <link rel="stylesheet" href="css/library/owl.carousel.css">
         <link rel="stylesheet" href="css/library/jquery.mb.YTPlayer.min.css">
+        <link rel="stylesheet" type="text/css" href="css/library/jquery.fancybox.min.css">
         <!-- End Library CSS -->
         <link rel="stylesheet" href="css/style.css">
     </head>
@@ -218,7 +219,7 @@
                                     <div class="form-field field-destination">
                                         <label for="destination" class="destinazione-ricerca"><span>Destination:</span> Country, City, Airport, Area, Landmark</label>
                                         <input type="text" id="destination" class="field-input">
-                                        <span class="lista-modal-button">Lista <i class="fa fa-list-ul" aria-hidden="true"></i></span>
+                                        <span class="lista-modal-button">Elenco <i class="fa fa-list-ul" aria-hidden="true"></i></span>
                                     </div>
                                     <div class="form-field field-date">
                                         <input type="text" class="field-input calendar-input arrivocal" placeholder="Check in">
@@ -1168,7 +1169,7 @@
                 <!-- slider carousel -->
                 <div class="container-fluid margin-carousel">
                     <div class="row">
-                        <div class="owl-carousel owl-theme">
+                        <div class="owl-carousel-collection owl-theme personal-controls">
                             <div class="item">
                                 <figure class="home-sales-img-carousel">
                                     <a href="" title="">
@@ -1519,7 +1520,7 @@
                 <!-- Recensioni -->
                 <div class="container-fluid back-color-review">
                     <div class="row">
-                        <div class="col-xs-12 col-md-3 review-padding-total">
+                        <div class="col-xs-12 col-md-4 col-lg-3 review-padding-total">
                             <div class="star-total">
                                 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span class="vote-total-review">4</span>/5
                             </div>
@@ -1531,8 +1532,8 @@
                                 <a href="#" >LEGGI TUTTE LE RECENSIONI</a>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-md-9">
-                            <div class="owl-carousel-recensioni owl-theme">
+                        <div class="col-xs-12 col-md-8 col-lg-9">
+                            <div class="owl-carousel-recensioni owl-theme personal-controls">
                                 <div class="item">
                                     <div class="container-review">
                                         <div class="star-review"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
@@ -1853,6 +1854,7 @@
                             <!--CopyRight-->
                             <p class="copyright">
                                 © <span class="anno-attuale">2018</span> GB Hotels, tutti i diritti riservati.<br>
+                                Via Antonio Bertoloni, 44 - 00197 Roma
                                 P.I./C.F.: 14646341009
                             </p>
                             <!--CopyRight-->
@@ -1897,10 +1899,10 @@
                             <a href="mailto:info@gbviaggi.it?subject=[Utente web] Richiesta informazioni&amp;body=Vorrei richiedere informazioni su.." onclick="gtag('event', 'generate_lead', {'event_category': 'engagement', 'event_label': 'Richiesta informazioni E-mail'});fbq('track', 'Lead');" title="Richiedi informazioni.."><i class="fa fa-envelope" style="color: #092d40;" aria-hidden="true"></i><span class="back-under">Email</span></a>
                         </div>
                         <div class="col-md-3 col-sm-3 col-xs-3">
-                            <a href="http://maps.google.com/?q=Oculista Catanzaro &quot;Dr. Marasco Simone Luca Studio Oculistico&quot;, via mula pardizzi, 88100 Catanzaro CZ" onclick="gtag('event', 'generate_lead', {'event_category': 'engagement', 'event_label': 'Avvia Navigatore'});" title="Raggiungici.."><i class="fa fa-search" style="color: #092d40;" aria-hidden="true"></i><span class="back-under">Cerca</span></a>
+                            <a href="/" onclick="gtag('event', 'generate_lead', {'event_category': 'engagement', 'event_label': 'Cerca'});" title="Cerca sistemazione"><i class="fa fa-search" style="color: #092d40;" aria-hidden="true"></i><span class="back-under">Cerca</span></a>
                         </div>
                         <div class="col-md-3 col-sm-3 col-xs-3">
-                            <a href="https://api.whatsapp.com/send?phone=+390681153087&amp;text=[Cliente-web]%20Vorrei%20avere%20maggiori%20informazioni%20su.." onclick="gtag('event', 'generate_lead', {'event_category': 'engagement', 'event_label': 'Messaggio Whatsapp'});fbq('track', 'Lead');" title="Prenota ora la tua vacanza.."><i class="fa fa-share-alt" style="color: #092d40;" aria-hidden="true"></i><span class="back-under">Condividi</span></a>
+                            <a href="https://api.whatsapp.com/send?phone=+390681153087&amp;text=[Cliente-web]%20Vorrei%20avere%20maggiori%20informazioni%20su.." onclick="gtag('event', 'generate_lead', {'event_category': 'engagement', 'event_label': 'Messaggio Whatsapp'});fbq('track', 'Lead');" title="Prenota ora la tua vacanza.."><i class="fa fa-comments-o" style="color: #092d40;" aria-hidden="true"></i><span class="back-under">Whatsapp</span></a>
                         </div>
                     </div>
                     <!-- \Barra fixed -->
@@ -1923,6 +1925,7 @@
         <script type="text/javascript" src="js/library/SmoothScroll.js"></script>
         <script type="text/javascript" src="js/library/jquery-mTab-min.js"></script>
         <script type="text/javascript" src="js/library/lightslider.js"></script>
+        <script type="text/javascript" src="js/library/jquery.fancybox.min.js"></script>
 
         <!-- End Library JS -->
         <!-- Main Js -->
