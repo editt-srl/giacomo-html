@@ -92,7 +92,7 @@ img {
     width: 40px;
     height: 40px;
     margin: auto;
-    border-right: 3px solid #f4c604;
+    border-right: 3px solid #e62264;
     border-bottom: 3px solid transparent;
     border-radius: 100%;
     -webkit-animation: spin 0.9s linear infinite;
@@ -2083,12 +2083,23 @@ p.Title-best{
 }
 /* FIX Altezze div - bootstrap -col */
 .equal {
-    display: flex;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;       /* TWEENER - IE 10 *//* TWEENER - IE 10 */
+    display: -msoz-flex;
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
     flex-wrap: wrap;
 }
 .equal > div[class*='col-'] {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;       /* TWEENER - IE 10 *//* TWEENER - IE 10 */
+    display: -msoz-flex;
+    display: -webkit-flex;     /* NEW - Chrome */
     display: flex;
     flex-direction: column;
+    margin: 0 -.3px;
 }
 
 /* 03.2 Region
@@ -8570,7 +8581,6 @@ h4.title-sidebar2:before {
     font-size: 13px;
 }
 .payment-form {
-    background: url('../images/bg-border-v.png') repeat-x top left;
     margin: 30px 30px 0 30px;
 }
 .payment-form .form {
@@ -8912,6 +8922,15 @@ h4.title-sidebar2:before {
     position: relative;
     border: 1px solid gainsboro;
     cursor: pointer;
+}
+.camera-edit span small {
+    font-size: 66%;
+    color: #e62264;
+}
+.camera-edit span small:before {
+    content: ' / ';
+    font-size: 125%;
+    color: #cccccc;
 }
 .box-personalizza h3{
     color: #092d40;
@@ -11034,6 +11053,9 @@ footer .back-under {
     .coupon-code-inner {
         height: 160px;
     }
+    .slides-payment {
+        padding-left: 30px !important;
+    }
 }
 @media (max-width: 991px) {
     /* Banner */
@@ -12488,6 +12510,12 @@ footer .back-under {
         text-align: center;
         width: 100%;
     }
+    .camera-edit span small {
+        display: none;
+    }
+    .camera-edit span small:before {
+        display: none;
+    }
 }
 @media (max-width: 480px) {
     /*Navigation*/
@@ -13379,6 +13407,10 @@ footer .back-under {
 
 .home-sales-img-carousel{
     padding: 5px;
+    overflow: hidden;
+}
+.home-sales-img-carousel img{
+    width: 100%;
 }
 .back-bottom-grey-bg-carousel {
     position: absolute;
