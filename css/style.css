@@ -9113,7 +9113,7 @@ flight-details span{
     position: relative;
     border: 1px solid gainsboro;
     cursor: pointer;
-    margin: 10px 0;
+    margin: 10px 0 0;
 }
 .ospiti-camera-singola i{
     position: absolute;
@@ -9194,7 +9194,7 @@ flight-details span{
     border-top: 1px solid rgba(9, 45, 64, 0.27);
 }
 .reg-user{
-    color: #F44336 ;
+    color: #e62264;
 }
 .coupon-code-inner .right-info {
     color: #092d40;
