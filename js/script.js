@@ -928,13 +928,9 @@
 
                 // Multiple Markers
                 var markers = [
-                    ['Bondi Beach', 41.0237, -73.701239],
-                    ['Coogee Beach', 41.005615, -73.69566551],
-                    ['Cronulla Beach', 40.9756737, -73.65614],
-                    ['Manly Beach', 40.973478, -73.8433],
-                    ['Maroubra Beach', 41.04579, -73.7464],
-                    ['Maroubra Beach', 41.0563, -73.75618],
-                    ['Maroubra Beach', 40.9442, -73.8554]
+                    ['Aquilia Resort', 38.5881288, 16.5635858],
+                    ['Le Rosette Resort', 38.6897462, 15.9357737],
+                    ['Baia Dei Gigli', 38.914939, 17.0766723]
                 ];
 
                 var infoWindowContent = [["\
@@ -943,7 +939,7 @@
                                                 <img src='images/hotel/img-10.jpg' alt=''>\
                                             </a>\
                                             <div class='maps-text'>\
-                                                <h2><a href='#'>The Cosmopolitan</a></h2>\
+                                                <h2><a href='#'>Aquilia Resort</a></h2>\
                                                 <span>\
                                                     <i class='glyphicon glyphicon-star'></i>\
                                                     <i class='glyphicon glyphicon-star'></i>\
@@ -951,11 +947,11 @@
                                                     <i class='glyphicon glyphicon-star'></i>\
                                                     <i class='glyphicon glyphicon-star'></i>\
                                                 </span>\
-                                                <address>Great Cumberland Place, London W1H 7DL</address>\
-                                                <p>My stay at cumberland hotel was amazing, loved the location, was close to all the major attraction.. <a href=''>view all 125 reviews</a>\
+                                                <address>Via Aquilia, Badolato - Calabria</address>\
+                                                <p>Prova di testo da aggiungere sotto, prova ancora ecc...</a>\
                                                 </p>\
                                                 <hr class='hr'>\
-                                                <span class='price'>From-<ins>$345</ins>/night</span>\
+                                                <span class='price'>Da-<ins>€345</ins>/persona</span>\
                                             </div>\
                                         </div>\
                                     "]];

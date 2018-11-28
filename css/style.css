@@ -2043,8 +2043,9 @@ h2.title-resort-sales{
 
 }
 .home-sales-description p{
-    font-size: 0.8em;
+    font-size: 0.9em;
     text-align: justify;
+    color: #616161;
 }
 .special-price, .old-price{
     font-family: 'BebasNeuewebfont' !important;
@@ -8405,7 +8406,7 @@ ul.contact-list li{
     background: #ececec;
     padding: 10px 30px;
     margin: 10px 0;
-    border-right: 5px solid #91af24;
+    border-right: 5px solid #e62264;
 }
 ul.contact-list li span{
     display: block;
@@ -8427,13 +8428,13 @@ ul.contact-list li span.contact-list-inner-tel{
 }
 ul.contact-list li span.contact-list-inner-email:before{
     content: '\f0e0';
-    color: #91af24;
+    color: #e62264;
     font-family: 'FontAwesome';
     margin-right: 10px;
 }
 ul.contact-list li span.contact-list-inner-tel:before{
     content: '\f095';
-    color: #91af24;
+    color: #e62264;
     font-family: 'FontAwesome';
     margin-right: 10px;
 }
