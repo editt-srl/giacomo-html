@@ -3412,6 +3412,7 @@ label.destinazione-ricerca{
 .thumnail-item figure {
     position: relative;
     z-index: 1;
+    max-width: 250px;
 }
 .thumnail-item figure:before {
     top: 0;
