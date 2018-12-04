@@ -565,6 +565,24 @@ body.menu-active {
 .tabs-head.nav-tabs-two li.active {
     border-bottom: 3px solid #000;
 }
+.my-sticky {
+    position: fixed;
+    top: 89px;
+    width: 355px;
+}
+.my-sticky-block{
+    position: absolute;
+    bottom: 0;
+}
+.price-big-block{
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+}
+.spacing-camere-relative{
+    position: relative;
+}
+
 /*End Tabs*/
 /*Accordion*/
 .panel-group {
@@ -2004,6 +2022,45 @@ h2.title-resort-sales{
     color: #fff;
     text-align: right;
     padding: 0px 20px;
+}
+.type-best{
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 2px 15px;
+    text-align: right;
+    background: #e62264;
+    display: inline;
+    float: right;
+    margin: 5px 20px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+}
+.type-travel{
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 2px 15px;
+    text-align: right;
+    background: #91af24;
+    display: inline;
+    float: right;
+    margin: 5px 20px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+}
+.type-experience{
+    text-transform: uppercase;
+    color: #092d40;
+    padding: 2px 15px;
+    text-align: right;
+    background: #f4c604;
+    display: inline;
+    float: right;
+    margin: 5px 20px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
 }
 .stars-resort-sales{
     color: #f4c604;

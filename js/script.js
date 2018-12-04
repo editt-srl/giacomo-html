@@ -1184,6 +1184,41 @@
             });
         });
 
+        /*===== Fix Payment dx =====*/
+        $(window).scroll(function () {
+            if ($(window).width() > 1199) {
+                var elem = $('#fix-vert');
+                var container = $('#measure');
+                var header = $('#header');
+
+                var headerHeight = header.height();
+
+                var elemOffset = elem.offset().top;
+                var elemheight = elem.height();
+
+                var containerheight = container.height();
+                var containerOffset = container.offset().top;
+
+                var appari = (containerOffset - headerHeight);
+                var scompari = (((containerOffset + containerheight) - headerHeight) - elemheight);
+                // var scompariFix = (((containerOffset + containerheight) - headerHeight) - elemheight);
+
+                if (window.pageYOffset >= appari && window.pageYOffset <= scompari) {
+                    elem.addClass("my-sticky");
+                } else {
+                    elem.removeClass("my-sticky");
+                }
+
+                if (window.pageYOffset > scompari && containerheight > elemheight) {
+                    $('.price-big').addClass("price-big-block");
+                    $('.spacing-camere').addClass("spacing-camere-relative");
+                } else {
+                    $('.price-big').removeClass("price-big-block");
+                    $('.spacing-camere').removeClass("spacing-camere-relative");
+                }
+            }
+        });
+
         /*===== Price box =====*/
         if ($(window).width() > 768) {
             $(".drag-point").draggable({axis: "x"});
