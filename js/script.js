@@ -1178,43 +1178,45 @@
             var cut = ($('.logo').outerHeight()) + ($('#first-offer').outerHeight());
             var win = $(window).height();
             var total = win - cut;
-            $('#slider-banner').css({minHeight: total});
+            $('#slider-banner').css({minHeight: total, marginTop: cut});
             $(window).resize(function () {
-                $('#slider-banner').css({minHeight: total});
+                $('#slider-banner').css({minHeight: total, marginTop: cut});
             });
         });
 
         /*===== Fix Payment dx =====*/
         $(window).scroll(function () {
-            if ($(window).width() > 1199) {
-                var elem = $('#fix-vert');
-                var container = $('#measure');
-                var header = $('#header');
+            if ($('#fix-vert').length) {
+                if ($(window).width() > 1199) {
+                    var elem = $('#fix-vert');
+                    var container = $('#measure');
+                    var header = $('#header');
 
-                var headerHeight = header.height();
+                    var headerHeight = header.height();
 
-                var elemOffset = elem.offset().top;
-                var elemheight = elem.height();
+                    var elemOffset = elem.offset().top;
+                    var elemheight = elem.height();
 
-                var containerheight = container.height();
-                var containerOffset = container.offset().top;
+                    var containerheight = container.height();
+                    var containerOffset = container.offset().top;
 
-                var appari = (containerOffset - headerHeight);
-                var scompari = (((containerOffset + containerheight) - headerHeight) - elemheight);
-                // var scompariFix = (((containerOffset + containerheight) - headerHeight) - elemheight);
+                    var appari = (containerOffset - headerHeight);
+                    var scompari = (((containerOffset + containerheight) - headerHeight) - elemheight);
+                    // var scompariFix = (((containerOffset + containerheight) - headerHeight) - elemheight);
 
-                if (window.pageYOffset >= appari && window.pageYOffset <= scompari) {
-                    elem.addClass("my-sticky");
-                } else {
-                    elem.removeClass("my-sticky");
-                }
+                    if (window.pageYOffset >= appari && window.pageYOffset <= scompari) {
+                        elem.addClass("my-sticky");
+                    } else {
+                        elem.removeClass("my-sticky");
+                    }
 
-                if (window.pageYOffset > scompari && containerheight > elemheight) {
-                    $('.price-big').addClass("price-big-block");
-                    $('.spacing-camere').addClass("spacing-camere-relative");
-                } else {
-                    $('.price-big').removeClass("price-big-block");
-                    $('.spacing-camere').removeClass("spacing-camere-relative");
+                    if (window.pageYOffset > scompari && containerheight > elemheight) {
+                        $('.price-big').addClass("price-big-block");
+                        $('.spacing-camere').addClass("spacing-camere-relative");
+                    } else {
+                        $('.price-big').removeClass("price-big-block");
+                        $('.spacing-camere').removeClass("spacing-camere-relative");
+                    }
                 }
             }
         });
