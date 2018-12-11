@@ -271,6 +271,9 @@ section {
 .bg-10 {
     background-image: url('../images/background/bg-10.png');
 }
+.bg-list{
+    background-image: url('../images/bg-list.jpg');
+}
 .tb {
     display: table;
 }
@@ -1004,17 +1007,32 @@ blockquote:before {
 /*End Title*/
 /*Sort View*/
 .sort-view {
-    padding: 19px 15px;
+    padding: 18px 15px;
 }
 .sort-view .sort-by {
     line-height: 30px;
 }
 .sort-view .sort-by label {
-    color: #111111;
+    color: #082c40;
     font-weight: bold;
     font-family: 'Open sans';
     margin: 0;
     float: left;
+}
+#color-change{
+    margin: 0 15px;
+}
+#color-change .btn{
+    padding: 6px 20px;
+    color: #082c40;
+    font-weight: bold;
+    font-family: 'Open sans';
+    margin: 0;
+    float: left;
+}
+#color-change i{
+    color: #91af24;
+    margin-right: 5px;
 }
 .sort-view .sort-by .sort-select {
     margin: 0px 15px;
@@ -1078,7 +1096,7 @@ blockquote:before {
 /*End Sort View*/
 /*Search Result*/
 .search-result {
-    background-color: #082c40;
+    background-color: #91af24;
     padding: 10px 30px;
     width: 100%;
     height: 110px;
@@ -1109,7 +1127,7 @@ blockquote:before {
 .search-result p ins {
     font-size: 30px;
     text-decoration: none;
-    color: #f4c604;
+    color: #082c40;
 }
 .search-result p span {
     font-size: 17px;
@@ -4196,7 +4214,7 @@ label.destinazione-ricerca{
     -o-transition: all 0.2s linear;
 }
 .hotel-service img{
-    max-width: 83%;
+    max-width: 25px;
 }
 .hotel-list-item .hotel-text .hotel-service a:hover {
     -webkit-opacity: 0.5;
@@ -4296,7 +4314,7 @@ a.read-more-result:before{
     -webkit-clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
     clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
 }
-.media-resources i:nth-child(4){
+.media-resources i:nth-last-of-type(1){
     -webkit-clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
     clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0% 100%);
 }
@@ -4512,10 +4530,9 @@ a.link-go-to-pay:before {
 .hl-maps-cn {
     height: 880px;
     background-color: #fff;
-    padding: 1px;
     width: 100%;
     position: relative;
-    z-index: 2;
+    z-index: 1;
 }
 .hl-maps-cn #hotel-maps {
     width: 100%;
@@ -13556,9 +13573,10 @@ footer .back-under {
     background: #f4c604;
     margin: -30px 5px 10px 5px !important;
     position: relative;
+    height: 75px;
 }
 h2.carousel-h2{
-    padding: 5px 0 5px 10px !important;
+    padding: 5px 40px 5px 10px !important;
     text-align: left;
     text-transform: uppercase;
     font-size: 1.2em;

@@ -198,7 +198,7 @@
             <!--Banner-->
             <section class="sub-banner">
                 <!--Background-->
-                <div class="bg-parallax bg-1"></div>
+                <div class="bg-parallax bg-list"></div>
                 <!--End Background-->
                 <!-- Logo -->
                 <div class="logo-banner text-center">
@@ -237,37 +237,72 @@
                                         <!-- Sort by -->
                                         <div class="sort-by float-left">
                                             <label>Ordina per: </label>
-                                            <div class="sort-select select float-left">
-                                                <span data-placeholder="Select">Giudizio</span>
-                                                <select name="start">
-                                                    <option value="1">Nessuna stella</option>
-                                                    <option selected value="1">1 stella</option>
-                                                    <option value="1">2 stelle</option>
-                                                    <option value="1">3 stelle</option>
-                                                    <option value="1">4 stelle</option>
-                                                    <option value="1">5 stelle</option>
-                                                </select>
+                                            <div class="btn-group btn-group-toggle" id="color-change" role="group" aria-label="Justified button group with nested dropdown">
+                                                <!--<a href="#" class="btn btn-default" role="button"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Test</a>-->
+                                                <div class="btn-group" role="group">
+                                                    <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                                        <i class="fa fa-star" aria-hidden="true"></i> Stelle <span class="caret"></span>
+                                                    </a>
+                                                    <ul class="dropdown-menu" role="menu">
+                                                        <li><a href="#">Crescente</a></li>
+                                                        <li><a href="#">Descrescente</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="btn-group" role="group">
+                                                    <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                                        <i class="fa fa-sort-amount-asc" aria-hidden="true"></i> Prezzo <span class="caret"></span>
+                                                    </a>
+                                                    <ul class="dropdown-menu" role="menu">
+                                                        <li><a href="#">Crescente</a></li>
+                                                        <li><a href="#">Descrescente</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="btn-group" role="group">
+                                                    <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                                        <i class="fa fa-comment" aria-hidden="true"></i> Recensioni <span class="caret"></span>
+                                                    </a>
+                                                    <ul class="dropdown-menu" role="menu">
+                                                        <li><a href="#">Crescente</a></li>
+                                                        <li><a href="#">Descrescente</a></li>
+                                                        <li><a href="#">I più votati</a></li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="#">Consigliati</a></li>
+                                                    </ul>
+                                                </div>
                                             </div>
+                                            <!--
                                             <div class="sort-select select float-left">
-                                                <span data-placeholder="Select">Tipologia</span>
-                                                <select name="guest">
-                                                    <option selected  value="1">Best</option>
-                                                    <option value="1">Travel</option>
-                                                    <option value="1">Experince</option>
-                                                    <option value="1">Mare</option>
-                                                    <option value="1">Montagna</option>
-                                                    <option value="1">Benessere</option>
-                                                    <option value="1">Estero</option>
-                                                </select>
-                                            </div>
-                                            <div class="sort-select select float-left">
-                                                <span data-placeholder="Select">Prezzo</span>
-                                                <select name="pricing">
-                                                    <option value="1">Decrescente</option>
-                                                    <option selected value="1">Crescente</option>
-                                                </select>
-                                            </div>
+                                            <span data-placeholder="Select">Giudizio</span>
+                                            <select name="start">
+                                                <option value="1">Nessuna stella</option>
+                                                <option selected value="1">1 stella</option>
+                                                <option value="1">2 stelle</option>
+                                                <option value="1">3 stelle</option>
+                                                <option value="1">4 stelle</option>
+                                                <option value="1">5 stelle</option>
+                                            </select>
                                         </div>
+                                        <div class="sort-select select float-left">
+                                            <span data-placeholder="Select">Tipologia</span>
+                                            <select name="guest">
+                                                <option selected  value="1">Best</option>
+                                                <option value="1">Travel</option>
+                                                <option value="1">Experince</option>
+                                                <option value="1">Mare</option>
+                                                <option value="1">Montagna</option>
+                                                <option value="1">Benessere</option>
+                                                <option value="1">Estero</option>
+                                            </select>
+                                        </div>
+                                        <div class="sort-select select float-left">
+                                            <span data-placeholder="Select">Prezzo</span>
+                                            <select name="pricing">
+                                                <option value="1">Decrescente</option>
+                                                <option selected value="1">Crescente</option>
+                                            </select>
+                                        </div>-->
+                                        </div>
+
                                         <!-- End Sort by -->
                                         <!-- View by -->
                                         <div class="view-by float-right">
@@ -531,8 +566,7 @@
                                                 </a>
                                                 <div class="media-resources">
                                                     <i class="fa fa-info-circle" aria-hidden="true" data-fancybox-trigger="info-rosette"></i>
-                                                    <i class="fa fa-video-camera" aria-hidden="true" data-fancybox-trigger="video-rosette"></i>
-                                                    <i class="fa fa-camera photo-gallery-open" aria-hidden="true" data-fancybox-trigger="gallery-rosette"></i>
+
                                                     <i class="fa fa-map-marker" aria-hidden="true" data-fancybox-trigger="map-rosette"></i>
                                                     <!--madia-->
                                                     <a href="images/gallery/aquilia/01.aquilia.png" data-fancybox="gallery-rosette" data-caption="Caption #1"></a>

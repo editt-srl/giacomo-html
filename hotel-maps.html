@@ -231,7 +231,42 @@
                                 <div class="sort-view clearfix">
                                     <!-- Sort by -->
                                     <div class="sort-by float-left">
-                                        <label>Sort by: </label>
+                                        <label>Ordina per: </label>
+                                        <div class="btn-group btn-group-toggle" id="color-change" role="group" aria-label="Justified button group with nested dropdown">
+                                            <!--<a href="#" class="btn btn-default" role="button"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Test</a>-->
+                                            <div class="btn-group" role="group">
+                                                <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                                    <i class="fa fa-star" aria-hidden="true"></i> Stelle <span class="caret"></span>
+                                                </a>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="#">Crescente</a></li>
+                                                    <li><a href="#">Descrescente</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="btn-group" role="group">
+                                                <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                                    <i class="fa fa-sort-amount-asc" aria-hidden="true"></i> Prezzo <span class="caret"></span>
+                                                </a>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="#">Crescente</a></li>
+                                                    <li><a href="#">Descrescente</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="btn-group" role="group">
+                                                <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                                    <i class="fa fa-comment" aria-hidden="true"></i> Recensioni <span class="caret"></span>
+                                                </a>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="#">Crescente</a></li>
+                                                    <li><a href="#">Descrescente</a></li>
+                                                    <li><a href="#">I più votati</a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#">Consigliati</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <!--
                                         <div class="sort-select select float-left">
                                             <span data-placeholder="Select">Star rating</span>
                                             <select name="start">
@@ -259,6 +294,7 @@
                                                 <option value="1">Pricing</option>
                                             </select>
                                         </div>
+                                        -->
                                     </div>
                                     <!-- End Sort by -->
                                     <!-- View by -->
