@@ -3076,6 +3076,12 @@ label.destinazione-ricerca{
     width: 100%;
     overflow: hidden;
 }
+[id*="camera-"]{
+    padding: 5px 0;
+    margin: 10px 0 5px;
+    border-top: 1px solid gainsboro;
+    background: #f1f1f1;
+}
 /*
 .sales-item .home-sales-img:after {
     display: block;
@@ -8959,12 +8965,12 @@ ul.contact-list li span.contact-list-inner-tel:before{
 }
 #bonifico, #carta{
     display: none;
+    margin-top: 25px;
 }
 #bonifico span{
     color: #092d40;
     text-transform: uppercase;
     display: block;
-    margin: 10px;
 }
 #bonifico p{
     padding: 5px 10px 0px;
@@ -9100,13 +9106,14 @@ div.dettagli-volo-box{
     border-radius: 50%;
 }
 .float-camera{
+    display: inline-block;
     float: right;
     max-width: 115px;
     overflow: hidden;
     margin-right: 0px;
 }
 .camera-type{
-    padding: 15px 0 0;
+    padding: 14px 0 5px;
     display: inline-block;
     text-transform: uppercase;
     color: #91af24;
