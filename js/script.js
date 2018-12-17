@@ -325,6 +325,16 @@
 
         }
 
+        /*===== Link offerte =====*/
+        if ($('.offer-link').length) {
+            if ($(window).width() < 1000) {
+                $(document).on("click", ".offer-link", function () {
+                    var thisLink = $(this).find('a').attr('href');
+                    window.location.href = thisLink;
+                })
+            }
+        }
+
         /*===== Focus and Blur Input Form Search =====*/
         function FocusBlurInput() {
 

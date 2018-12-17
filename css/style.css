@@ -1826,7 +1826,7 @@ footer .social-icons{
     width: 100%;
     position: fixed;
     top: 0;
-    z-index: 2;
+    z-index: 3;
 }
 .header .container {
     position: relative;
@@ -3076,7 +3076,7 @@ label.destinazione-ricerca{
     width: 100%;
     overflow: hidden;
 }
-[id*="camera-"]{
+.camera-form-prenotazione{
     padding: 5px 0;
     margin: 10px 0 5px;
     border-top: 1px solid gainsboro;
@@ -4098,6 +4098,20 @@ label.destinazione-ricerca{
 }
 .video-modal, foto-modal{
 
+}
+.tag-sh{
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 2px 15px;
+    text-align: left;
+    background: #e62264;
+    -webkit-border-top-right-radius: 9px;
+    -webkit-border-bottom-right-radius: 9px;
+    -moz-border-radius-topright: 9px;
+    -moz-border-radius-bottomright: 9px;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+    margin-right: 10px;
 }
 /*End Hotel Item*/
 /*Hotel List Item*/
@@ -9048,6 +9062,46 @@ ul.contact-list li span.contact-list-inner-tel:before{
     border: 1px solid gainsboro;
     cursor: pointer;
 }
+.price-top{
+    text-align: right;
+    display: block;
+    font-size: 3em;
+    font-weight: 600;
+    margin-top: 15px;
+    color: #e62264;
+    margin: 10px 0 10px 30px;
+    padding: 5px 10px;
+    position: relative;
+    border: 1px solid gainsboro;
+    -webkit-border-top-left-radius: 50px;
+    -webkit-border-bottom-left-radius: 50px;
+    -moz-border-radius-topleft: 50px;
+    -moz-border-radius-bottomleft: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+.minimo-garantito{
+    font-size: 0.3em;
+    font-weight: 500;
+    color: #274757;
+    text-align: right;
+    display: block;
+    margin: 9px 0 -6px;
+}
+.minimo-garantito-star{
+    position: absolute;
+    left: -30px;
+    background: #ffffff;
+    padding: 11px 18px 10px 21px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    top: 18px;
+    border: 1px solid gainsboro;
+    color: #e62264;
+    box-shadow: 5px 0px 5px #dedede;
+    font-size: 0.6em;
+}
 .camera-edit {
     border-bottom: 1px solid gainsboro;
     padding: 10px 15px;
@@ -11193,6 +11247,14 @@ footer .back-under {
     }
     .slides-payment {
         padding-left: 30px !important;
+    }
+    .price-top{
+        display: none;
+    }
+}
+@media screen and (min-width: 992px) {
+    .form-hotel .fix-width {
+        width: 27% !important;
     }
 }
 @media (max-width: 991px) {
