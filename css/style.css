@@ -8444,7 +8444,7 @@ h4.title-sidebar2:before {
     width: 430px;
     padding: 10px 30px 0 30px;
     position: absolute;
-    z-index: 10;
+    z-index: 2;
     left: 0;
     right: 0px;
     margin: auto;
@@ -8533,6 +8533,9 @@ ul.contact-list li span.contact-list-inner-tel:before{
     color: #e62264;
     font-family: 'FontAwesome';
     margin-right: 10px;
+}
+.thanks{
+    padding: 10px 0;
 }
 /* 17. Payment Page
  --------------------------------------------------------------------------------*/

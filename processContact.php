@@ -16,15 +16,15 @@ $message = $_POST["message"];
 $errors = array();
 
 if(!$email) {
-	$errors[] = "You must enter an email.";
+	$errors[] = "E' necessario inserire un indirizzo email.";
 } else if(!validEmail($email)) {
-	$errors[] = "You must enter a valid email.";
+	$errors[] = "Inserire un indirizzo email valido";
 }
 if(strlen($message) < 10) {
 	if(!$message) {
-		$errors[] = "You must enter a message.";
+		$errors[] = "E' necesario inserire un messaggio";
 	} else {
-		$errors[] = "Message must be at least 10 characters.";
+		$errors[] = "Il messaggio deve avere almeno 10 caratteri";
 	}
 }
 
@@ -34,17 +34,17 @@ if($errors) {
 	foreach($errors as $error) {
 		$errortext .= "<li>".$error."</li>";
 	}
-	die("<div class='thanks failure'>The following errors occured:<ul>". $errortext ."</ul></div>");
+	die("<div class='thanks failure'>Abbiamo riscontrato i seguenti errori:<ul>". $errortext ."</ul></div>");
 }
 // Send the email
-$to = "info@megadrupal.com";
+$to = "info@gbviaggi.com";
 $subject = "Contact Form: $name";
 $headers = "From: $email";
 
 mail($to, $subject, $message, $headers);
 
 // Die with a success message
-die("<div class='thanks'>Thanks for submitting your email! Our manager will contact you shortly.</div>");
+die("<div class='thanks'>Grazie per aver inviato il messaggio! Risponderemo al più presto.</div>");
 
 // A function that checks to see if
 // an email is valid

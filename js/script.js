@@ -1081,22 +1081,22 @@
                     // when the user does something horrid
                     messages: {
                         name: {
-                            required: "Please enter your first name.",
-                            minlength: $.format("At least {0} characters required.")
+                            required: "Inserisci il tuo nome.",
+                            minlength: $.format("Sono richiesti almeno {0} caratteri.")
                         },
                         email: {
-                            required: "Please enter your email.",
-                            email: "Please enter a valid email."
+                            required: "Inserisci una mail.",
+                            email: "Inserisci un indirizzo mail valido."
                         },
                         message: {
-                            required: "Please enter a message.",
-                            minlength: $.format("At least {0} characters required.")
+                            required: "Inserisci qui il tuo messaggio.",
+                            minlength: $.format("Sono richiesti almeno {0} caratteri.")
                         }
                     },
 
                     // Use Ajax to send everything to processForm.php
                     submitHandler: function (form) {
-                        $("#submit-contact").html("Sending...");
+                        $("#submit-contact").html("Invio in corso...");
                         $(form).ajaxSubmit({
                             success: function (responseText, statusText, xhr, $form) {
                                 $("#contact-content").slideUp(600, function () {
