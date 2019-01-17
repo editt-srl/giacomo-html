@@ -165,6 +165,14 @@ jQuery(document).ready(function ($) {
         }
     });
 
+    /*===== Form cons =====*/
+    $(document).on("focus", "#dove-andare", function () {
+        $("#form-when").slideDown('slow');
+    });
+    $(document).on("focus", "#partenza, #arrivo", function () {
+        $("#form-user").slideDown('slow');
+    });
+
 //End
 });
 

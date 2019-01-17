@@ -367,7 +367,10 @@
         function Calendar() {
             $('.calendar-input,.caneldar').datepicker({
                 showOtherMonths: true,
-                selectOtherMonths: true
+                selectOtherMonths: true,
+                onClose: function () {
+                    $(".partenzacal").datepicker("show");
+                }
             });
         }
         $.datepicker.regional['it'] = {
@@ -392,22 +395,29 @@
             initStatus: 'Scegliere una data', isRTL: false};
         $.datepicker.setDefaults($.datepicker.regional['it']);
 
-        /* Vincolo data secondo caleedario */
+        /* Vincolo data secondo caleedario con 7 giorni di selezione in più*/       
         $(".arrivocal").change(function () {
             //Aggiungo 7gg alla data selezionata
             var currentDate = $(this).datepicker('getDate');
             currentDate.setDate(currentDate.getDate());
-            $(".partenzacal").datepicker('setDate', currentDate);
+            
+            var date2 = $('.arrivocal').datepicker('getDate', '+7d'); 
+            date2.setDate(date2.getDate()+7); 
+            $('.partenzacal').datepicker('setDate', date2);
+            
             $(".partenzacal").datepicker("destroy"); //distruggo
-            $(".partenzacal").datepicker({minDate: currentDate, dateFormat: "dd/mm/yy", showButtonPanel: false, "firstDay": 1});//reinizializzo
+            $(".partenzacal").datepicker({minDate: currentDate, dateFormat: "dd/mm/yy", showButtonPanel: false, firstDay: 1});//reinizializzo
         });
-
-        $('.calendar-data-nascita').datepicker({
-            showOtherMonths: true,
-            selectOtherMonths: true,
-            changeMonth: true,
-            changeYear: true,
-            yearRange: "-100:+0"
+        
+        /* Data di nascita */
+        $(document).on('focus',".calendar-data-nascita", function(){ 
+            $(this).datepicker({
+                    showOtherMonths: true,
+                    selectOtherMonths: true,
+                    changeMonth: true,
+                    changeYear: true,
+                    yearRange: "-100:+0"
+            });
         });
 
         /*===== BANNER SLIDE =====*/
@@ -1171,11 +1181,12 @@
             $(".person-on-page").html(Math.floor(Math.random() * 4) + 1);
         }, 35000);
 
-        /*===== Social Share =====*/
+        /*===== Social Share =====
         $('.home-sales-bar-bg-share').on("click", function () {
             $(this).animate({width: "100%"}, 200);
             $(this).closest("div.home-sales-bar-bg").children(".home-sales-bar-bg-button").animate({width: "0%"}, 200);
         });
+        */
 
         /*===== Tagliare testo anteprima =====*/
         $("h4.title-sidebar").click(function () {
@@ -1259,7 +1270,7 @@
         /*===== Action bar =====*/
         $(window).scroll(function () {
             clearTimeout($.data(this, 'scrollTimer'));
-            var somma = $(".action-bar").height() + 1200;
+            var somma = $(".action-bar").height() + 1500;
             if (($(this).scrollTop() >= somma) && ($(window).width() <= 468)) {
                 $.data(this, 'scrollTimer', setTimeout(function () {
                     $("div.action-bar").hide();
@@ -1334,6 +1345,28 @@
             $(this).toggleClass('fa-info-circle').toggleClass('fa-times-circle');
             $(this).toggleClass('color-gray');
         });
+        // Tooltip best, travel, experience
+        if ($(window).width() < 468) {
+            $('.type-info-left').tooltip({
+                trigger: "click",
+                html: true,
+                placement: "left"
+            });
+            $('.type-info-right').tooltip({
+                trigger: "click",
+                html: true,
+                placement: "right"
+            });
+        }else{
+            $('.type-info-left').tooltip({
+                html: true,
+                placement: "left"
+            });
+            $('.type-info-right').tooltip({
+                html: true,
+                placement: "right"
+            });
+        }
 
 
         /*===== Star Rate =====*/
@@ -1452,7 +1485,6 @@ if ($(window).width() > 768) {
         }
     });
 }
-
 
 /*===== Deferring video =====*/
 $(window).load(function () {

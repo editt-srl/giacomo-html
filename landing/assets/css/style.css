@@ -66,6 +66,11 @@ section { overflow: hidden; }
 /*
     Spacing & Alignment
 ------------------------------------------*/
+@font-face {
+    font-family: 'BebasNeuewebfont';
+    src: url('../../../fonts/bebas/BebasNeuewebfont.eot');
+    src: local('BebasNeuewebfont'), url('../../../fonts/bebas/BebasNeuewebfont.woff') format('woff'), url('../../../fonts/bebas/BebasNeuewebfont.ttf') format('truetype');
+}
 
 .roomy-100 {
     padding-top: 100px;
@@ -698,7 +703,88 @@ textarea::-ms-input-placeholder{
   overflow: hidden;
 }*/
 
-
+.button-call-landing{
+    padding: 10px 20px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    background: #e62264;
+    color: white;
+    border: 2px solid #b9164c;
+    margin: 10px 0 0;
+}
+.button-call-landing span{
+    display: block;
+    font-size: 2em;
+    font-family: arial;
+}
+.button-call-landing span i{
+    margin-right: 10px;
+}
+.price-offer {
+    padding: 18px 13px 10px 22px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 3em;
+    color: #ffffff;
+    z-index: 2;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: 'BebasNeuewebfont' !important;
+    background: url(../images/linea.png) bottom right no-repeat;
+}
+.price-offer-inner{
+    color: #ffffff;
+    display: block;
+    font-size: 0.5em;
+    margin-top: -13px;
+}
+.rounded-sx{
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+}
+.rounded-dx{
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+}
+.form-space{
+    margin: 20px -15px;
+}
+#form-when, #form-user{
+    display: none;
+}
+#form-user h2, #form-when h2, #form-where h2{
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0;
+    color: #e62264;
+}
+.form-da-compilare{
+    box-shadow: 0px 0px 8px 1px #e62264 inset;
+}
+span.steps-arrow{
+    text-align: center;
+    color: grey;
+    display: block;
+    margin: -5px 0 10px;
+}
+.type-hotels{
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 2px 15px;
+    text-align: right;
+    background: #e62264;
+    position: absolute;
+    right: 25px;
+    top: 28px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+    z-index: 2;
+}
 .transform_scal_rotate:hover img{
     -webkit-transform: scale(1.1) rotate(4deg);
     transform: scale(1.1) rotate(4deg);

@@ -58,7 +58,9 @@ Author URI: http://www.xpeedstudio.com
     .navbar-brand {
         padding: 15px 15px;
     }
-
+    .mobile-space{
+        margin-bottom: 20px;
+    }
 
 }
 

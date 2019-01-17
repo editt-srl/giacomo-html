@@ -1826,7 +1826,7 @@ footer .social-icons{
     width: 100%;
     position: fixed;
     top: 0;
-    z-index: 3;
+    z-index: 10000;/* prima era 3 */
 }
 .header .container {
     position: relative;
@@ -2041,6 +2041,9 @@ h2.title-resort-sales{
     text-align: right;
     padding: 0px 20px;
 }
+.type-info{
+    cursor: help;
+}
 .type-best{
     text-transform: uppercase;
     color: #ffffff;
@@ -2053,6 +2056,20 @@ h2.title-resort-sales{
     -webkit-border-radius: 9px;
     -moz-border-radius: 9px;
     border-radius: 9px;
+}
+.type-best-collection{
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 2px 15px;
+    text-align: right;
+    background: #e62264;
+    position: absolute;
+    right: 25px;
+    top: 28px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+    z-index: 2;
 }
 .type-travel{
     text-transform: uppercase;
@@ -2067,6 +2084,20 @@ h2.title-resort-sales{
     -moz-border-radius: 9px;
     border-radius: 9px;
 }
+.type-travel-collection{
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 2px 15px;
+    text-align: right;
+    background: #91af24;
+    position: absolute;
+    right: 25px;
+    top: 28px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+    z-index: 2;
+}
 .type-experience{
     text-transform: uppercase;
     color: #092d40;
@@ -2079,6 +2110,20 @@ h2.title-resort-sales{
     -webkit-border-radius: 9px;
     -moz-border-radius: 9px;
     border-radius: 9px;
+}
+.type-travel-collection{
+    text-transform: uppercase;
+    color: #092d40;
+    padding: 2px 15px;
+    text-align: right;
+    background: #f4c604;
+    position: absolute;
+    right: 25px;
+    top: 28px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+    z-index: 2;
 }
 .stars-resort-sales{
     color: #f4c604;
@@ -2113,6 +2158,7 @@ h2.title-resort-sales{
     color: #fff;
     padding-top: 20px;
     font-size: 1.2em;
+    cursor: pointer;
 }
 .home-sales-description{
 
@@ -3387,6 +3433,22 @@ label.destinazione-ricerca{
 .destinations-item .destinations-img img {
     width: 100%;
 }
+.download-catalogue{
+    display: block;
+    text-transform: uppercase;
+    color: #e62163;
+    font-size: 0.9em;
+    margin: 5px 0 0;
+}
+.download-catalogue-inner{
+    color: #ffffff;
+    background: #082c40;
+    margin: 0 auto;
+    padding: 5px 20px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+}
 /*End Destinations Item*/
 /*End Destinations*/
 /*Magazine*/
@@ -4193,7 +4255,7 @@ label.destinazione-ricerca{
 .hotel-list-item .hotel-text .hotel-star-address .hotel-address {
     line-height: 25px;
     display: block;
-    margin: 0px 0 0 0;
+    margin: 5px 0;
     color: #717070;
     font-family: 'Open sans';
     font-size: 14px;
@@ -9210,7 +9272,7 @@ flight-details span{
 }
 .tooltip-inner {
     max-width: 300px;
-    color: #fff;
+    color: #fff !important;
     text-align: justify;
     background-color: #092d40;
     border-radius: 4px;
@@ -9222,7 +9284,7 @@ flight-details span{
     margin-top: 5px;
     margin-bottom: 15px;
     border: 0;
-    border-top: 0.5px solid #91af24;
+    border-top: 1px solid #91af24;
 }
 .box-personalizza{
     background-color: #f3f3f3;
@@ -12748,6 +12810,10 @@ footer .back-under {
     .camera-edit span small:before {
         display: none;
     }
+    .download-catalogue{
+        margin: 10px;
+        padding: 5px 0;
+    }
 }
 @media (max-width: 480px) {
     /*Navigation*/
@@ -13562,7 +13628,7 @@ footer .back-under {
 .big-fa{
     font-size: 9em;
     color: #082C40;
-    padding: 15px;
+    padding: 0px;
 }
 .setting-row-chisiamo{
     text-align: center;
@@ -13669,6 +13735,12 @@ footer .back-under {
     text-transform: uppercase;
     font-family: 'BebasNeuewebfont' !important;
     background: url(../images/linea.png) bottom right no-repeat;
+}
+.price-offer-inner{
+    color: #ffffff;
+    display: block;
+    font-size: 0.5em;
+    margin-top: -13px;
 }
 .carousel-back-div{
     background: #f4c604;
