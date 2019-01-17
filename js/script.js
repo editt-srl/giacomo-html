@@ -1322,7 +1322,6 @@
 
         $(document).on("click", "div.singolo-ospite-trigger-data", function () {
             $(this).closest('div.singoli-ospiti-container').find('div.dati-ospite').slideToggle();
-            setTimeout(checkDatePicker, 500);
             $(this).closest('div.singoli-ospiti-container').find("i[class*='fa-chevron-']").toggleClass('fa-chevron-down').toggleClass("fa-chevron-up");
         });
 
