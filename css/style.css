@@ -9420,7 +9420,7 @@ flight-details span{
 }
 .coupon-code-inner input[type=text]{
     border: 1px solid #dedede;
-    padding: 14px 20px 14px 60px;
+    padding: 14px 50px 14px 60px;
     color: #333333;
     width: 100%;
     font-family: 'Open sans';
@@ -9430,8 +9430,24 @@ flight-details span{
 .inputWithIcon {
     position: relative;
 }
-
-.inputWithIcon i {
+.inputWithIcon i.fa-check {
+    position: absolute;
+    right: 18px;
+    top: 3px;
+    padding: 14px 0;
+    color: #828282;
+    transition: 0.3s;
+    background: #e6e6e6;
+    border: 1px solid #d0cdcd;
+    width: 44px;
+    height: 44px;
+    color: #092d40;
+}
+.inputWithIcon i.fa-check:hover {
+    color: #91af24;
+    cursor: pointer;
+}
+.inputWithIcon i.fa-ticket {
     position: absolute;
     left: 28px;
     top: 10px;
@@ -9693,6 +9709,7 @@ p.tel-payment i{
     color: #092d40;
     font-size: 1.3em;
 }
+
 /* 18. Cart
  --------------------------------------------------------------------------------*/
 .cart-cn {
