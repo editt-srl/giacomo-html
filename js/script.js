@@ -395,28 +395,28 @@
             initStatus: 'Scegliere una data', isRTL: false};
         $.datepicker.setDefaults($.datepicker.regional['it']);
 
-        /* Vincolo data secondo caleedario con 7 giorni di selezione in più*/       
+        /* Vincolo data secondo caleedario con 7 giorni di selezione in più*/
         $(".arrivocal").change(function () {
             //Aggiungo 7gg alla data selezionata
             var currentDate = $(this).datepicker('getDate');
             currentDate.setDate(currentDate.getDate());
-            
-            var date2 = $('.arrivocal').datepicker('getDate', '+7d'); 
-            date2.setDate(date2.getDate()+7); 
+
+            var date2 = $('.arrivocal').datepicker('getDate', '+7d');
+            date2.setDate(date2.getDate() + 7);
             $('.partenzacal').datepicker('setDate', date2);
-            
+
             $(".partenzacal").datepicker("destroy"); //distruggo
             $(".partenzacal").datepicker({minDate: currentDate, dateFormat: "dd/mm/yy", showButtonPanel: false, firstDay: 1});//reinizializzo
         });
-        
+
         /* Data di nascita */
-        $(document).on('focus',".calendar-data-nascita", function(){ 
+        $(document).on('focus', ".calendar-data-nascita", function () {
             $(this).datepicker({
-                    showOtherMonths: true,
-                    selectOtherMonths: true,
-                    changeMonth: true,
-                    changeYear: true,
-                    yearRange: "-100:+0"
+                showOtherMonths: true,
+                selectOtherMonths: true,
+                changeMonth: true,
+                changeYear: true,
+                yearRange: "-100:+0"
             });
         });
 
@@ -1086,7 +1086,6 @@
                             minlength: 10
                         }
                     },
-
                     // Specify what error messages to display
                     // when the user does something horrid
                     messages: {
@@ -1103,7 +1102,6 @@
                             minlength: $.format("Sono richiesti almeno {0} caratteri.")
                         }
                     },
-
                     // Use Ajax to send everything to processForm.php
                     submitHandler: function (form) {
                         $("#submit-contact").html("Invio in corso...");
@@ -1182,11 +1180,11 @@
         }, 35000);
 
         /*===== Social Share =====
-        $('.home-sales-bar-bg-share').on("click", function () {
-            $(this).animate({width: "100%"}, 200);
-            $(this).closest("div.home-sales-bar-bg").children(".home-sales-bar-bg-button").animate({width: "0%"}, 200);
-        });
-        */
+         $('.home-sales-bar-bg-share').on("click", function () {
+         $(this).animate({width: "100%"}, 200);
+         $(this).closest("div.home-sales-bar-bg").children(".home-sales-bar-bg-button").animate({width: "0%"}, 200);
+         });
+         */
 
         /*===== Tagliare testo anteprima =====*/
         $("h4.title-sidebar").click(function () {
@@ -1258,8 +1256,10 @@
             , toggleClose: true
             , animation: false
             , openWithUrl: true
-            , callbackonclick: function () { }
-            , callback: function () { }
+            , callbackonclick: function () {
+            }
+            , callback: function () {
+            }
         });
 
         /*===== Anno attuale in footer =====*/
@@ -1310,6 +1310,11 @@
             $(this).find("i[class*='-square-o']").toggleClass('fa-plus-square-o').toggleClass('fa-minus-square-o');
         });
 
+        /*Prima box pagamento camera aperta + icon*/
+        $('.box-personalizza').first().css("display", "inherit");
+        $('.camera-edit i[class*="-square-o"]').first().toggleClass('fa-minus-square-o').toggleClass('fa-plus-square-o');
+        /*end fix*/
+
         $(document).on("click", ".camera-edit", function () {
             $(this).closest('div.row').find('div.box-personalizza').slideToggle();
             $(this).closest('div.row').find(".camera-edit i[class*='-square-o']").toggleClass('fa-plus-square-o').toggleClass('fa-minus-square-o');
@@ -1330,7 +1335,7 @@
             $(this).closest('div.box-info').find('div.box-info-inner').slideToggle();
         });
         $(document).on("click", ".camera-details", function () {
-            $('.camera-details-inner').slideToggle();
+            $(this).next('.camera-details-inner').slideToggle();
         });
 
 
@@ -1357,7 +1362,7 @@
                 html: true,
                 placement: "right"
             });
-        }else{
+        } else {
             $('.type-info-left').tooltip({
                 html: true,
                 placement: "left"
