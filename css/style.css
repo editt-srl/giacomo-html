@@ -9432,15 +9432,15 @@ flight-details span{
 }
 .inputWithIcon i.fa-check {
     position: absolute;
-    right: 18px;
-    top: 3px;
-    padding: 14px 0;
+    right: 15px;
+    top: 0;
+    padding: 17px 0;
     color: #828282;
     transition: 0.3s;
-    background: #e6e6e6;
+    background: #efefef;
     border: 1px solid #d0cdcd;
-    width: 44px;
-    height: 44px;
+    width: 50px;
+    height: 50px;
     color: #092d40;
 }
 .inputWithIcon i.fa-check:hover {
