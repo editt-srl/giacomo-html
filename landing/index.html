@@ -7,7 +7,7 @@
         <meta charset="utf-8">
         <title>Copiare contenuto h1</title>
         <meta name="description" content="Copiare primo h2">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
         <link rel="icon" type="image/png" href="favicon.ico">
 
         <!--Google Font link-->
@@ -26,6 +26,7 @@
         <link rel="stylesheet" href="assets/css/jquery-ui.structure.min.css">
         <link rel="stylesheet" href="assets/css/jquery-ui.theme.min.css">
         <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/mTab-style.css" />
 
 
         <!--For Plugins external css-->
@@ -121,7 +122,7 @@
                                             <div class="home_text xs-m-top-30">
                                                 <h2 class="text-white">Il <strong>Natale</strong> GB Viaggi</h2>
                                                 <h1 class="text-white line-h-fix">Fino al 25% di sconto + €100 in regalo. Cosa aspetti?</h1>
-                                                <h3 class="text-white">Quest'anno a Natale <strong>fatti un regalo</strong>, prenota entro il 6 gennaio e oltre allo sconto <strong>riceverai un buono da €100</strong> da spendere sulla tua vacanza.</h3>
+                                                <h3 class="text-white">Quest'anno a Natale <strong>fatti un regalo</strong>, prenota entro il 6 gennaio</h3>
                                             </div>
                                         </div>
                                     </div><!-- End off slid item -->
@@ -137,7 +138,7 @@
                 <div class="container">
                     <div class="row" id="form-where">
 
-                        <h2>Dove vuoi trascorrere le vacanze?</h2>
+                        <h2>Dove vuoi andare in vacanza?</h2>
                         <span class="steps-arrow"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
 
                         <div class="col-xs-12 col-md-12">
@@ -157,16 +158,39 @@
                         <div class="col-xs-6 col-md-6">
                             <div class="input-group">
                                 <span class="input-group-addon rounded-sx"><i class="fa fa-calendar" aria-hidden="true"></i></span>
-                                <input id="arrivo" type="text" class="form-control rounded-dx" placeholder="Arrivo">
+                                <input id="arrivo" type="text" class="form-control rounded-dx" placeholder="Arrivo" readonly>
                             </div>
                         </div>
                         <div class="col-xs-6 col-md-6">
                             <div class="input-group">
                                 <span class="input-group-addon rounded-sx"><i class="fa fa-calendar" aria-hidden="true"></i></span>
-                                <input id="partenza" type="text" class="form-control rounded-dx" placeholder="Partenza">
+                                <input id="partenza" type="text" class="form-control rounded-dx" placeholder="Partenza" readonly>
                             </div>
                         </div>
 
+                    </div> <!--End off row form when-->
+
+                    <div class="row form-space" id="form-who">
+
+                        <h2>Di quante cemere hai bisogno?</h2>
+                        <span class="steps-arrow"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+
+                        <div class="col-xs-12 col-md-12">
+                            <div class="input-group">
+                                <span class="input-group-addon rounded-sx"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                                <select class="form-control rounded-dx" id="ncamere" required>
+                                    <option value="0" disabled selected hidden>N. Camere</option>
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-12 sistemazione-cont">
+
+                        </div>
                     </div> <!--End off row form when-->
 
                     <div class="row form-space" id="form-user">
@@ -192,14 +216,217 @@
                                 <input type="text" class="form-control rounded-dx" placeholder="Telefono">
                             </div>
                         </div>
+                        <div class="col-xs-12 col-md-12 mobile-space fix-align-center">
+                            <button class="button-call-landing-primary">
+                                <span>CALCOLA IL PREVENTIVO</span>
+                            </button>
+                        </div>
 
                     </div> <!--End off row form when-->
 
                 </div> <!--End off container -->
             </section> <!--End off Home Sections-->
 
+            <!--product section-->
+            <section id="product" class="product text-center bg-white">
+                <div class="container">
+                    <div class="main_product roomy-40">
+                        <div class="head_title text-center fix">
+                            <h2 class="text-uppercase text-black">Le nostre Strutture</h2>
+                            <h5>Villaggi 4 stelle direttamente sul mare, scegli il meglio per la tua vacanza.</h5>
+                        </div>
+                        <div class="owl-carousel-landing owl-carousel owl-theme">
+
+                            <div class="item">
+                                <div class="port_img">
+                                    <img src="assets/images/work-img1.jpg" alt="">
+                                    <div class="port_overlay text-center">
+                                        <a href="assets/images/work-img1.jpg" class="popup-img">+</a>
+                                    </div>
+                                    <span class="price price-offer">€175<span class="price-offer-inner">PERS/SETT</span></span>
+                                    <div class="type-hotels type-info-left" title="<h4>BEST</h4> <hr> Tutto il testo che ti pare da inserire qui...">BEST</div>
+                                </div>
+                                <div class="dati-villaggio">
+                                    <h2>Villaggio Le Rosette Resort</h2>
+                                    <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+                                    <span>Calabria, Badolato</span>
+                                </div>
+                                <div class="overlay-landing"></div>
+                            </div>
+                            <div class="item">
+                                <div class="port_img">
+                                    <img src="assets/images/work-img1.jpg" alt="">
+                                    <div class="port_overlay text-center">
+                                        <a href="assets/images/work-img1.jpg" class="popup-img">+</a>
+                                    </div>
+                                    <span class="price price-offer">€175<span class="price-offer-inner">PERS/SETT</span></span>
+                                    <div class="type-hotels type-info-left" title="<h4>BEST</h4> <hr> Tutto il testo che ti pare da inserire qui...">BEST</div>
+                                </div>
+                                <div class="dati-villaggio">
+                                    <h2>Villaggio Le Rosette Resort</h2>
+                                    <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+                                    <span>Calabria, Badolato</span>
+                                </div>
+                                <div class="overlay-landing"></div>
+                            </div>
+                            <div class="item">
+                                <div class="port_img">
+                                    <img src="assets/images/work-img1.jpg" alt="">
+                                    <div class="port_overlay text-center">
+                                        <a href="assets/images/work-img1.jpg" class="popup-img">+</a>
+                                    </div>
+                                    <span class="price price-offer">€175<span class="price-offer-inner">PERS/SETT</span></span>
+                                    <div class="type-hotels type-info-left" title="<h4>BEST</h4> <hr> Tutto il testo che ti pare da inserire qui...">BEST</div>
+                                </div>
+                                <div class="dati-villaggio">
+                                    <h2>Villaggio Le Rosette Resort</h2>
+                                    <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+                                    <span>Calabria, Badolato</span>
+                                </div>
+                                <div class="overlay-landing"></div>
+                            </div>
+                            <div class="item">
+                                <div class="port_img">
+                                    <img src="assets/images/work-img1.jpg" alt="">
+                                    <div class="port_overlay text-center">
+                                        <a href="assets/images/work-img1.jpg" class="popup-img">+</a>
+                                    </div>
+                                    <span class="price price-offer">€175<span class="price-offer-inner">PERS/SETT</span></span>
+                                    <div class="type-hotels type-info-left" title="<h4>BEST</h4> <hr> Tutto il testo che ti pare da inserire qui...">BEST</div>
+                                </div>
+                                <div class="dati-villaggio">
+                                    <h2>Villaggio Le Rosette Resort</h2>
+                                    <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+                                    <span>Calabria, Badolato</span>
+                                </div>
+                                <div class="overlay-landing"></div>
+                            </div>
+                            <div class="item">
+                                <div class="port_img">
+                                    <img src="assets/images/work-img1.jpg" alt="">
+                                    <div class="port_overlay text-center">
+                                        <a href="assets/images/work-img1.jpg" class="popup-img">+</a>
+                                    </div>
+                                    <span class="price price-offer">€175<span class="price-offer-inner">PERS/SETT</span></span>
+                                    <div class="type-hotels type-info-left" title="<h4>BEST</h4> <hr> Tutto il testo che ti pare da inserire qui...">BEST</div>
+                                </div>
+                                <div class="dati-villaggio">
+                                    <h2>Villaggio Le Rosette Resort</h2>
+                                    <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+                                    <span>Calabria, Badolato</span>
+                                </div>
+                                <div class="overlay-landing"></div>
+                            </div>
+                            <div class="item">
+                                <div class="port_img">
+                                    <img src="assets/images/work-img1.jpg" alt="">
+                                    <div class="port_overlay text-center">
+                                        <a href="assets/images/work-img1.jpg" class="popup-img">+</a>
+                                    </div>
+                                    <span class="price price-offer">€175<span class="price-offer-inner">PERS/SETT</span></span>
+                                    <div class="type-hotels type-info-left" title="<h4>BEST</h4> <hr> Tutto il testo che ti pare da inserire qui...">BEST</div>
+                                </div>
+                                <div class="dati-villaggio">
+                                    <h2>Villaggio Le Rosette Resort</h2>
+                                    <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+                                    <span>Calabria, Badolato</span>
+                                </div>
+                                <div class="overlay-landing"></div>
+                            </div>
+                            <div class="item">
+                                <div class="port_img">
+                                    <img src="assets/images/work-img1.jpg" alt="">
+                                    <div class="port_overlay text-center">
+                                        <a href="assets/images/work-img1.jpg" class="popup-img">+</a>
+                                    </div>
+                                    <span class="price price-offer">€175<span class="price-offer-inner">PERS/SETT</span></span>
+                                    <div class="type-hotels type-info-left" title="<h4>BEST</h4> <hr> Tutto il testo che ti pare da inserire qui...">BEST</div>
+                                </div>
+                                <div class="dati-villaggio">
+                                    <h2>Villaggio Le Rosette Resort</h2>
+                                    <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+                                    <span>Calabria, Badolato</span>
+                                </div>
+                                <div class="overlay-landing"></div>
+                            </div>
+
+                        </div>
+                    </div><!-- End off row -->
+                </div><!-- End off container -->
+            </section>
+            <!-- End off Product section -->
+
+
+
+
+            <!-- Tab section-->
+            <section id="tabs" class="team fix bg-white">
+                <div class="container">
+                    <div class="main_team roomy-40">
+                        <div class="tabbing"> <!-- Tab -->
+                            <ul class="tabNav">
+                                <li><a href="#tab1">Descrizione</a></li>
+                                <li><a href="#tab2">Spiaggia</a></li>
+                                <li><a href="#tab3">Ristorante</a></li>
+                                <li><a href="#tab4">Camere</a></li>
+                                <li><a href="#tab5">Animazione</a></li>
+                            </ul>
+                            <div class="tabContainer">
+                                <div class="tabContent" id="tab1">
+                                    <h3>Descrizione</h3>
+                                    <p>Lorem ipsum dolor sit amet, prompta molestie ad eam, ea commodo voluptaria referrentur pri, dicant consul est et. Corpora detraxit inciderint eam no, nonumy denique his id. Utroque percipit accusata usu eu, eu choro offendit consetetur nec. Cum at purto timeam cotidieque.</p>
+                                    <p>At sit modus posse porro, duis doming interesset id pro. Vis vero ignota cetero ex, mentitum vituperatoribus quo id, eam eu modo sententiae. Cu iudico rationibus eum, ne duo elit nostrum constituam. Mea ea atqui minim. Eros primis persius eu sed. Usu cu aperiri utroque. An per voluptua phaedrum percipitur, ne ius scribentur dissentiunt. Lobortis principes est te, inermis placerat hendrerit mea ne, duo dicat nonumy sententiae an. An mel eius noster, dolore vituperata efficiendi pro at. Electram incorrupte mea at, percipit torquatos instructior sed eu, unum dolores ne vel. Id has tacimates intellegam, putent recusabo corrumpit nam ea.</p>
+                                </div>
+                                <div class="tabContent" id="tab2">
+                                    <h3>Spiaggia</h3>
+                                    <p>At sit modus posse porro, duis doming interesset id pro. Vis vero ignota cetero ex, mentitum vituperatoribus quo id, eam eu modo sententiae. Cu iudico rationibus eum, ne duo elit nostrum constituam. Mea ea atqui minim. Eros primis persius eu sed. Usu cu aperiri utroque. An per voluptua phaedrum percipitur, ne ius scribentur dissentiunt. Lobortis principes est te, inermis placerat hendrerit mea ne, duo dicat nonumy sententiae an. An mel eius noster, dolore vituperata efficiendi pro at.</p>
+                                    <p>Lorem ipsum dolor sit amet, prompta molestie ad eam, ea commodo voluptaria referrentur pri, dicant consul est et. Corpora detraxit inciderint eam no, nonumy denique his id. Utroque percipit accusata usu eu, eu choro offendit consetetur nec. Cum at purto timeam cotidieque.</p>
+                                </div>
+                                <div class="tabContent" id="tab3">
+                                    <h3>Ristorante</h3>
+                                    <p>Lorem ipsum dolor sit amet, prompta molestie ad eam, ea commodo voluptaria referrentur pri, dicant consul est et. Corpora detraxit inciderint eam no, nonumy denique his id. Utroque percipit accusata usu eu, eu choro offendit consetetur nec. Cum at purto timeam cotidieque.</p>
+                                    <p>Ea oblique ceteros vix, ex quo paulo labore maiorum, falli detraxit ad pri. Ex sea populo tacimates definitionem, et mel sale erant, has ad probatus adipiscing. Mea cibo sententiae cotidieque ea. In viris quodsi lucilius vim, purto rebum graeco sea ad. In cum reque suscipit, moderatius philosophia sed ut. Denique platonem scribentur sed no, est natum electram abhorreant ei. Vis et possim quaerendum, sed primis nominavi ad. Nec munere lucilius ea, vel in latine erroribus, ius te porro regione. Te sed tollit tamquam invenire. Ad quo nihil virtute ancillae, pri ad idque singulis, iuvaret molestie dissentias ut cum.</p>
+                                </div>
+                                <div class="tabContent" id="tab4">
+                                    <h3>Camere</h3>
+                                    <p>Ea oblique ceteros vix, ex quo paulo labore maiorum, falli detraxit ad pri. Ex sea populo tacimates definitionem, et mel sale erant, has ad probatus adipiscing. Mea cibo sententiae cotidieque ea. In viris quodsi lucilius vim, purto rebum graeco sea ad.</p>
+                                    <p> In cum reque suscipit, moderatius philosophia sed ut. Denique platonem scribentur sed no, est natum electram abhorreant ei. Vis et possim quaerendum, sed primis nominavi ad. Nec munere lucilius ea, vel in latine erroribus, ius te porro regione. Te sed tollit tamquam invenire. Ad quo nihil virtute ancillae, pri ad idque singulis, iuvaret molestie dissentias ut cum.</p>
+                                </div>
+                                <div class="tabContent" id="tab5">
+                                    <h3>Animazione</h3>
+                                    <p>Ea oblique ceteros vix, ex quo paulo labore maiorum, falli detraxit ad pri. Ex sea populo tacimates definitionem, et mel sale erant, has ad probatus adipiscing. Mea cibo sententiae cotidieque ea. In viris quodsi lucilius vim, purto rebum graeco sea ad.</p>
+                                    <p> In cum reque suscipit, moderatius philosophia sed ut. Denique platonem scribentur sed no, est natum electram abhorreant ei. Vis et possim quaerendum, sed primis nominavi ad. Nec munere lucilius ea, vel in latine erroribus, ius te porro regione. Te sed tollit tamquam invenire. Ad quo nihil virtute ancillae, pri ad idque singulis, iuvaret molestie dissentias ut cum.</p>
+                                </div>
+                            </div>
+                        </div> <!-- End Tab -->
+                    </div>
+                </div><!-- End off row -->
+
+            </section>
+            <!-- End off tab section -->
+
+            <!--Dialogue section-->
+            <section id="dialogue" class="dialogue bg-grey roomy-40">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_dialogue text-center">
+                            <div class="col-md-12">
+                                <h3>Progettiamo le vostre <strong>vacanze da oltre 30 anni</strong>,<br />
+                                    garanzia di <strong>qualità e affidabilità</strong></h3>
+                            </div>
+                            <div>
+                                <button class="button-call-landing">
+                                    Chiama ora per un preventivo
+                                    <a href="tel:+390681153087"><span><i class="fa fa-phone" aria-hidden="true"></i> (+ 39) 06 81153087</span></a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!--Featured Section-->
-            <section id="features" class="features bg-grey">
+            <section id="features" class="features bg-white">
                 <div class="container">
                     <div class="row">
                         <div class="main_features fix roomy-70">
@@ -254,26 +481,6 @@
             </section><!-- End off Featured Section-->
 
 
-            <!--Dialogue section-->
-            <section id="dialogue" class="dialogue bg-white roomy-40">
-                <div class="container">
-                    <div class="row">
-                        <div class="main_dialogue text-center">
-                            <div class="col-md-12">
-                                <h3>Progettiamo le vostre <strong>vacanze da oltre 30 anni</strong>,<br />
-                                    garanzia di <strong>qualità e affidabilità</strong></h3>
-                            </div>
-                            <div>
-                                <button class="button-call-landing">
-                                    Chiama ora
-                                    <span><i class="fa fa-phone" aria-hidden="true"></i> (+ 39) 06 81153087</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             <!--Business Section-->
             <section id="business" class="business bg-blue roomy-70" style="display: none;">
                 <div class="business_overlay"></div>
@@ -313,344 +520,6 @@
                 </div>
             </section>
             <!-- End off Business section -->
-
-
-            <!--product section-->
-            <section id="product" class="product text-center bg-grey">
-                <div class="container">
-                    <div class="main_product roomy-40">
-                        <div class="head_title text-center fix">
-                            <h2 class="text-uppercase text-black">Le nostre Strutture</h2>
-                            <h5>Villaggi 4 stelle direttamente sul mare, scegli il meglio per la tua vacanza.</h5>
-                        </div>
-                        <div class="owl-carousel-landing owl-carousel owl-theme">
-                            <div class="item">
-                                <div class="port_img">
-                                    <img src="assets/images/work-img1.jpg" alt="">
-                                    <div class="port_overlay text-center">
-                                        <a href="assets/images/work-img1.jpg" class="popup-img">+</a>
-                                    </div>
-                                    <span class="price price-offer">€175<span class="price-offer-inner">PERS/SETT</span></span>
-                                    <div class="type-hotels type-info-left" title="<h4>BEST</h4> <hr> Tutto il testo che ti pare da inserire qui...">BEST</div>
-                                    <h3>Nome Villaggio/Servizio</h3>
-                                    <p class="desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes...</p>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="port_img">
-                                    <img src="assets/images/work-img1.jpg" alt="">
-                                    <div class="port_overlay text-center">
-                                        <a href="assets/images/work-img1.jpg" class="popup-img">+</a>
-                                    </div>
-                                    <h3>Nome Villaggio/Servizio</h3>
-                                    <p class="desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes...</p>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="port_img">
-                                    <img src="assets/images/work-img1.jpg" alt="">
-                                    <div class="port_overlay text-center">
-                                        <a href="assets/images/work-img1.jpg" class="popup-img">+</a>
-                                    </div>
-                                    <h3>Nome Villaggio/Servizio</h3>
-                                    <p class="desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes...</p>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="port_img">
-                                    <img src="assets/images/work-img1.jpg" alt="">
-                                    <div class="port_overlay text-center">
-                                        <a href="assets/images/work-img1.jpg" class="popup-img">+</a>
-                                    </div>
-                                    <h3>Nome Villaggio/Servizio</h3>
-                                    <p class="desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes...</p>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="port_img">
-                                    <img src="assets/images/work-img1.jpg" alt="">
-                                    <div class="port_overlay text-center">
-                                        <a href="assets/images/work-img1.jpg" class="popup-img">+</a>
-                                    </div>
-                                    <h3>Nome Villaggio/Servizio</h3>
-                                    <p class="desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes...</p>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="port_img">
-                                    <img src="assets/images/work-img1.jpg" alt="">
-                                    <div class="port_overlay text-center">
-                                        <a href="assets/images/work-img1.jpg" class="popup-img">+</a>
-                                    </div>
-                                    <h3>Nome Villaggio/Servizio</h3>
-                                    <p class="desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes...</p>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="port_img">
-                                    <img src="assets/images/work-img1.jpg" alt="">
-                                    <div class="port_overlay text-center">
-                                        <a href="assets/images/work-img1.jpg" class="popup-img">+</a>
-                                    </div>
-                                    <h3>Nome Villaggio/Servizio</h3>
-                                    <p class="desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes...</p>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="port_img">
-                                    <img src="assets/images/work-img1.jpg" alt="">
-                                    <div class="port_overlay text-center">
-                                        <a href="assets/images/work-img1.jpg" class="popup-img">+</a>
-                                    </div>
-                                    <h3>Nome Villaggio/Servizio</h3>
-                                    <p class="desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes...</p>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="port_img">
-                                    <img src="assets/images/work-img1.jpg" alt="">
-                                    <div class="port_overlay text-center">
-                                        <a href="assets/images/work-img1.jpg" class="popup-img">+</a>
-                                    </div>
-                                    <h3>Nome Villaggio/Servizio</h3>
-                                    <p class="desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes...</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- End off row -->
-                </div><!-- End off container -->
-            </section>
-            <!-- End off Product section -->
-
-
-            <!--product section-->
-            <section id="team" class="team fix">
-                <div class="container">
-                    <div class="main_team roomy-80">
-                        <div class="head_title text-center fix">
-                            <h2 class="text-uppercase">Soluzioni per la Calabria</h2>
-                            <h5>Abbiamo selezionato 10 villaggi turistici</h5>
-                        </div>
-
-                        <div id="team-slid" class="carousel slide carousel-fade" data-ride="carousel">
-                            <!-- Indicators -->
-                            <ol class="carousel-indicators">
-                                <li data-target="#team-slid" data-slide-to="0" class="active"></li>
-                                <li data-target="#team-slid" data-slide-to="1"></li>
-                                <li data-target="#team-slid" data-slide-to="2"></li>
-                            </ol>
-
-                            <!-- Wrapper for slides -->
-                            <div class="carousel-inner" role="listbox">
-                                <div class="item active">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-sm-4">
-                                                <div class="team_item team_content xs-m-top-30">
-                                                    <h2 class="desc-title">Villaggio Aquilia Resort</h2>
-                                                    <h4>
-                                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut odio. Nam sed est. Nam a risus et est iaculis adipiscing. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer ut justo. In tincidunt viverra nisl. Donec dictum malesuada magna. Curabitur id nibh auctor tellus adipiscing pharetra. Fusce vel justo non orci semper feugiat. Cras eu leo at purus ultrices tristique...
-                                                    </h4>
-
-                                                    <div class="divider"></div>
-
-                                                    <div class="team_socail">
-                                                        <h5>Calabria, Badolato</h5>
-                                                    </div>
-
-                                                </div>
-                                            </div><!-- End off col-sm-4 -->
-
-                                            <div class="col-sm-4">
-                                                <div class="team_item xs-m-top-30">
-                                                    <div class="port_img">
-                                                        <img src="assets/images/team-img1.jpg" alt="" />
-                                                    </div>
-                                                </div>
-                                            </div><!-- End off col-sm-4 -->
-
-                                            <div class="col-sm-4">
-                                                <div class="team_item team_skill">
-                                                    <div class="team_author">
-                                                        <h4>Valutazione</h4>
-                                                        <p>GB Viaggi</p>
-                                                    </div>
-
-                                                    <div class="team_skill_title fix m-top-40 m-bottom-40">
-                                                        <h5>Consigliato per</h5>
-                                                    </div>
-
-                                                    <div class="skill_bar sm-m-top-50 m-top-20">
-                                                        <div class="teamskillbar clearfix m-top-20" data-percent="80%">
-                                                            <h6 class="text-uppercase">Famiglia</h6>
-                                                            <div class="teamskillbar-bar"></div>
-                                                        </div> <!-- End Skill Bar -->
-
-                                                        <div class="teamskillbar clearfix m-top-50" data-percent="75%">
-                                                            <h6 class="text-uppercase">Gruppi</h6>
-                                                            <div class="teamskillbar-bar"></div>
-                                                        </div> <!-- End Skill Bar -->
-
-                                                        <div class="teamskillbar clearfix m-top-50" data-percent="90%">
-                                                            <h6 class="text-uppercase">Coppie</h6>
-                                                            <div class="teamskillbar-bar"></div>
-                                                        </div> <!-- End Skill Bar -->
-
-                                                        <div class="teamskillbar clearfix m-top-50" data-percent="75%">
-                                                            <h6 class="text-uppercase">Over 65</h6>
-                                                            <div class="teamskillbar-bar"></div>
-                                                        </div> <!-- End Skill Bar -->
-                                                    </div><!-- End off skill bar -->
-
-                                                </div>
-                                            </div><!-- End off col-sm-4 -->
-
-                                        </div><!-- End off row -->
-                                    </div>
-                                </div><!-- End off team -->
-
-                                <div class="item">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-sm-4">
-                                                <div class="team_item team_content xs-m-to
-                                                     p-30">
-                                                    <h2 class="desc-title">GB Best Le Rosette Resort</h2>
-                                                    <h4>
-                                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut odio. Nam sed est. Nam a risus et est iaculis adipiscing. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer ut justo. In tincidunt viverra nisl. Donec dictum malesuada magna. Curabitur id nibh auctor tellus adipiscing pharetra. Fusce vel justo non orci semper feugiat. Cras eu leo at purus ultrices tristique...
-                                                    </h4>
-                                                    <div class="divider"></div>
-
-                                                    <div class="team_socail">
-                                                        <h5>Calabria, Badolato</h5>
-                                                    </div>
-
-                                                </div>
-                                            </div><!-- End off col-sm-4 -->
-
-                                            <div class="col-sm-4">
-                                                <div class="team_item xs-m-top-30">
-                                                    <div class="port_img">
-                                                        <img src="assets/images/team-img1.jpg" alt="" />
-                                                    </div>
-                                                </div>
-                                            </div><!-- End off col-sm-4 -->
-
-                                            <div class="col-sm-4">
-                                                <div class="team_item team_skill">
-                                                    <div class="team_author">
-                                                        <h4>Valutazione</h4>
-                                                        <p>GB Viaggi</p>
-                                                    </div>
-
-                                                    <div class="team_skill_title fix m-top-40 m-bottom-40">
-                                                        <h5>Consigliato per</h5>
-                                                    </div>
-
-                                                    <div class="skill_bar sm-m-top-50 m-top-20">
-                                                        <div class="teamskillbar clearfix m-top-20" data-percent="80%">
-                                                            <h6 class="text-uppercase">Famiglia</h6>
-                                                            <div class="teamskillbar-bar"></div>
-                                                        </div> <!-- End Skill Bar -->
-
-                                                        <div class="teamskillbar clearfix m-top-50" data-percent="75%">
-                                                            <h6 class="text-uppercase">Gruppi</h6>
-                                                            <div class="teamskillbar-bar"></div>
-                                                        </div> <!-- End Skill Bar -->
-
-                                                        <div class="teamskillbar clearfix m-top-50" data-percent="90%">
-                                                            <h6 class="text-uppercase">Coppie</h6>
-                                                            <div class="teamskillbar-bar"></div>
-                                                        </div> <!-- End Skill Bar -->
-
-                                                        <div class="teamskillbar clearfix m-top-50" data-percent="75%">
-                                                            <h6 class="text-uppercase">Over 65</h6>
-                                                            <div class="teamskillbar-bar"></div>
-                                                        </div> <!-- End Skill Bar -->
-                                                    </div><!-- End off skill bar -->
-
-                                                </div>
-                                            </div><!-- End off col-sm-4 -->
-
-                                        </div><!-- End off row -->
-                                    </div>
-                                </div><!-- End off team -->
-
-                                <div class="item">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-sm-4">
-                                                <div class="team_item team_content xs-m-top-30">
-                                                    <h2 class="desc-title">Villaggio altro best da mettere</h2>
-                                                    <h4>
-                                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut odio. Nam sed est. Nam a risus et est iaculis adipiscing. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer ut justo. In tincidunt viverra nisl. Donec dictum malesuada magna. Curabitur id nibh auctor tellus adipiscing pharetra. Fusce vel justo non orci semper feugiat. Cras eu leo at purus ultrices tristique...
-                                                    </h4>
-
-                                                    <div class="divider"></div>
-
-                                                    <div class="team_socail">
-                                                        <h5>Calabria, Badolato</h5>
-                                                    </div>
-
-                                                </div>
-                                            </div><!-- End off col-sm-4 -->
-
-                                            <div class="col-sm-4">
-                                                <div class="team_item xs-m-top-30">
-                                                    <div class="port_img">
-                                                        <img src="assets/images/team-img1.jpg" alt="" />
-                                                    </div>
-                                                </div>
-                                            </div><!-- End off col-sm-4 -->
-
-                                            <div class="col-sm-4">
-                                                <div class="team_item team_skill">
-                                                    <div class="team_author">
-                                                        <h4>Valutazione</h4>
-                                                        <p>GB Viaggi</p>
-                                                    </div>
-
-                                                    <div class="team_skill_title fix m-top-40 m-bottom-40">
-                                                        <h5>Consigliato per</h5>
-                                                    </div>
-
-                                                    <div class="skill_bar sm-m-top-50 m-top-20">
-                                                        <div class="teamskillbar clearfix m-top-20" data-percent="80%">
-                                                            <h6 class="text-uppercase">Famiglia</h6>
-                                                            <div class="teamskillbar-bar"></div>
-                                                        </div> <!-- End Skill Bar -->
-
-                                                        <div class="teamskillbar clearfix m-top-50" data-percent="75%">
-                                                            <h6 class="text-uppercase">Gruppi</h6>
-                                                            <div class="teamskillbar-bar"></div>
-                                                        </div> <!-- End Skill Bar -->
-
-                                                        <div class="teamskillbar clearfix m-top-50" data-percent="90%">
-                                                            <h6 class="text-uppercase">Coppie</h6>
-                                                            <div class="teamskillbar-bar"></div>
-                                                        </div> <!-- End Skill Bar -->
-
-                                                        <div class="teamskillbar clearfix m-top-50" data-percent="75%">
-                                                            <h6 class="text-uppercase">Over 65</h6>
-                                                            <div class="teamskillbar-bar"></div>
-                                                        </div> <!-- End Skill Bar -->
-                                                    </div><!-- End off skill bar -->
-
-                                                </div>
-                                            </div><!-- End off col-sm-4 -->
-
-
-                                        </div><!-- End off row -->
-                                    </div><!-- End off row -->
-                                </div><!-- End off team -->
-
-                            </div>
-
-                        </div>
-                    </div><!-- End off row -->
-                </div><!-- End off container -->
-            </section>
-            <!-- End off Product section -->
 
 
             <!--Brand Section
@@ -915,7 +784,7 @@
                 </div>
                 <!-- Barra fixed -->
                 <div class="row-fluid action-bar">
-                    <div class="col-md-3 col-sm-3 col-xs-3">
+                    <div class="col-md-3 col-sm-3 col-xs-3 gb-color">
                         <a href="tel:+390681153087" onclick="gtag('event', 'generate_lead', {'event_category': 'engagement', 'event_label': 'Telefonata Action Bar'});
                                 fbq('track', 'Lead');" title="Contattaci"><i class="fa fa-phone" aria-hidden="true"></i><span class="back-under">Chiama</span></a>
                     </div>
@@ -927,7 +796,7 @@
                         <a href="http://www.facebook.com/sharer.php?u=http://www.gbviaggi.it" onclick="gtag('event', 'generate_lead', {'event_category': 'engagement', 'event_label': 'Condividi Fb'});" title="Condividi su Facebook"><i class="fa fa-share-alt" aria-hidden="true"></i><span class="back-under">Condividi</span></a>
                     </div>
                     <div class="col-md-3 col-sm-3 col-xs-3">
-                        <a href="https://api.whatsapp.com/send?phone=+390681153087&amp;text=[Cliente-web]%20Vorrei%20avere%20maggiori%20informazioni%20su.." onclick="gtag('event', 'generate_lead', {'event_category': 'engagement', 'event_label': 'Messaggio Whatsapp'});
+                        <a href="https://api.whatsapp.com/send?phone=+393273812905&amp;text=[Cliente-web]%20Vorrei%20avere%20maggiori%20informazioni%20su.." onclick="gtag('event', 'generate_lead', {'event_category': 'engagement', 'event_label': 'Messaggio Whatsapp'});
                                 fbq('track', 'Lead');" title="Prenota ora la tua vacanza.."><i class="fa fa-whatsapp" aria-hidden="true"></i><span class="back-under">Whatsapp</span></a>
                     </div>
                 </div>
@@ -949,6 +818,7 @@
         <script src="assets/js/bootsnav.js"></script>
         <script src="assets/js/owl.carousel.min.js"></script>
         <script src="assets/js/jquery-ui.min.js"></script>
+        <script src="assets/js/jquery-mTab-min.js"></script>
 
 
         <script src="assets/js/plugins.js"></script>

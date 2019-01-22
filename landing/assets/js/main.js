@@ -114,7 +114,10 @@ jQuery(document).ready(function ($) {
         "showButtonPanel": false,
         "firstDay": 1,
         "defaultDate": 0,
-        "minDate": 0
+        "minDate": 0,
+        onClose: function () {
+            $("#partenza").datepicker("show");
+        }
     });
 
     $.datepicker.regional['it'] = {
@@ -139,14 +142,18 @@ jQuery(document).ready(function ($) {
         initStatus: 'Scegliere una data', isRTL: false};
     $.datepicker.setDefaults($.datepicker.regional['it']);
 
-    /* Vincolo data secondo caleedario */
+    /* Vincolo data secondo caleedario con 7 giorni di selezione in più*/
     $("#arrivo").change(function () {
         //Aggiungo 7gg alla data selezionata
         var currentDate = $(this).datepicker('getDate');
         currentDate.setDate(currentDate.getDate());
-        $("#partenza").datepicker('setDate', currentDate);
+
+        var date2 = $('#arrivo').datepicker('getDate', '+7d');
+        date2.setDate(date2.getDate() + 7);
+        $('#partenza').datepicker('setDate', date2);
+
         $("#partenza").datepicker("destroy"); //distruggo
-        $("#partenza").datepicker({minDate: currentDate, dateFormat: "dd/mm/yy", showButtonPanel: false, "firstDay": 1});//reinizializzo
+        $("#partenza").datepicker({minDate: currentDate, dateFormat: "dd/mm/yy", showButtonPanel: false, firstDay: 1});//reinizializzo
     });
 
     /*===== Action bar =====*/
@@ -165,12 +172,70 @@ jQuery(document).ready(function ($) {
         }
     });
 
+    $('.tabbing').mTab({
+        navigation: ".tabNav",
+        container: ".tabContainer",
+        activeTab: 1,
+        activeClass: "active",
+        scrollOffset: true,
+        accordScreen: 768,
+        toggleClose: true,
+        animation: false,
+        openWithUrl: true,
+        callbackonclick: function () {
+        },
+        callback: function () {
+        }
+    });
+
     /*===== Form cons =====*/
     $(document).on("focus", "#dove-andare", function () {
         $("#form-when").slideDown('slow');
     });
-    $(document).on("focus", "#partenza, #arrivo", function () {
-        $("#form-user").slideDown('slow');
+    $(document).on("change", "#arrivo", function () {
+        $("#form-who").slideDown('slow');
+    });
+    $(document).on("change", "#ncamere", function () {
+        if ($("#ncamere").val() > 0) {
+            $("#form-user").slideDown('slow');
+        }
+    });
+
+    /* SISTEMAZIONI */
+
+    $("#ncamere").on('change', function () {
+
+        $("div.sistemazione-cont").empty();
+        var camereadd = $(this).val();
+
+        if (camereadd < 1) {
+            $("div.sistemazione-cont").empty();
+        } else {
+            for (var i = 0; i < camereadd; i++) {
+                $("div.sistemazione-cont").append('<fieldset class="sistemazione-inner"> <legend>Sistemazione ' + (i + 1) + ':</legend> <div class="row"> <div class="col-md-6 col-sm-6 col-xs-12"> <div class="form-group"> <label class="sr-only" for="form-first-adulti">* Numero adulti..</label> <select class="form-control rounded-sx rounded-dx" id="nadulti' + (i + 1) + '" required> <option value="x" disabled selected hidden>N. Adulti</option> <option value="1">1</option> <option value="2">2</option> <option value="3">3</option> <option value="4">4</option> <option value="5">5</option> </select> </div></div><div class="col-md-6 col-sm-6 col-xs-12"> <div class="form-group"> <label class="sr-only" for="form-last-bambini">* Numero bambini..</label> <select class="form-control rounded-sx rounded-dx nbambini-change" id="nbambini' + (i + 1) + '"> <option value="x" disabled selected hidden>N. Bambini</option> <option value="0">0</option> <option value="1">1</option> <option value="2">2</option> <option value="3">3</option> <option value="4">4</option> </select> </div></div></div><div class="row bimbishow"> <div class="eta-bambini-box eta' + (i + 1) + ' col-md-12 col-sm-12 col-xs-12"></div></div></fieldset>');
+            }
+        }
+    });
+
+    /* Modulo Sezione bambini EventListener */
+
+    $(document).on('change', 'select.nbambini-change', function () {
+
+        var selected = $(this);
+        var selectedval = selected.val();
+
+        selected.closest("fieldset").find("div.eta-bambini-box").empty();
+
+        if (selectedval >= 1) {
+            selected.closest("fieldset").find("div.eta-bambini-box").append('<div class="small-text">Seleziona l\'età  dei bambini.</div>');
+            for (var i = 0; i < selectedval; i++) {
+                selected.closest("fieldset").find("div.eta-bambini-box").append('<select class="eta-bamb"><option value="0">0</option><option value="1" selected>1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option></select>');
+            }
+            selected.closest("fieldset").find("div.bimbishow").slideDown("slow");
+        } else {
+            selected.closest("fieldset").find("div.bimbishow").slideUp("slow");
+            selected.closest("fieldset").find("div.eta-bambini-box").empty();
+        }
     });
 
 //End

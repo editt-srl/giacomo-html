@@ -48,10 +48,9 @@ Author URI: http://www.xpeedstudio.com
     .item_img i{
         right:0%;
     }
-
     .home {
-        padding-top: 140px;
-        padding-bottom: 100px;
+        padding-top: 95px;
+        padding-bottom: 35px;
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 97%, 50% 100%, 0 97%);
         clip-path: polygon(0 0, 100% 0, 100% 97%, 50% 100%, 0 97%);
     }
@@ -99,8 +98,9 @@ Author URI: http://www.xpeedstudio.com
     .xs-m-bottom-20{
         margin-bottom:20px;
     }
-
-
+    .maine_action h2{
+        font-size: 1.3em;
+    }
     .main_home .home_text h2{
         font-size:24px;
     }
@@ -118,6 +118,9 @@ Author URI: http://www.xpeedstudio.com
     }
     .bg-mega{
         padding-bottom: 77px;
+    }
+    section#form-customer{
+        padding-top: 10px !important;
     }
 
 }
