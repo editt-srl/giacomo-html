@@ -2229,10 +2229,9 @@ p.Title-best{
  --------------------------------------------------------------------------------*/
 .home-sales-img-over-bg-region{
     position: absolute;
-    bottom: 27px;
+    bottom: 0px;
     text-align: left;
     color: #fff;
-    height: 15%;
     z-index: 2;
 }
 .price-box-region{
@@ -9072,7 +9071,7 @@ ul.contact-list li span.contact-list-inner-tel:before{
 }
 .total{
     background: #e7f1f7;
-    padding: 18px 0;
+    padding: 20px;
 }
 .total ol{
     margin: 10px 10px 10px 0;
