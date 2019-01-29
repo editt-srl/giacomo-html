@@ -1296,11 +1296,26 @@
         });
 
         /*===== Slide payment =====*/
+        // Test per intercettare i classe-box aperti e nel caso cambio icona
+        $("div.supplementi, div.assicurazione, div.servizi, div.tipocamera").each(function () {
+            var classeSel = $(this).attr("class");
+            var selector = 'div.' + classeSel + '-box';
+            if ($(this).next(selector).css('display') !== 'none') {
+                $(this).find('i').toggleClass('fa-chevron-down').toggleClass("fa-chevron-up");
+            }
+        });
+
+        //Cambio icone le icone al click categoria
         $(document).on("click", "div.supplementi, div.assicurazione, div.servizi, div.tipocamera", function () {
             var classeSel = $(this).attr("class");
             var selector = 'div.' + classeSel + '-box';
             $(this).closest('div.row').find(selector).slideToggle();
-            $(this).closest('div.row').find('div.' + classeSel + ' i').toggleClass('fa-chevron-down').toggleClass("fa-chevron-up");
+            var iNow = $(this).closest('div.row').find('div.' + classeSel + ' i');
+            if (iNow.hasClass("fa-chevron-down")) {
+                iNow.toggleClass('fa-chevron-down').toggleClass("fa-chevron-up");
+            } else {
+                iNow.toggleClass('fa-chevron-up').toggleClass("fa-chevron-down");
+            }
         });
 
         $("div.struttura-selezionata, div.dettagli-volo").on("click", function () {
