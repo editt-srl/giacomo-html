@@ -1085,9 +1085,12 @@ Home Section style
 .main_home .home_text h2{
     font-size: 36px;
     font-weight: 400;
-    background: #e62264;
     display: inline;
-    padding: 8px 20px;
+}
+.background-fuxia{
+    display: inline-block;
+    background: #e62264;
+    padding: 5px 35px;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     border-radius: 50px;
@@ -1209,7 +1212,7 @@ Featured section style
     position: absolute;
     color: #fff;
     font-size: 1.5em;
-    top: 45%;
+    top: 35%;
     background: #e62264;
     padding: 10px 14px 10px 12px;
     border: 1px solid #8e143d;
@@ -1225,7 +1228,7 @@ Featured section style
     position: absolute;
     color: #fff;
     font-size: 1.5em;
-    top: 45%;
+    top: 35%;
     background: #e62264;
     padding: 10px 14px 10px 12px;
     border: 1px solid #8e143d;
@@ -1558,6 +1561,9 @@ work Section style
     margin-left:-15px;
 
 }
+iframe#hJd61VQ-1548172214508{
+    bottom: 72px !important;
+}
 
 
 
@@ -1657,7 +1663,7 @@ work Section style
     color: #ff0000;
 }
 footer .action-bar{
-    background-color: #1a1a1a;
+    background-color: #092d40;
     position: fixed;
     bottom: 0;
     left: 0;
