@@ -923,6 +923,9 @@ body.menu-active {
     top: 0;
     opacity: 0;
 }
+#ui-datepicker-div{
+    z-index: 10001 !important;
+}
 /*End Select*/
 /*Block Quote*/
 blockquote {
