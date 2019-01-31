@@ -1486,8 +1486,9 @@ blockquote:before {
 
 /* Idle State of the stars */
 .rating-stars ul > li.star > i.fa {
-    font-size:1em; /* Change the size of the stars */
+    font-size:1.8em; /* Change the size of the stars */
     color:#ccc; /* Color on idle state */
+    padding: 8px 0 0;
 }
 
 /* Hover state of the stars */
@@ -11977,8 +11978,12 @@ footer .back-under {
     .table {
         max-width: inherit;
     }
-    .supplementi p, .assicurazione p, .servizi p{
+    .supplementi p, .assicurazione p, .servizi p, .tipocamera p{
         font-size: 0.8em;
+    }
+    .supplementi span, .assicurazione span, .servizi span, .tipocamera span, .camera-edit span {
+        font-size: 1.2em;
+        font-weight: 500;
     }
     .icon-pay-services {
         width: 20%;
@@ -14180,8 +14185,8 @@ a.read-more-review:before{
     text-align: justify;
     padding: 5px 14px 0px 0;
     overflow-y: auto;
-    height: 220px;
-    margin-bottom: 15px;
+    height: 150px;
+    margin-bottom: 25px;
 }
 .review-cont p:before{
     color: #ccc;
@@ -14196,12 +14201,11 @@ a.read-more-review:before{
     content: close-quote;
 }
 .header-rew {
-    height: 120px;
-    margin: 0px 0px 20px;
+    margin: 20px 0;
     border-bottom: 1px dotted #d2d0d0;
 }
 .review{
-    border: 1px solid #d2d0d0;
+    margin: 10px 0 20px;
 }
 .star-review-page{
     color: #f4c604;
@@ -14219,34 +14223,60 @@ field-submit-space{
 h3.review-title{
     text-align: right;
     color: #092d40;
+    font-size: 1.3em;
 }
 .review h5{
     text-align: right;
 }
 .user-review {
     float: left;
-    margin: 10px 10px 0px 0px;
+    margin: 0px 10px 10px 0px;
     border: 3px solid #91af24;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
 }
 .name-review{
     text-align: left;
     color: #91af24;
+}
+h3.name-review{
+    margin-top: 0px;
+    margin-bottom: 3px;
 }
 .data-review{
     color: #afafaf;
     text-align: left;
 }
 .img-review{
-    width: auto; height: 210px;
-}
-.img-review img{
-    width: 300px;
+    width: 100%;
 }
 .img-review-border{
-    border-right: 1px solid #d0d0d0;
+    border-bottom: 3px dotted #dedede;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
-.video-review{
-
+.img-review-container{
+    overflow: hidden;
+    width: calc(33.333% - 6px);
+    height: 70px;
+    margin: 1px;
+    display: inline-block;
+    position: relative;
+}
+.img-review-container:after{
+    content: '+';
+    color: #fff;
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    font-size: 2em;
+    border-radius: 50%;
+    width: 29px;
+    height: 29px;
+    background: rgba(0, 0, 0, 0.4);
+    line-height: 28px;
+    cursor: pointer;
 }
 .inserisci-recensione-button{
     width: 100%;
@@ -14414,9 +14444,6 @@ label.input-toggle > input {
 }
 
 @media (max-width: 468px) {
-    .img-review-border{
-        display: none;
-    }
     mobile-border{
         border-left: 1px solid grey !important;
     }
