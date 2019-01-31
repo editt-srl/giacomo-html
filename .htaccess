@@ -1,0 +1,103 @@
+SetOutputFilter DEFLATE
+AddOutputFilter DEFLATE text/plain
+AddOutputFilter DEFLATE text/xml
+AddOutputFilter DEFLATE application/xhtml+xml
+AddOutputFilter DEFLATE text/css
+AddOutputFilter DEFLATE application/xml
+AddOutputFilter DEFLATE image/svg+xml
+AddOutputFilter DEFLATE application/rss+xml
+AddOutputFilter DEFLATE application/atom_xml
+AddOutputFilter DEFLATE application/x-javascript
+AddOutputFilter DEFLATE application/x-httpd-php
+AddOutputFilter DEFLATE application/x-httpd-fastphp
+AddOutputFilter DEFLATE application/x-httpd-eruby
+AddOutputFilter DEFLATE text/html
+SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip dont-vary
+SetEnvIfNoCase Request_URI \.(?:exe|t?gz|zip|bz2|sit|rar)$ no-gzip dont-vary
+SetEnvIfNoCase Request_URI \.pdf$ no-gzip dont-vary
+SetEnvIfNoCase Request_URI \.avi$ no-gzip dont-vary
+SetEnvIfNoCase Request_URI \.mov$ no-gzip dont-vary
+SetEnvIfNoCase Request_URI \.mp3$ no-gzip dont-vary
+SetEnvIfNoCase Request_URI \.mp4$ no-gzip dont-vary
+SetEnvIfNoCase Request_URI \.rm$ no-gzip dont-vary
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+BrowserMatch ^Mozilla/4\.0[678] no-gzip
+BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+
+# Usare versione con www forzata
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^([a-z.]+)?gbviaggi\.it$ [NC]
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule .? http://www.%1gbviaggi.it%{REQUEST_URI} [R=301,L]
+
+# ErrorDocument 401 http://www.gbviaggi.it/401.php
+# ErrorDocument 403 http://www.gbviaggi.it/403.php
+# ErrorDocument 404 http://www.gbviaggi.it/404.php
+# ErrorDocument 500 http://www.gbviaggi.it/500.php
+
+# proc/self/environ? no!
+RewriteCond %{QUERY_STRING} proc/self/environ [OR]
+
+#Blocca ogni script che cerca di settare un valore mosConfig attraverso l'URL
+RewriteCond %{QUERY_STRING} mosConfig_[a-zA-Z_]{1,21}(=|\%3D) [OR]
+
+# Blocca ogni script base64_encode crap
+RewriteCond %{QUERY_STRING} base64_encode.*(.*) [OR]
+
+#Blocca ogni script che contiene un tag <script> nell'URL
+RewriteCond %{QUERY_STRING} (<|%3C).*script.*(>|%3E) [NC,OR]
+
+# Blocca ogni script che cerca di settare una variabile globale PHP via URL
+RewriteCond %{QUERY_STRING} GLOBALS(=|[|\%[0-9A-Z]{0,2}) [OR]
+
+# Blocca ogni script che cerca di modificare una variabile a _REQUEST via URL
+RewriteCond %{QUERY_STRING} _REQUEST(=|[|\%[0-9A-Z]{0,2})
+
+# Invia tutte le richieste bloccate alla pagina di errore 403!
+RewriteRule ^(.*)$ index.php [F,L]
+
+# proteggi htaccess file
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+
+
+# CACHE BROWSER
+
+# Turn on Expires and set default to 0
+ExpiresActive On
+ExpiresDefault A0
+
+# Set up caching on media files for 1 settimana
+<FilesMatch "\.(flv|ico|avi|mov|ppt|doc|mp3|wmv|wav)$">
+ExpiresDefault A604800
+Header append Cache-Control "public"
+</FilesMatch>
+
+# Set up caching on media files for 1 week
+<FilesMatch "\.(gif|jpg|jpeg|png|swf)$">
+ExpiresDefault A604800
+Header append Cache-Control "public"
+</FilesMatch>
+
+# Set up 1 week
+<FilesMatch "\.(js|css)$">
+ExpiresDefault A604800
+Header append Cache-Control "proxy-revalidate"
+</FilesMatch>
+
+# Set up 2 Hour caching on commonly updated files
+<FilesMatch "\.(xml|txt|html)$">
+ExpiresDefault A7200
+Header append Cache-Control "proxy-revalidate"
+</FilesMatch>
+
+# Force no caching for dynamic files
+<FilesMatch "\.(php|cgi|pl|htm)$">
+ExpiresActive Off
+Header set Cache-Control "private, no-cache, no-store, proxy-revalidate, no-transform"
+Header set Pragma "no-cache"
+</FilesMatch>
+
+# fine CACHE BROWSER
