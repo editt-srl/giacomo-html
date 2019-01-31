@@ -1486,7 +1486,7 @@ blockquote:before {
 
 /* Idle State of the stars */
 .rating-stars ul > li.star > i.fa {
-    font-size:1.8em; /* Change the size of the stars */
+    font-size:1.3em; /* Change the size of the stars */
     color:#ccc; /* Color on idle state */
     padding: 8px 0 0;
 }
@@ -1724,6 +1724,9 @@ footer .social-icons{
         padding-left: 20px;
         padding-right: 20px;
     }
+    .rating-stars ul > li.star > i.fa {
+        font-size: 1.1em;
+    }
 }
 @media (max-width: 991px) {
     .awe-btn.awe-btn-lager {
@@ -1791,6 +1794,9 @@ footer .social-icons{
         width: 15%;
         text-align: center;
         padding: 15px 0 0;
+    }
+    .rating-stars ul > li.star > i.fa {
+        font-size:1.8em; /* Change the size of the stars */
     }
 }
 @media (max-width: 767px) {
@@ -11979,7 +11985,7 @@ footer .back-under {
         max-width: inherit;
     }
     .supplementi p, .assicurazione p, .servizi p, .tipocamera p{
-        font-size: 0.8em;
+        font-size: 0.9em;
     }
     .supplementi span, .assicurazione span, .servizi span, .tipocamera span, .camera-edit span {
         font-size: 1.2em;
