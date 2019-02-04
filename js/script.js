@@ -27,51 +27,28 @@
 
 
         var WindowWidth = $(window).width();
-
         Placeholder();
-
         BarsMenu();
-
         MenuResize();
-
         DropDown();
-
         SelectTag();
-
         FocusBlurInput();
-
         Calendar();
-
         OwlMagazine();
-
         PriceSlider();
-
         TimeSlider();
-
         DetailSlide();
-
         ScrollTable();
-
         CalendarChart();
-
         MemberReview();
-
         PostSlide();
-
         PageSlide();
-
         SelectTable();
-
         GoogleMapHotel();
-
         HotelLocationMap();
-
         GoogleMapContact();
-
         ajaxContactForm();
-
         PopupRoom();
-
         $(window).load(function (event) {
             $('#preloader').fadeOut(1000);
             MenuResponsive();
@@ -82,22 +59,17 @@
             SubMenuClick();
             parallaxInit();
         });
-
         $(window).resize(function (event) {
             MenuResponsive();
             MenuResize();
         });
-
         $(window).scroll(function (event) {
             HeaderScroll();
             ScrollSiderBar();
         });
-
         $(window).on('load resize', function () {
             var windowHeight = $(window).height();
             $('.page-not-found, .page-comingsoon').css('min-height', windowHeight);
-
-
             var menuType = $('.navigation').data('menu-type'),
                     windowWidth = window.innerWidth,
                     windown_top = $(window).scrollTop();
@@ -111,7 +83,6 @@
                         });
             }
         });
-
         /*===== Bars Click Menu =====*/
         function BarsMenu() {
             $('#bars').on('click', function () {
@@ -123,7 +94,6 @@
                 });
                 return false;
             });
-
             $('#bars-close').on('click', function () {
                 if ($('.navigation').hasClass('nav-active')) {
                     $('.navigation').removeClass('nav-active');
@@ -171,24 +141,20 @@
                 if ($(this).find('> ul').length) {
 
                     $(this).append('<span><i class="fa fa-angle-down"></i></span>');
-
                     $(this).find('li').each(function () {
 
                         if ($(this).find('ul').length) {
 
                             $(this).append('<span><i class="fa fa-angle-right"></i></span>');
-
                         }
                     });
                 }
             });
-
             $('.navigation ul li').each(function () {
                 if ($(this).find('ul').length) {
                     $(this).addClass('menu-parent');
                 }
             });
-
         }
 
         function MenuResponsive() {
@@ -203,7 +169,6 @@
                         .closest('.header');
                 _Header.next().css('margin-top', 0);
                 $('.bars, .bars-close, .logo-banner').show();
-
                 $('.navigation .sub-menu').each(function () {
                     $(this)
                             .removeClass('left right');
@@ -222,7 +187,6 @@
                         });
                 _Header.next().css('margin-top', $('.header').height());
                 $('.bars, .bars-close, .logo-banner').hide();
-
                 $('.navigation .sub-menu').each(function () {
                     var offsetLeft = $(this).offset().left,
                             width = $(this).width(),
@@ -254,7 +218,6 @@
                     value = parseInt($menu.attr('data-responsive'), 10),
                     resize_w = WindowWidth,
                     $header = $('.header');
-
             if ($menu.length) {
 
                 if (value > 0) {
@@ -302,12 +265,10 @@
                 var text = $this.find('.current > a').text();
                 $this.find('.dropdown-head').prepend(text);
             });
-
             _dropdown.on('click', function (event) {
                 $(this).toggleClass('open');
                 event.stopPropagation();
             });
-
             $(document).click(function () {
                 _dropdown.removeClass('open');
             });
@@ -319,7 +280,6 @@
                 var $this = $(this),
                         $span = $this.parent('.select').find('span'),
                         textchange = $this.find('option:selected').text();
-
                 $span.text(textchange);
             })
 
@@ -341,14 +301,12 @@
             $('.form-field .field-input').on('keydown', function () {
 
                 var $label = $(this).parent('.form-field').find('label');
-
                 if ($label.hasClass('forcus') == false) {
                     $label.addClass('focus');
                 }
 
             }).on('keyup', function () {
                 var $this = $(this);
-
                 var $label = $this.parent('.form-field').find('label')
 
                 if ($this.val() != '') {
@@ -360,7 +318,6 @@
                     $label.removeClass('focus');
                 }
             });
-
         }
 
         /*===== Calendar =====*/
@@ -394,21 +351,17 @@
             dateFormat: 'dd/mm/yy', firstDay: 1,
             initStatus: 'Scegliere una data', isRTL: false};
         $.datepicker.setDefaults($.datepicker.regional['it']);
-
         /* Vincolo data secondo caleedario con 7 giorni di selezione in più*/
         $(".arrivocal").change(function () {
             //Aggiungo 7gg alla data selezionata
             var currentDate = $(this).datepicker('getDate');
             currentDate.setDate(currentDate.getDate());
-
             var date2 = $('.arrivocal').datepicker('getDate', '+7d');
             date2.setDate(date2.getDate() + 7);
             $('.partenzacal').datepicker('setDate', date2);
-
             $(".partenzacal").datepicker("destroy"); //distruggo
-            $(".partenzacal").datepicker({minDate: currentDate, dateFormat: "dd/mm/yy", showButtonPanel: false, firstDay: 1});//reinizializzo
+            $(".partenzacal").datepicker({minDate: currentDate, dateFormat: "dd/mm/yy", showButtonPanel: false, firstDay: 1}); //reinizializzo
         });
-
         /* Data di nascita */
         $(document).on('focus', ".calendar-data-nascita", function () {
             $(this).datepicker({
@@ -419,7 +372,6 @@
                 yearRange: "-100:+0"
             });
         });
-
         /*===== BANNER SLIDE =====*/
         function BannerSlide() {
             if ($('#banner-slide').length > 0) {
@@ -460,7 +412,6 @@
                     startAt: 0,
                     opacity: 1
                 });
-
                 $('.icon-play').click(function (event) {
                     if ($(this).hasClass('fa-play')) {
                         $('#banner-player').YTPPlay();
@@ -490,9 +441,7 @@
                         $parent.find('.thumnail-item').eq(this.currentItem).addClass('active');
                     }
                 });
-
                 var owl_magazine_data = $("#owl-magazine-ds").data('owlCarousel');
-
                 $('#magazine-thum').on('click', '.thumnail-item', function () {
                     var $this = $(this);
                     if ($this.hasClass('active') == false) {
@@ -543,11 +492,9 @@
                 $('.dati-fatturazione').slideToggle();
             }
         });
-
         /*=====  Payment Methods Change  =====*/
         $('ul.pay-li li input[type=radio]').click(function () {
             var typePay = $(this).attr('data-trigger-box');
-
             switch (typePay) {
                 case "carta":
                     $('div#bonifico').slideUp();
@@ -562,7 +509,6 @@
                     $('div#bonifico').slideUp();
             }
         });
-
         /*=====  Price Slider =====*/
         function PriceSlider() {
             if ($('.price-slider').length) {
@@ -575,25 +521,17 @@
 
                         var $this = $(this),
                                 values = $(this).find('.range').attr('value').split(',');
-
                         $this.slider("values", values);
-
                         $this.prepend("<label class='label-min'>€" + values[0] + "</label>");
-
                         $this.append("<label class='label-max'>€" + values[1] + "</label>");
-
                     },
                     slide: function (event, ui) {
 
                         var $this = $(this),
                                 values = ui.values;
-
                         $this.find('.label-min').text("€" + values[0] + "");
-
                         $this.find('.label-max').text("€" + values[1] + "");
-
                         $this.find('.range').attr('value', values);
-
                     }
                 });
             }
@@ -612,34 +550,22 @@
                                 start = parseInt($this.attr('data-start'), 10),
                                 end = parseInt($this.attr('data-end'), 10),
                                 hours_start = Math.floor(start / 60);
-
                         if (isNaN(end) == false) {
 
                             $this.slider("option", "range", true);
-
                             $this.slider("values", [start, end]);
-
                             var hours_end = Math.floor(end / 60),
                                     time_end = TimeSlide(hours_end, end - (hours_end * 60), true),
                                     time_start = TimeSlide(hours_start, start - (hours_start * 60), true);
-
                             $this.prepend("<label class='label-min'>" + time_start + "</label>");
-
                             $this.append("<label class='label-max'>" + time_end + "</label>");
-
                             $this.find('.range').attr('value', time_start + ',' + time_end);
-
                         } else {
                             var time_start = TimeSlide(hours_start, start - (hours_start * 60), false);
-
                             $this.slider("value", start);
-
                             $this.slider("option", "range", "min");
-
                             $this.append("<label class='label-max'>" + time_start + "</label>");
-
                             $this.find('.range').attr('value', time_start);
-
                         }
 
 
@@ -649,35 +575,22 @@
                         var $this = $(this),
                                 rager = $this.slider("option", "range"),
                                 values, hours_start, hours_end, time_start, time_end;
-
                         if (rager == true) {
 
                             values = ui.values;
-
                             hours_start = Math.floor(values[0] / 60);
-
                             hours_end = Math.floor(values[1] / 60);
-
                             time_start = TimeSlide(hours_start, values[0] - (hours_start * 60), true);
-
                             time_end = TimeSlide(hours_end, values[1] - (hours_end * 60), true);
-
                             $this.find('.label-min').text(time_start);
-
                             $this.find('.label-max').text(time_end);
-
                             $this.find('.range').attr('value', time_start + ',' + time_end);
-
                         } else {
 
                             values = ui.value;
-
                             hours_start = Math.floor(values / 60);
-
                             time_start = TimeSlide(hours_start, values - (hours_start * 60), false);
-
                             $this.find('.label-max').text(time_start);
-
                             $this.find('.range').attr('value', time_start);
                         }
                     }
@@ -694,13 +607,10 @@
             if (e == true) {
                 if (hours.length == 1)
                     hours = '0' + hours;
-
                 if (minutes < 10)
                     minutes = '0' + minutes;
-
                 if (minutes == 0)
                     minutes = '00';
-
                 if (hours >= 12) {
                     if (hours == 12) {
                         hours = hours;
@@ -737,9 +647,7 @@
                 }
                 if (minutes < 10)
                     minutes = '0' + minutes;
-
                 t = 'm';
-
                 time = hours + 'h ' + minutes + t;
             }
 
@@ -750,14 +658,12 @@
         function DetailSlide() {
             var slidelager = $("#slide-room-lg");
             var slidethumnail = $("#slide-room-sm");
-
             slidelager.owlCarousel({
                 singleItem: true,
                 autoPlay: false,
                 navigation: false,
                 pagination: false,
             });
-
             slidethumnail.owlCarousel({
                 mouseDrag: false,
                 navigation: true,
@@ -765,7 +671,6 @@
                 itemsCustom: [[320, 3], [480, 5], [768, 6], [992, 7], [1200, 8]],
                 pagination: false
             });
-
             $("#slide-room-sm").on("click", ".owl-item", function (e) {
                 e.preventDefault();
                 if ($(this).hasClass('synced')) {
@@ -855,7 +760,6 @@
             if (WindowWidth >= 1200) {
                 var scroll = $(window).scrollTop(),
                         top = $("#header").outerHeight();
-
                 $('.detail-cn').each(function (index, value) {
 
                     var $this = $(this),
@@ -864,7 +768,6 @@
                             $taget = $this.find('.scroll-heading'),
                             eheight = $taget.outerHeight(),
                             scroll_top = scroll - offset + top;
-
                     if (scroll_top > 0) {
                         if (height - scroll_top >= 0 && (height - eheight) > scroll_top) {
                             $taget.css({
@@ -878,13 +781,11 @@
                         $taget.css({'position': 'static'});
                     }
                 });
-
                 $('.scroll-heading a').on('click', function () {
                     var id = $(this).attr('href');
                     $('html, body').stop().animate({
                         scrollTop: $(id).offset().top - 70
                     }, 1000);
-
                     return false;
                 });
             }
@@ -936,23 +837,19 @@
             if ($('#hotel-maps').length) {
                 var map;
                 var bounds = new google.maps.LatLngBounds();
-
                 var mapOptions = {
                     zoom: 16,
                     scrollwheel: false,
                     mapTypeId: google.maps.MapTypeId.ROADMAP
                 };
-
                 // Display a map on the page
                 map = new google.maps.Map(document.getElementById("hotel-maps"), mapOptions);
-
                 // Multiple Markers
                 var markers = [
                     ['Aquilia Resort', 38.5881288, 16.5635858],
                     ['Le Rosette Resort', 38.6897462, 15.9357737],
                     ['Baia Dei Gigli', 38.914939, 17.0766723]
                 ];
-
                 var infoWindowContent = [["\
                                         <div class='maps-item'>\
                                             <a href='#' class='maps-image'>\
@@ -975,11 +872,9 @@
                                             </div>\
                                         </div>\
                                     "]];
-
                 var infoWindow = new google.maps.InfoWindow({maxWidth: 600}),
                         marker, i,
                         image = 'images/icon-maker.png';
-
                 for (i = 0; i < markers.length; i++) {
                     var beach = markers[i];
                     var position = new google.maps.LatLng(beach[1], beach[2]);
@@ -990,7 +885,6 @@
                         icon: image,
                         title: beach[0]
                     });
-
                     // Allow each marker to have an info window
                     google.maps.event.addListener(marker, 'click', (function (marker, i) {
                         return function () {
@@ -998,7 +892,6 @@
                             infoWindow.open(map, marker);
                         }
                     })(marker, i));
-
                     // Automatically center the map fitting all markers on the screen
                     map.fitBounds(bounds);
                 }
@@ -1021,25 +914,18 @@
                     scrollwheel: false,
                     mapTypeId: google.maps.MapTypeId.ROADMAP
                 };
-
                 var map = new google.maps.Map(document.getElementById("contact-maps"), mapProp);
-
                 var marker = new google.maps.Marker({
                     position: myCenter
                 });
-
                 marker.setMap(map);
-
                 var infowindow = new google.maps.InfoWindow({
                     content: mapContent,
                     maxWidth: 200
                 });
-
                 google.maps.event.addListener(marker, 'click', function () {
                     infowindow.open(map, marker);
                 });
-
-
             }
         }
 
@@ -1057,10 +943,7 @@
                     scrollwheel: false,
                     mapTypeId: google.maps.MapTypeId.ROADMAP
                 };
-
                 var map = new google.maps.Map(document.getElementById("hotel-detail-map"), mapProp);
-
-
             }
         }
 
@@ -1141,7 +1024,6 @@
             navigationText: ['<div class="prev-collection"><i class="fa fa-chevron-left"></i></div>', '<div class="next-collection"><i class="fa fa-chevron-right"></i></div>'],
             itemsCustom: [[320, 1], [480, 1], [768, 3], [992, 3], [1200, 4], [1600, 5]]
         });
-
         /*===== Carousel Recensioni =====*/
         $('.owl-carousel-recensioni').owlCarousel({
             loop: true,
@@ -1153,13 +1035,23 @@
             navigationText: ['<div class="prev"><i class="fa fa-chevron-left"></i></div>', '<div class="next"><i class="fa fa-chevron-right"></i></div>'],
             itemsCustom: [[320, 1], [480, 1], [768, 3], [992, 3], [1200, 4], [1600, 5]]
         });
-
+        /*===== Carousel Prezzi =====*/
+        $('.owl-carousel-prezzi').owlCarousel({
+            loop: true,
+            margin: 10,
+            autoplay: true,
+            autoplayTimeout: 1000,
+            autoplayHoverPause: true,
+            navigation: true,
+            navigationText: ['<div class="prev-prezzi"><i class="fa fa-angle-left"></i></div>', '<div class="next-prezzi"><i class="fa fa-angle-right"></i></div>'],
+            itemsCustom: [[320, 1], [480, 1], [768, 2], [992, 3], [1200, 3], [1600, 3]]
+        });
         /*===== Tagliare testo anteprima =====*/
         function anteprima(elems, length) {
             $.each($(elems), function () {
                 var item_html = $(this).html(); // salvo in una variabile il contenuto dell'elemento
                 item_html = item_html.replace(/<\/?[^>]+>/gi, ''); // tolgo eventuali tags HTML
-                item_html = jQuery.trim(item_html);  // elimino eventuali spazi bianchi prima e dopo
+                item_html = jQuery.trim(item_html); // elimino eventuali spazi bianchi prima e dopo
                 $(this).html(item_html.substring(0, length) + '...');
             });
             return this;
@@ -1171,14 +1063,10 @@
         anteprima('.desc-cut', 278);
         anteprima('.magazine-body', 1000);
         anteprima('.post .post-text p', 180);
-
-
-
         /*===== Random persone connesse 1 - 10 =====*/
         setInterval(function () {
             $(".person-on-page").html(Math.floor(Math.random() * 4) + 1);
         }, 35000);
-
         /*===== Social Share =====
          $('.home-sales-bar-bg-share').on("click", function () {
          $(this).animate({width: "100%"}, 200);
@@ -1191,7 +1079,6 @@
             $(this).next().slideToggle();
             $(this).toggleClass('title-sidebar2');
         });
-
         /*===== Altezza automatica slider =====*/
         jQuery(document).ready(function ($) {
             var cut = ($('.logo').outerHeight()) + ($('#first-offer').outerHeight());
@@ -1202,7 +1089,6 @@
                 $('#slider-banner').css({minHeight: total, marginTop: cut});
             });
         });
-
         /*===== Fix Payment dx =====*/
         $(window).scroll(function () {
             if ($('#fix-vert').length) {
@@ -1210,15 +1096,11 @@
                     var elem = $('#fix-vert');
                     var container = $('#measure');
                     var header = $('#header');
-
                     var headerHeight = header.height();
-
                     var elemOffset = elem.offset().top;
                     var elemheight = elem.height();
-
                     var containerheight = container.height();
                     var containerOffset = container.offset().top;
-
                     var appari = (containerOffset - headerHeight);
                     var scompari = (((containerOffset + containerheight) - headerHeight) - elemheight);
                     // var scompariFix = (((containerOffset + containerheight) - headerHeight) - elemheight);
@@ -1239,7 +1121,6 @@
                 }
             }
         });
-
         /*===== Price box =====*/
         if ($(window).width() > 768) {
             $(".drag-point").draggable({axis: "x"});
@@ -1261,12 +1142,10 @@
             , callback: function () {
             }
         });
-
         /*===== Anno attuale in footer =====*/
         var dd = new Date();
         var nn = dd.getFullYear();
         $(".anno-attuale").html(nn);
-
         /*===== Action bar =====*/
         $(window).scroll(function () {
             clearTimeout($.data(this, 'scrollTimer'));
@@ -1282,19 +1161,16 @@
                 $("div.action-bar").hide();
             }
         });
-
         /*===== Slide camere =====*/
         $(".result-go-to-pay").on("click", function () {
             var itembox = $(this).closest('.hotel-list-item');
             itembox.children('.camere-container').slideToggle();
         });
-
         $("a.img-single-hotel").hover(function () {
             $(this).append('<i class="fa fa-camera icon"></i>');
         }, function () {
             $(this).find('i.icon').remove();
         });
-
         /*===== Slide payment =====*/
         // Test per intercettare i classe-box aperti e nel caso cambio icona
         $("div.supplementi, div.assicurazione, div.servizi, div.tipocamera").each(function () {
@@ -1304,7 +1180,6 @@
                 $(this).find('i').toggleClass('fa-chevron-down').toggleClass("fa-chevron-up");
             }
         });
-
         //Cambio icone le icone al click categoria
         $(document).on("click", "div.supplementi, div.assicurazione, div.servizi, div.tipocamera", function () {
             var classeSel = $(this).attr("class");
@@ -1317,14 +1192,12 @@
                 iNow.toggleClass('fa-chevron-up').toggleClass("fa-chevron-down");
             }
         });
-
         $("div.struttura-selezionata, div.dettagli-volo").on("click", function () {
             var classeSel = $(this).attr("class");
             var selector = 'div.' + classeSel + '-box';
             $(selector).slideToggle();
             $(this).find("i[class*='-square-o']").toggleClass('fa-plus-square-o').toggleClass('fa-minus-square-o');
         });
-
         /*Prima box pagamento camera aperta + icon*/
         $('.box-personalizza').first().css("display", "inherit");
         $('.camera-edit i[class*="-square-o"]').first().toggleClass('fa-minus-square-o').toggleClass('fa-plus-square-o');
@@ -1334,17 +1207,14 @@
             $(this).closest('div.row').find('div.box-personalizza').slideToggle();
             $(this).closest('div.row').find(".camera-edit i[class*='-square-o']").toggleClass('fa-plus-square-o').toggleClass('fa-minus-square-o');
         });
-
         /*===== Slide ospiti camera =====*/
         $(document).on("click", "div.ospiti-camera-singola", function () {
             $(this).closest('div.camere-list').find('div.ospiti-list').slideToggle();
         });
-
         $(document).on("click", "div.singolo-ospite-trigger-data", function () {
             $(this).closest('div.singoli-ospiti-container').find('div.dati-ospite').slideToggle();
             $(this).closest('div.singoli-ospiti-container').find("i[class*='fa-chevron-']").toggleClass('fa-chevron-down').toggleClass("fa-chevron-up");
         });
-
         /*===== Info box =====*/
         $(document).on("click", ".box-info span", function () {
             $(this).closest('div.box-info').find('div.box-info-inner').slideToggle();
@@ -1352,9 +1222,6 @@
         $(document).on("click", ".camera-details", function () {
             $(this).next('.camera-details-inner').slideToggle();
         });
-
-
-
         /*===== Tooltip =====*/
         $('.right-info').tooltip({
             trigger: "click",
@@ -1402,19 +1269,15 @@
                     $(this).removeClass('hover');
                 }
             });
-
         }).on('mouseout', function () {
             $(this).parent().children('li.star').each(function (e) {
                 $(this).removeClass('hover');
             });
         });
-
-
         /* 2. Action to perform on click */
         $('#stars li').on('click', function () {
             var onStar = parseInt($(this).data('value'), 10); // The star currently selected
             var stars = $(this).parent().children('li.star');
-
             for (var i = 0; i < stars.length; i++) {
                 $(stars[i]).removeClass('selected');
             }
@@ -1427,15 +1290,12 @@
             var ratingValue = parseInt($('#stars li.selected').last().data('value'), 10);
             console.log(ratingValue);
         });
-
-
         /*===== Upload files video foto =====*/
         var inputs = document.querySelectorAll('.inputfile');
         Array.prototype.forEach.call(inputs, function (input)
         {
             var label = input.nextElementSibling,
                     labelVal = label.innerHTML;
-
             input.addEventListener('change', function (e)
             {
                 var fileName = '';
@@ -1443,26 +1303,24 @@
                     fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
                 else
                     fileName = e.target.value.split('\\').pop();
-
                 if (fileName)
                     label.querySelector('span').innerHTML = fileName;
                 else
                     label.innerHTML = labelVal;
             });
         });
-
         /*===== Recensioni div =====*/
         var recensioniDivLap = '<div class="box-sospeso">Scrivi la tua recensione, condividi la tua esperianza.<br><textarea>Scrivi qui..</textarea></div>';
         var recensioniDivMobile = '<div class="box-sospeso-mobile">Scrivi la tua recensione, condividi la tua esperianza.<br><textarea>Scrivi qui..</textarea></div>';
         if ($(window).width() > 992) {
             $("div.scrivi-recensione").append(recensioniDivLap);
-            $('label.scrivi-recensione-label').on('click resize', function () {
+            $('label.scrivi-recensione-label').on('click', function () {
                 $('div.box-sospeso').toggleClass("arrow-top-rec");
                 $('div.box-sospeso').slideToggle();
             });
         } else {
             $("div.rec-mobile-container").append(recensioniDivMobile);
-            $('label.scrivi-recensione-label').on('click resize', function () {
+            $('label.scrivi-recensione-label').on('click', function () {
                 $('div.rec-mobile-container').slideToggle();
             });
         }
@@ -1475,10 +1333,8 @@
             $(this).children('div.cont-child-li').slideToggle();
             $(this).children('i').toggleClass('fa-caret-down').toggleClass('fa-caret-up');
         });
-
     });
 })(jQuery);
-
 /* OUT OF document.ready */
 
 /*===== Fancy box control =====*/

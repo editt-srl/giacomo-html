@@ -1798,6 +1798,9 @@ footer .social-icons{
     .rating-stars ul > li.star > i.fa {
         font-size:1.8em; /* Change the size of the stars */
     }
+    .title-wrap-single-resort p {
+        margin-bottom: 25px !important;
+    }
 }
 @media (max-width: 767px) {
     .tabs-head.nav-tabs-two li {
@@ -13813,6 +13816,24 @@ p.title-carousel{
     color: #4c4b4b;
     padding: 0 10px;
 }
+.owl-carousel-prezzi{
+    width: calc(100% - 40px);
+    margin: 0 auto;
+}
+.prev-prezzi{
+    position: absolute;
+    left: -15px;
+    top: 60px;
+    font-size: 2em;
+    color: #929292;
+}
+.next-prezzi{
+    position: absolute;
+    right: -15px;
+    top: 60px;
+    font-size: 2em;
+    color: #929292;
+}
 
 /* 27. Recensioni
  --------------------------------------------------------------------------------*/
@@ -13936,9 +13957,7 @@ a.read-more-review:before{
     display: none;
 }
 .pricebox{
-    width: 360px;
     height: 150px;
-    display: inline-block;
     margin: 5px;
     background: #fff;
     border: 2px dashed #c7c6c6;
@@ -13948,7 +13967,9 @@ a.read-more-review:before{
     color: #91af24;
     position: absolute;
     top: -8px;
-    left: 29px;
+    text-align: center;
+    left: 0;
+    right: 0;
 }
 .pricebox .anno-price{
     width: 144px;
@@ -13969,7 +13990,9 @@ a.read-more-review:before{
 .pricebox .price-number{
     position: absolute;
     bottom: 13px;
-    left: 112px;
+    text-align: center;
+    left: 0;
+    right: 0;
     font-size: 5em;
     font-family: 'BebasNeuewebfont';
     color: #092d40;
@@ -13977,7 +14000,9 @@ a.read-more-review:before{
 .pricebox .pers-sett-single-s{
     position: absolute;
     bottom: 8px;
-    left: 132px;
+    text-align: center;
+    left: 0;
+    right: 0;
     color: #a5a5a5;
 }
 
