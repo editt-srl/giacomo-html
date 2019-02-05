@@ -297,8 +297,6 @@ section {
     height: 4px;
     background-color: #082c40;
 }
-
-
 nav ul {
     margin: 0;
     padding: 0;
@@ -13816,25 +13814,20 @@ p.title-carousel{
     color: #4c4b4b;
     padding: 0 10px;
 }
-.owl-carousel-prezzi{
-    width: calc(100% - 40px);
-    margin: 0 auto;
-}
 .prev-prezzi{
     position: absolute;
-    left: -15px;
-    top: 60px;
-    font-size: 2em;
-    color: #929292;
+    left: -50px;
+    top: 50px;
+    font-size: 3em;
+    color: #b9b7b7;
 }
 .next-prezzi{
     position: absolute;
-    right: -15px;
-    top: 60px;
-    font-size: 2em;
-    color: #929292;
+    right: -50px;
+    top: 50px;
+    font-size: 3em;
+    color: #b9b7b7;
 }
-
 /* 27. Recensioni
  --------------------------------------------------------------------------------*/
 
@@ -13941,17 +13934,16 @@ a.read-more-review:before{
 /* 28. Barra Prezzi
  --------------------------------------------------------------------------------*/
 .price-container{
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-    padding: 20px 0 15px;
-    cursor: move;
+    padding: 15px 10px;
     -webkit-box-shadow: inset 0px 0px 9px 1px rgba(0,0,0,0.20);
     -moz-box-shadow: inset 0px 0px 9px 1px rgba(0,0,0,0.20);
     box-shadow: inset 0px 0px 9px 1px rgba(0,0,0,0.20);
     border-right: 1px solid #cac8c8;
     border-left: 1px solid #cac8c8;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
 }
 .price-container::-webkit-scrollbar {
     display: none;
@@ -14451,6 +14443,30 @@ label.input-toggle > input {
     .form-field label span {
         font-size: 0.9em;
     }
+    .owl-carousel-prezzi{
+        width: calc(100% - 60px);
+        margin: 0 auto;
+    }
+    .prev-prezzi{
+        left: -18px;
+        top: 60px;
+        font-size: 2em;
+        color: #092d40;
+    }
+    .next-prezzi{
+        right: -18px;
+        top: 60px;
+        font-size: 2em;
+        color: #092d40;
+    }
+    .price-container{
+        padding: 15px 0;
+        -webkit-box-shadow: inset 0px 0px 9px 1px rgba(0,0,0,0.20);
+        -moz-box-shadow: inset 0px 0px 9px 1px rgba(0,0,0,0.20);
+        box-shadow: inset 0px 0px 9px 1px rgba(0,0,0,0.20);
+        border-right: 0px;
+        border-left: 0px;
+    }
 }
 @media (max-width: 767px) {
     mobile-border{
@@ -14480,5 +14496,9 @@ label.input-toggle > input {
     }
     .form-hotel .form-search .form-field {
         border: initial !important;
+    }
+    .mobile-container{
+        padding-left: 5px;
+        padding-right: 5px;
     }
 }
