@@ -8732,7 +8732,7 @@ ul.contact-list li span.contact-list-inner-tel:before{
 }
 .payment-room .payment-info h2 {
     color: #092d40;
-    font-size: 28px;
+    font-size: 1.9em;
     line-height: 42px;
     font-weight: 400;
     margin: 0;
@@ -9718,6 +9718,17 @@ p.tel-payment i{
     left: 10px;
     color: #092d40;
     font-size: 1.3em;
+}
+p.date-price-quotation {
+    color: grey;
+}
+p.date-price-quotation i {
+    margin-right: 5px;
+}
+p.date-price-quotation span{
+    padding: 0 5px;
+    display: inline-block;
+    color: #91af24;
 }
 
 /* 18. Cart
@@ -14313,10 +14324,13 @@ h3.name-review{
     background: #91af24;
     top: 98px;
     left: 0;
-    padding: 5px 4px 1px;
+    padding: 5px 8px 2px;
     line-height: 17px;
     color: white;
-    display:none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    display: none;
 }
 .box-sospeso textarea{
     width: 100%;
@@ -14324,6 +14338,13 @@ h3.name-review{
     margin-top: 5px;
     color: #092d40;
     padding: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.box-sospeso p{
+    padding: 5px;
+    margin: 0;
 }
 div.arrow-top-rec:before {
     border: 12px solid #91af24;
