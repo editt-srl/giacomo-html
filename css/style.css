@@ -9266,6 +9266,11 @@ div.dettagli-volo-box{
 .camera-type small{
     color: grey;
 }
+.camera-type small:before{
+    content: "/";
+    padding: 3px;
+    color: grey;
+}
 .slides-payment{
     margin-top: 0px;
     padding-left: 0 !important;
@@ -12855,6 +12860,16 @@ footer .back-under {
     .download-catalogue{
         margin: 10px;
         padding: 5px 0;
+    }
+    .camera-type small{
+        color: grey;
+        display: block;
+    }
+    .camera-type small:before{
+        display: none;
+    }
+    .camera-type {
+        padding: 0px 0 5px;
     }
 }
 @media (max-width: 480px) {
