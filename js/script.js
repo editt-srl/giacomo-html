@@ -484,6 +484,12 @@
 
         }
 
+        /*=====  Barra Cambia ricerca =====*/
+
+        $('.bar-container-trigger').click(function () {
+            $('.bar-container').slideToggle();
+        });
+
         /*=====  Cecked Fattura =====*/
         $('#fatturazione').click(function () {
             if ($(this).is(':checked')) {
@@ -1310,7 +1316,7 @@
             });
         });
         /*===== Recensioni div =====*/
-        var recensioniDivLap = '<div class="box-sospeso">Scrivi la tua recensione, condividi la tua esperianza.<br><textarea>Scrivi qui..</textarea></div>';
+        var recensioniDivLap = '<div class="box-sospeso"><p>Scrivi la tua recensione, condividi la tua esperianza.</p><textarea>Scrivi qui la tua recensione..</textarea></div>';
         var recensioniDivMobile = '<div class="box-sospeso-mobile">Scrivi la tua recensione, condividi la tua esperianza.<br><textarea>Scrivi qui..</textarea></div>';
         if ($(window).width() > 992) {
             $("div.scrivi-recensione").append(recensioniDivLap);

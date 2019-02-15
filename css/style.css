@@ -171,6 +171,7 @@ input {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
+    padding: 0;
 }
 section {
     position: relative;
@@ -9735,6 +9736,74 @@ p.date-price-quotation span{
     display: inline-block;
     color: #91af24;
 }
+.bar-container{
+    padding: 15px;
+    background: #ffffff;
+    border: 20px solid #f4c604;
+}
+.bar-container-trigger{
+    display: block;
+    width: 200px;
+    padding: 10px 0 10px;
+    background: #f4c604;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1em;
+    text-transform: uppercase;
+    -webkit-border-bottom-right-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    cursor: pointer;
+}
+.bar-container-trigger i{
+    padding: 0 10px;
+    font-size: 1em;
+    color: #092d40;
+}
+.from-container input, .to-container input{
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    border: 0;
+    outline: none;
+    color: #092d40;
+    background-color: transparent;
+    font-weight: 600;
+    border-bottom: 1px dashed #91af24;
+}
+.person-container span{
+    display: block;
+    padding-right: 20px;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    border: 0;
+    outline: none;
+    color: #092d40;
+    background-color: transparent;
+    font-weight: 600;
+    border-bottom: 1px dashed #91af24;
+    font-size: 19px;
+    width: 100%;
+    font-family: 'Lato', Arial, Verdana;
+}
+.from-container input::placeholder, .to-container input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #092d40;
+    opacity: 1; /* Firefox */
+    line-height: 29px;
+}
+.from-container input:-ms-input-placeholder, .to-container input:-ms-input-placeholder  { /* Internet Explorer 10-11 */
+    color: #092d40;
+    line-height: 29px;
+}
+.from-container input::-ms-input-placeholder, .to-container input:-ms-input-placeholder { /* Microsoft Edge */
+    color: #092d40;
+    line-height: 29px;
+}
 
 /* 18. Cart
  --------------------------------------------------------------------------------*/
@@ -13500,6 +13569,28 @@ footer .back-under {
     footer .copyright {
         margin-top: 30px;
     }
+    .bar-container-trigger {
+        display: block;
+        font-size: 1.1em;
+        -webkit-border-bottom-right-radius: 0px;
+        -webkit-border-bottom-left-radius: 0px;
+        -moz-border-radius-bottomright: 0px;
+        -moz-border-radius-bottomleft: 0px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        cursor: pointer;
+        width: 100%;
+        box-shadow: none;
+    }
+    .bar-container{
+        display: none;
+    }
+    .from-container, .to-container, .person-container span{
+        margin: 10px 0;
+    }
+    .grand-total span {
+        background: #e62264;
+    }
 }
 @media (max-width: 320px) {
     /*Navigation*/
@@ -14532,6 +14623,9 @@ label.input-toggle > input {
     }
     .form-hotel .form-search .form-field {
         border: initial !important;
+    }
+    .field-destination{
+        margin-top: 10px;
     }
     .mobile-container{
         padding-left: 5px;
