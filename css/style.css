@@ -9737,7 +9737,6 @@ p.date-price-quotation span{
     color: #91af24;
 }
 .bar-container{
-    padding: 15px;
     background: #ffffff;
     border: 20px solid #f4c604;
 }
@@ -9787,9 +9786,16 @@ p.date-price-quotation span{
     background-color: transparent;
     font-weight: 600;
     border-bottom: 1px dashed #91af24;
-    font-size: 19px;
+    font-size: 18px;
     width: 100%;
     font-family: 'Lato', Arial, Verdana;
+}
+.from-container, .to-container, .person-container span{
+    margin: 22px 0 0;
+}
+.search-form-align{
+    margin: 10px 0;
+    text-align: center;
 }
 .from-container input::placeholder, .to-container input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #092d40;
@@ -13584,9 +13590,6 @@ footer .back-under {
     }
     .bar-container{
         display: none;
-    }
-    .from-container, .to-container, .person-container span{
-        margin: 10px 0;
     }
     .grand-total span {
         background: #e62264;
