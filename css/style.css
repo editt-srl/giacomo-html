@@ -9795,7 +9795,7 @@ p.date-price-quotation span{
 }
 .search-form-align{
     margin: 10px 0;
-    text-align: center;
+    text-align: right;
 }
 .from-container input::placeholder, .to-container input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #092d40;
@@ -13593,6 +13593,10 @@ footer .back-under {
     }
     .grand-total span {
         background: #e62264;
+    }
+    .search-form-align {
+        margin: 20px 0 10px;
+        text-align: center;
     }
 }
 @media (max-width: 320px) {
