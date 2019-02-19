@@ -3136,11 +3136,30 @@ label.destinazione-ricerca{
     width: 100%;
     overflow: hidden;
 }
-.camera-form-prenotazione{
-    padding: 5px 0;
-    margin: 10px 0 5px;
-    border-top: 1px solid gainsboro;
-    background: #f1f1f1;
+.camera-form-prenotazione {
+    padding: 8px 5px;
+    margin: 8px 0 5px;
+    border: 1px solid #dcdcdc;
+    background: #efefef;
+}
+#divCamere div:first-child{
+    padding: 5px;
+    font-weight: 600;
+}
+.text-right {
+    font-size: small;
+    text-align: right;
+    text-transform: uppercase;
+}
+.text-right:after {
+    content: "\f05c";
+    padding-left: 5px;
+    color: #0c0c0c;
+    font-family: FontAwesome;
+    font-size: small;
+}
+a.text-right {
+    color: #0c0c0c;
 }
 .modal {
     z-index: 99999 !important;
