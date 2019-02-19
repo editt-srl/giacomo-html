@@ -212,6 +212,8 @@ section {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
     background-size: cover;
 }
 
@@ -226,6 +228,8 @@ section {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
     background-size: cover;
 }
 
@@ -777,7 +781,7 @@ body.menu-active {
     background-color: #fff;
     border: 1px solid #dedede;
     padding: 0 0 10px 0;
-    width: 340px;
+    width: 22em !important;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
@@ -3137,6 +3141,9 @@ label.destinazione-ricerca{
     margin: 10px 0 5px;
     border-top: 1px solid gainsboro;
     background: #f1f1f1;
+}
+.modal {
+    z-index: 99999 !important;
 }
 /*
 .sales-item .home-sales-img:after {
@@ -8720,7 +8727,7 @@ ul.contact-list li span.contact-list-inner-tel:before{
     line-height: 28px;
     margin: 5px 0 0 0;
 }
-.payment-room > .row {
+.payment-room > .row, .payment-room > form > .row{
     margin-left: 0px;
     margin-right: 0px;
 }
@@ -12135,7 +12142,7 @@ footer .back-under {
         margin-top: 50px;
     }
     .banner .tabs-cat {
-        margin-top: 60px;
+        margin: 40px auto 0;
     }
     .banner .category-singer {
         margin-top: 50px;

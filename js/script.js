@@ -1091,9 +1091,6 @@
             var win = $(window).height();
             var total = win - cut;
             $('#slider-banner').css({minHeight: total, marginTop: cut});
-            $(window).resize(function () {
-                $('#slider-banner').css({minHeight: total, marginTop: cut});
-            });
         });
         /*===== Fix Payment dx =====*/
         $(window).scroll(function () {
