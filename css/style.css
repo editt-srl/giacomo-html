@@ -891,6 +891,16 @@ body.menu-active {
     border-width: 0;
     color: #999999;
 }
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year{
+    padding: 8px 14px;
+    margin: 8px 1%;
+    border: 0px;
+    box-sizing: border-box;
+    color: #092d40;
+    background-color: transparent;
+    font-weight: 600;
+    border-bottom: 1px dashed #91af24;
+}
 /*End Calendar*/
 /*Select*/
 .select {
@@ -8750,7 +8760,7 @@ ul.contact-list li span.contact-list-inner-tel:before{
     margin-left: 0px;
     margin-right: 0px;
 }
-.payment-room > .row > [class*="col-"] {
+.payment-room > .row > [class*="col-"], .payment-room > form > .row > [class*="col-"] {
     padding-left: 30px;
     padding-right: 30px;
 }
@@ -9799,7 +9809,7 @@ p.date-price-quotation span{
     font-weight: 600;
     border-bottom: 1px dashed #91af24;
 }
-.person-container span{
+.person-container span, .person-container > label > div > span{
     display: block;
     padding-right: 20px;
     cursor: pointer;
@@ -14211,6 +14221,42 @@ a.read-more-review:before{
 .tabContainer .tabContent.mTabActive {
     opacity: 1;
     display: block;
+}
+.recensioni-singola-struttura {
+    border: 1px solid #cccccc;
+    margin-bottom: 10px;
+    padding: 5px 10px 5px 5px;
+}
+#recensioni-singola-struttura img{
+    width: 100px;
+    float: left;
+    margin: 0 10px 0 0;
+}
+#recensioni-singola-struttura h3{
+    margin-top: 0px;
+    margin-bottom: 5px;
+    color: #092d40;
+    padding-left: 110px;
+    font-size: 1.5em;
+}
+#recensioni-singola-struttura p{
+    padding-left: 110px;
+    text-align: justify;
+    color: #666666;
+}
+#recensioni-singola-struttura span{
+    font-size: small;
+    color: #e61c65;
+    display: block;
+    margin-bottom: 5px;
+}
+#recensioni-singola-struttura span.star-recensioni-singola-struttura{
+    color: #f4c604;
+    display: block;
+    margin-bottom: 5px;
+}
+#recensioni-singola-struttura span.star-recensioni-singola-struttura i{
+    margin-right: 3px;
 }
 .mResTabbing .mResAccordAnchor {
     display: none;
