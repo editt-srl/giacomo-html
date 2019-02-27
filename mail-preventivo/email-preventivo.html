@@ -1,0 +1,630 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Tempo-Responsive Email Template</title>
+
+        <style type="text/css">
+            /* Client-specific Styles */
+            div, p, a, li, td { -webkit-text-size-adjust:none; }
+            #outlook a {padding:0;} /* Force Outlook to provide a "view in browser" menu link. */
+            html{width: 100%; }
+            body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0;}
+            /* Prevent Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */
+            .ExternalClass {width:100%;} /* Force Hotmail to display emails at full width */
+            .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;} /* Force Hotmail to display normal line spacing. */
+            #backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;}
+            img {outline:none; text-decoration:none;border:none; -ms-interpolation-mode: bicubic;}
+            a img {border:none;}
+            .image_fix {display:block;}
+            p {margin: 0px 0px !important;}
+            table td {border-collapse: collapse;}
+            table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }
+            a {color: #33b9ff;text-decoration: none;text-decoration:none!important;}
+            /*STYLES*/
+            table[class=full] { width: 100%; clear: both; }
+            /*IPAD STYLES*/
+            @media only screen and (max-width: 640px) {
+                a[href^="tel"], a[href^="sms"] {
+                    text-decoration: none;
+                    color: #33b9ff; /* or whatever your want */
+                    pointer-events: none;
+                    cursor: default;
+                }
+                .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+                    text-decoration: default;
+                    color: #33b9ff !important;
+                    pointer-events: auto;
+                    cursor: default;
+                }
+                table[class=devicewidth] {width: 440px!important;text-align:center!important;}
+                table[class=devicewidthinner] {width: 420px!important;text-align:center!important;}
+                img[class=banner] {width: 440px!important;height:220px!important;}
+                img[class=col2img] {width: 440px!important;height:220px!important;}
+
+
+            }
+            /*IPHONE STYLES*/
+            @media only screen and (max-width: 480px) {
+                a[href^="tel"], a[href^="sms"] {
+                    text-decoration: none;
+                    color: #33b9ff; /* or whatever your want */
+                    pointer-events: none;
+                    cursor: default;
+                }
+                .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+                    text-decoration: default;
+                    color: #33b9ff !important;
+                    pointer-events: auto;
+                    cursor: default;
+                }
+                table[class=devicewidth] {width: 280px!important;text-align:center!important;}
+                table[class=devicewidthinner] {width: 260px!important;text-align:center!important;}
+                img[class=banner] {width: 280px!important;height:140px!important;}
+                img[class=col2img] {width: 280px!important;height:140px!important;}
+
+
+            }
+        </style>
+
+    </head>
+    <body>
+        <!-- Start of preheader -->
+        <table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="preheader" >
+            <tbody>
+                <tr>
+                    <td>
+                        <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                            <tbody>
+                                <tr>
+                                    <td width="100%">
+                                        <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                                            <tbody>
+                                                <!-- Spacing -->
+                                                <tr>
+                                                    <td width="100%" height="20"></td>
+                                                </tr>
+                                                <!-- Spacing -->
+                                                <tr>
+                                                    <td width="100%" align="center" valign="middle" style="font-family: Helvetica, arial, sans-serif; font-size: 13px;color: #122944" st-content="preheader">
+                                                        Preventivo inviato il 26/02/2019 alle ore 17:24
+                                                    </td>
+                                                </tr>
+                                                <!-- Spacing -->
+                                                <tr>
+                                                    <td width="100%" height="20"></td>
+                                                </tr>
+                                                <!-- Spacing -->
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- End of preheader -->
+        <!-- Start of header -->
+        <table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="header">
+            <tbody>
+                <tr>
+                    <td>
+                        <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                            <tbody>
+                                <tr>
+                                    <td width="100%">
+                                        <table width="90%" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="padding: 0 0 15px;">
+                                                        <!-- logo -->
+                                                        <table bgcolor="#ffffff" width="140" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="140" height="50" align="center">
+                                                                        <div class="imgpop">
+                                                                            <a target="_blank" href="#">
+                                                                                <img src="https://www.gbviaggi.net/editt/mail-preventivo/logo.png" alt="" border="0" width="160" height="50" style="display:block; border:none; outline:none; text-decoration:none;">
+                                                                            </a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!-- end of logo -->
+                                                        <!-- start of menu -->
+                                                        <table bgcolor="#ffffff" width="250" height="50" border="0" align="right" valign="middle" cellpadding="0" cellspacing="0" border="0" class="devicewidth">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td height="50" align="center" valign="middle" style="font-family: Helvetica, arial, sans-serif; font-size: 13px;color: #e62264" st-content="menu">
+                                                                        <a href="tel:+390681153087" style="color: #122944;text-decoration: none;">☎ <strong style="color: #e62264; font-size: 2em; margin-left: 10px;">06 81153087</strong></a>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!-- end of menu -->
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- End of Header -->
+        <table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="footer">
+            <tbody>
+                <tr>
+                    <td>
+                        <table width="600" height="50" bgcolor="#e62264" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                            <tbody>
+                                <tr>
+                                    <td width="100%">
+                                        <table bgcolor="#e62264" width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                                            <tbody>
+                                                <!-- Spacing -->
+                                                <tr>
+                                                    <td height="10" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                                                </tr>
+                                                <!-- Spacing -->
+                                                <tr>
+                                                    <td>
+                                                        <!-- Social icons -->
+                                                        <table  width="100%" align="center" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td align="center">
+                                                                        <div class="imgpop">
+                                                                            <a target="_blank" href="#" style="font-weight: 600; font-size: 1.2em; font-family: arial; text-transform: uppercase;color: #fff">
+                                                                                Villaggio Club Aquilia Resort
+                                                                            </a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!-- end of Social icons -->
+                                                    </td>
+                                                </tr>
+                                                <!-- Spacing -->
+                                                <tr>
+                                                    <td height="10" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                                                </tr>
+                                                <!-- Spacing -->
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- Start of seperator -->
+        <table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="seperator">
+            <tbody>
+                <tr>
+                    <td>
+                        <table width="600" align="center" cellspacing="0" cellpadding="0" border="0" class="devicewidth">
+                            <tbody>
+                                <tr>
+                                    <td align="center" height="30" style="font-size:1px; line-height:1px;">&nbsp;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- End of seperator -->
+        <!-- Start of main-banner -->
+        <table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="banner">
+            <tbody>
+                <tr>
+                    <td>
+                        <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                            <tbody>
+                                <tr>
+                                    <td width="100%">
+                                        <table width="90%" align="center" cellspacing="0" cellpadding="0" border="0" class="devicewidth">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="font-family: Helvetica, arial, sans-serif; font-size: 18px; color: #122944; text-align:left; line-height: 24px;">
+                                                        Gentile Maria,
+                                                    </td>
+                                                </tr>
+                                                <!-- end of title -->
+                                                <!-- Spacing -->
+                                                <tr>
+                                                    <td width="100%" height="15" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                                                </tr>
+                                                <!-- /Spacing -->
+                                                <!-- content -->
+                                                <tr>
+                                                    <td style="font-family: Helvetica, arial, sans-serif; font-size: 14px; color: #889098; text-align:left; line-height: 24px; padding: 0 0 10px">
+                                                        ti inviamo in allegato a questa email la nostra migliore proposta per i servizi da te richiesti:
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <!-- end of image -->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- End of main-banner -->
+        <!-- Start of seperator -->
+        <table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="seperator">
+            <tbody>
+                <tr>
+                    <td>
+                        <table width="600" align="center" cellspacing="0" cellpadding="0" border="0" class="devicewidth">
+                            <tbody>
+                                <tr>
+                                    <td align="center" height="30" style="font-size:1px; line-height:1px;">&nbsp;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- End of seperator -->
+        <!-- Start of Left Image -->
+        <table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="left-image">
+            <tbody>
+                <tr>
+                    <td>
+                        <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                            <tbody>
+                                <tr>
+                                    <td width="100%">
+                                        <table width="90%" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <!-- Start of left column -->
+                                                        <table width="280" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                                                            <tbody>
+                                                                <!-- image -->
+                                                                <tr>
+                                                                    <td width="280" height="140" align="center" class="devicewidth">
+                                                                        <img src="https://www.gbviaggi.net/editt/mail-preventivo/struttura.jpg" alt="" border="0" width="280" height="140" style="display:block; border:none; outline:none; text-decoration:none;-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px;" class="col2img">
+                                                                    </td>
+                                                                </tr>
+                                                                <!-- /image -->
+                                                            </tbody>
+                                                        </table>
+                                                        <!-- end of left column -->
+                                                        <!-- spacing for mobile devices-->
+                                                        <table align="left" border="0" cellpadding="0" cellspacing="0" class="mobilespacing">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="100%" height="15" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!-- end of for mobile devices-->
+                                                        <!-- start of right column -->
+                                                        <table align="right" border="0" cellpadding="0" cellspacing="0" class="devicewidth" width="45%">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <table align="center" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                                                                            <tbody>
+                                                                                <!-- title -->
+                                                                                <tr>
+                                                                                    <td style="font-family: Helvetica, arial, sans-serif; font-size: 18px; color: #122944; text-align:left; line-height: 24px;">
+                                                                                        Villaggio Club Baia dei Gigli club esse test
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <!-- end of title -->
+                                                                                <!-- content -->
+                                                                                <tr>
+                                                                                    <td style="font-family: Helvetica, arial, sans-serif; font-size: 14px; color: #889098; text-align:left; line-height: 24px;">
+                                                                                        <span style="display: block;">Dal 02/06/2019 al 09/06/2019</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <!-- end of content -->
+                                                                                <!-- Spacing -->
+                                                                                <tr>
+                                                                                    <td width="100%" height="15" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                                                                                </tr>
+                                                                                <!-- /Spacing -->
+                                                                                <!-- read more -->
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <table width="160" height="40" bgcolor="#e62264" align="left" valign="middle" border="0" cellpadding="0" cellspacing="0" style="border-radius:50px; padding: 15px " st-button="learnmore">
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td height="9" align="center" style="font-size:1px; line-height:1px;">&nbsp;</td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="14" align="center" valign="middle" style="font-family: Helvetica, Arial, sans-serif; font-size: 13px; font-weight:bold;color: #ffffff; text-align:center; line-height: 14px; ; -webkit-text-size-adjust:none;" st-title="fulltext-btn">
+                                                                                                        <a style="text-decoration: none;color: #ffffff; text-align:center;" href="#">PRENOTA ORA</a>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="9" align="center" style="font-size:1px; line-height:1px;">&nbsp;</td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <!-- end of read more -->
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!-- end of right column -->
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- End of Left Image -->
+        <!-- Start of seperator -->
+        <table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="seperator">
+            <tbody>
+                <tr>
+                    <td>
+                        <table width="600" align="center" cellspacing="0" cellpadding="0" border="0" class="devicewidth">
+                            <tbody>
+                                <tr>
+                                    <td align="center" height="30" style="font-size:1px; line-height:1px;">&nbsp;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- End of seperator -->
+        <!-- start of Full text -->
+        <table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="full-text">
+            <tbody>
+                <tr>
+                    <td>
+                        <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                            <tbody>
+                                <tr>
+                                    <td width="100%">
+                                        <table bgcolor="#ffffff" width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                                            <tbody>
+                                                <!-- Spacing -->
+                                                <tr>
+                                                    <td height="20" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                                                </tr>
+                                                <!-- Spacing -->
+                                                <tr>
+                                                    <td>
+                                                        <table width="90%" align="center" cellpadding="0" cellspacing="0" border="0" class="devicewidthinner">
+                                                            <tbody>
+                                                                <!-- Title -->
+                                                                <tr>
+                                                                    <td style="font-family: Helvetica, arial, sans-serif; font-size: 18px; color: #122944; text-align:center; line-height: 24px;">
+                                                                        I dettagli del tuo soggiorno
+                                                                    </td>
+                                                                </tr>
+                                                                <!-- End of Title -->
+                                                                <!-- spacing -->
+                                                                <tr>
+                                                                    <td width="100%" height="15" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                                                                </tr>
+                                                                <!-- End of spacing -->
+                                                                <!-- content -->
+                                                                <tr>
+                                                                    <td style="font-family: Helvetica, arial, sans-serif; font-size: 14px; color: #717273; text-align:left; line-height: 24px;">
+                                                                        <span style="display: block; color: #e62264; font-size: 1.2em; font-weight: 600; border-bottom: 1px solid #d6d6d6; padding: 0 0 10px;">Sistemazione 1</span>
+                                                                        <span style="display: block;">2 Persone</span>
+                                                                        <span style="display: block;">Camera Standard Doppia / Pensione completa</span>
+
+                                                                        <span style="display: block; color: #122944; font-size: 1.2em; font-weight: 600; padding: 10px 0 0;">Soggiorno</span>
+                                                                        € 656,00
+
+                                                                        <span style="display: block; color: #122944; font-size: 1.2em; font-weight: 600; padding: 10px 0 0;">Quota Gestione Pratica</span>
+                                                                        GRATIS
+
+                                                                        <span style="display: block; color: #122944; font-size: 1.2em; font-weight: 600; padding: 10px 0 0;">Assicurazione viaggio e annullamento</span>
+                                                                        GRATIS
+
+
+                                                                        <span style="display: block; color: #122944; font-size: 1.2em; font-weight: 600; padding: 10px 0 0; border-top: 1px solid #d6d6d6;">Totale pratica</span>
+                                                                        <span style="display: block; color: #e62264; font-size: 2em; font-weight: 600; padding: 10px 0;">€ 656,00</span>
+
+                                                                        <span style="display: block; color: #e62264; font-size: 1.5em; font-weight: 600; padding: 10px 0; border-top: 1px solid #d6d6d6; border-bottom: 1px dashed #d6d6d6;">+ € 0,00 da pagare in loco</span>
+                                                                        <span style="display: block; color: #ff7b07; font-size: 1.2em; font-weight: 600; padding: 10px 0 0;">Termini di pagamento</span>
+                                                                        <em>Acconto 30% subito e saldo 30 giorni prima della partenza</em>
+                                                                    </td>
+                                                                </tr>
+                                                                <!-- End of content -->
+                                                                <!-- Spacing -->
+                                                                <tr>
+                                                                    <td width="100%" height="15" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                                                                </tr>
+                                                                <!-- Spacing -->
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <!-- Spacing -->
+                                                <tr>
+                                                    <td height="20" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                                                </tr>
+                                                <!-- Spacing -->
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- End of Full Text -->
+        <!-- Start of seperator -->
+        <table width="90%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="seperator">
+            <tbody>
+                <tr>
+                    <td>
+                        <table width="600" align="center" cellspacing="0" cellpadding="0" border="0" class="devicewidth">
+                            <tbody>
+                                <tr>
+                                    <td align="center" height="15" style="font-size:1px; line-height:1px;">&nbsp;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- End of seperator -->
+        <!-- Start of seperator -->
+        <table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="seperator">
+            <tbody>
+                <tr>
+                    <td>
+                        <table width="600" align="center" cellspacing="0" cellpadding="0" border="0" class="devicewidth">
+                            <tbody>
+                                <tr>
+                                    <td width="100%" height="43" align="center">
+                                        <div class="imgpop">
+                                            <div style="border: 2px dashed #c7c7c7; padding: 10px; margin: 0 0 20px;">
+                                                <span style="display: block; font-weight: 600; color: #57a220; padding: 0 0 10px">La promozione valida per prenotazioni confermate entro il 28/02/2019.</span>
+                                                <span style="display: block; color: #122944;">Puoi visualizzare il dettaglio costi nell'allegato di questa email.</span>
+                                            </div>
+                                            <span style="font-family: Helvetica, Arial, sans-serif; font-size: 13px; font-weight:bold;color: #ffffff; text-align:center; line-height: 14px; ; -webkit-text-size-adjust:none;" st-title="fulltext-btn">
+                                                <a style="display: inline-block; margin: 15px 0 0; text-decoration: none; color: #ffffff; text-align: center; background: #e62264; padding: 15px 25px; -webkit-border-radius: 50px;-moz-border-radius: 50px;border-radius: 50px;" href="#">PRENOTA ORA</a>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- End of seperator -->
+        <!-- Start of seperator -->
+        <table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="seperator">
+            <tbody>
+                <tr>
+                    <td>
+                        <table width="600" align="center" cellspacing="0" cellpadding="0" border="0" class="devicewidth">
+                            <tbody>
+                                <tr>
+                                    <td align="center" height="30" style="font-size:1px; line-height:1px;">&nbsp;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- End of seperator -->
+        <!-- Start of footer -->
+        <table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="footer">
+            <tbody>
+                <tr>
+                    <td>
+                        <table width="600" bgcolor="#092d40" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                            <tbody>
+                                <tr>
+                                    <td width="100%">
+                                        <table bgcolor="#092d40" width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                                            <tbody>
+                                                <!-- Spacing -->
+                                                <tr>
+                                                    <td height="10" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                                                </tr>
+                                                <!-- Spacing -->
+                                                <tr>
+                                                    <td>
+                                                        <!-- Social icons -->
+                                                        <table  width="100%" align="center" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="100%" height="43" align="center">
+                                                                        <div class="imgpop">
+                                                                            <span style="display: block; font-weight: 600; color: #fff; padding: 0 0 10px; text-transform: uppercase;"><small>I nostri uffici sono aperti</small></span>
+                                                                            <span style="display: block; color: #fff;">dal Lunedì al Venerdì (09:00 - 14:00 e 15:00 - 19:00)</span>
+                                                                            <span style="display: block; color: #fff;">Sabato (09:00 - 13:00)</span>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!-- end of Social icons -->
+                                                    </td>
+                                                </tr>
+                                                <!-- Spacing -->
+                                                <tr>
+                                                    <td height="10" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                                                </tr>
+                                                <!-- Spacing -->
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- End of footer -->
+        <!-- Start of Postfooter -->
+        <table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="postfooter" >
+            <tbody>
+                <tr>
+                    <td>
+                        <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                            <tbody>
+                                <!-- Spacing -->
+                                <tr>
+                                    <td width="100%" height="20"></td>
+                                </tr>
+                                <!-- Spacing -->
+                                <tr>
+                                    <td align="center" valign="middle" style="font-family: Helvetica, arial, sans-serif; font-size: 13px;color: #122944; text-align: justify; padding: 0 10px" st-content="preheader">
+                                        Ricevi questo messaggio perchè hai inserito il tuo indirizzo email sul nostro sito oppure perchè lo hai comunicato telefonicamente al nostro ufficio booking. Il tuo indirizzo email è trattato ai sensi degli art. 13 e 14 Regolamento UE n. 2016/679 c.d. GDPR, garantendo la massima riservatezza al fine di fornire utili informazioni commerciali. Maggiori informazioni sulla nostra Privacy Policy.
+                                    </td>
+                                </tr>
+                                <!-- Spacing -->
+                                <tr>
+                                    <td width="100%" height="20"></td>
+                                </tr>
+                                <!-- Spacing -->
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- End of postfooter -->
+    </body>
+</html>
