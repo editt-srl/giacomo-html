@@ -749,7 +749,7 @@
                                     <span>€750,00</span>
                                     <p class="pagare-in-loco"><strong>+ €350,00</strong><small>da pagare in loco</small></p>
                                     <p>Il tuo prezzo finale senza sorprese</p>
-                                    <span class="button-payment">
+                                    <span class="button-payment" id="download-pdf">
                                         <i class="fa fa-download" aria-hidden="true"></i>
                                         Scarica preventivo
                                     </span>
@@ -1141,7 +1141,37 @@
                                         <label for="pwd">Email destinatario:</label>
                                         <input type="text" class="form-control" id="email-form">
                                     </div>
-                                    <button type="submit" class="btn btn-default">Invia Preventivo</button>
+                                    <button type="submit" class="btn btn-success btn-lg btn-block">Invia Preventivo</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / End Modal box invia preventivo -->
+
+                    <!-- Modal box invia preventivo -->
+                    <div class="modal fade bs-example-modal-sm" id="scarica-preventivo-pdf" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content share-box-friends">
+                                <div class="segnala-amico-closer">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="condividi-con-un-amico-text">
+                                    Scarica il preventivo in pdf
+                                </div>
+                                <form action="/action_page.php">
+                                    <div class="form-group">
+                                        <label for="email">Nome:</label>
+                                        <input type="text" class="form-control" id="nome-form">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pwd">Email:</label>
+                                        <input type="text" class="form-control" id="email-form">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Telefono:</label>
+                                        <input type="text" class="form-control" id="nome-form">
+                                    </div>
+                                    <button type="submit" class="btn btn-success btn-lg btn-block">Scarica preventivo</button>
                                 </form>
                             </div>
                         </div>

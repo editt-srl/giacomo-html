@@ -1351,6 +1351,11 @@
             $("#segnala-amico").modal();
         });
 
+        /*===== Modal scarica preventivo =====*/
+        $("#download-pdf").click(function () {
+            $("#scarica-preventivo-pdf").modal();
+        });
+
     });
 })(jQuery);
 /* OUT OF document.ready */
