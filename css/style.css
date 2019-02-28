@@ -9850,6 +9850,18 @@ p.date-price-quotation span{
     color: #092d40;
     line-height: 29px;
 }
+.share-box-friends{
+    padding: 15px;
+    color: #092d40;
+}
+.segnala-amico-closer{
+    height: 10px;
+}
+.condividi-con-un-amico-text{
+    padding: 10px 0;
+    color: #9e9e9e;
+    font-size: small;
+}
 
 /* 18. Cart
  --------------------------------------------------------------------------------*/

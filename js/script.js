@@ -325,11 +325,15 @@
             $('.calendar-input,.caneldar').datepicker({
                 showOtherMonths: true,
                 selectOtherMonths: true,
-                onClose: function () {
-                    $(".partenzacal").datepicker("show");
+                autoclose: true,
+                onClose: function (date, datepicker) {
+                    if (date != "") {
+                        $(".partenzacal").datepicker("show");
+                    }
                 }
             });
         }
+
         $.datepicker.regional['it'] = {
             clearText: 'Svuota', clearStatus: 'Annulla',
             closeText: 'Chiudi', closeStatus: 'Chiudere senza modificare',
@@ -360,7 +364,12 @@
             date2.setDate(date2.getDate() + 7);
             $('.partenzacal').datepicker('setDate', date2);
             $(".partenzacal").datepicker("destroy"); //distruggo
-            $(".partenzacal").datepicker({minDate: currentDate, dateFormat: "dd/mm/yy", showButtonPanel: false, firstDay: 1}); //reinizializzo
+            $(".partenzacal").datepicker({
+                minDate: currentDate,
+                dateFormat: "dd/mm/yy",
+                showButtonPanel: false,
+                firstDay: 1
+            }); //reinizializzo
         });
         /* Data di nascita */
         $(document).on('focus', ".calendar-data-nascita", function () {
@@ -1336,6 +1345,12 @@
             $(this).children('div.cont-child-li').slideToggle();
             $(this).children('i').toggleClass('fa-caret-down').toggleClass('fa-caret-up');
         });
+
+        /*===== Modal invia preventivo per email =====*/
+        $("#share-friends").click(function () {
+            $("#segnala-amico").modal();
+        });
+
     });
 })(jQuery);
 /* OUT OF document.ready */
