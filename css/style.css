@@ -3489,7 +3489,7 @@ label.destinazione-ricerca{
     text-transform: uppercase;
     color: #e62163;
     font-size: 0.9em;
-    margin: 5px 0 0;
+    margin: 5px 0 15px;
 }
 .download-catalogue-inner{
     color: #ffffff;
@@ -8671,6 +8671,10 @@ ul.contact-list li span.contact-list-inner-tel:before{
 .step {
     padding-left: 30px;
     padding-right: 30px;
+}
+.no-margin-row{
+    margin-right: 0px;
+    margin-left: 0px;
 }
 .payment-step {
     margin: 0;
