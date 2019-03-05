@@ -9025,6 +9025,7 @@ ul.contact-list li span.contact-list-inner-tel:before{
     border-radius: 3px;
     border: 1px solid #bdbdbd;
     background: #ffffff;
+    padding: 0 30px 0 0;
     position: relative;
     cursor: pointer;
 }
@@ -9072,7 +9073,8 @@ ul.contact-list li span.contact-list-inner-tel:before{
 }
 .supplementi-box ol li span.price, .assicurazione-box ol li span.price, .servizi-box ol li span.price, .tipocamera-box ol li span.price {
     background-color: #fff;
-    float: right;
+    position: absolute;
+    right: 0;
     padding: 0 10px;
     font-weight: 400;
     color: #092d40;
@@ -9084,6 +9086,7 @@ ul.contact-list li span.contact-list-inner-tel:before{
     position: relative;
     background: url(../images/bg-dots.png) transparent 0 17px repeat-x;
     margin-bottom: 5px;
+    padding: 0 45px 0 0;
 }
 .note-payment{
     background-color: #e4e4e2;
@@ -12134,6 +12137,7 @@ footer .back-under {
     }
     .supplementi p, .assicurazione p, .servizi p, .tipocamera p{
         font-size: 0.9em;
+        padding: 0 50px;
     }
     .supplementi span, .assicurazione span, .servizi span, .tipocamera span, .camera-edit span {
         font-size: 1.2em;
