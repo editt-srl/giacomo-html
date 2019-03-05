@@ -9088,6 +9088,9 @@ ul.contact-list li span.contact-list-inner-tel:before{
     margin-bottom: 5px;
     padding: 0 45px 0 0;
 }
+.total ol li{
+    padding: 0;
+}
 .note-payment{
     background-color: #e4e4e2;
     margin: 10px 0;
