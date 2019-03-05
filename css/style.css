@@ -13658,6 +13658,18 @@ footer .back-under {
         margin: 20px 0 10px;
         text-align: center;
     }
+    .supplementi-box ol li, .assicurazione-box ol li, .servizi-box ol li, .tipocamera-box ol li, .total ol li {
+        display: block;
+        position: relative;
+        background: none;
+        margin-bottom: 5px;
+        padding: 0px 45px 4px 0;
+        border-bottom: 1px dashed #d2d2d2;
+    }
+    .supplementi-box ol li:last-child, .assicurazione-box ol li:last-child, .servizi-box ol li:last-child, .tipocamera-box ol li:last-child, .total ol li:last-child {
+        border-bottom: none;
+    }
+
 }
 @media (max-width: 320px) {
     /*Navigation*/
