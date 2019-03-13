@@ -1829,6 +1829,9 @@ footer .social-icons{
         padding-left: 10px;
         padding-right: 10px;
     }
+    #checkout-second-phase {
+        padding: 0;
+    }
 }
 @media (max-width: 480px) {
     .tabs-head.nav-tabs-two li {
@@ -3156,7 +3159,6 @@ label.destinazione-ricerca{
     margin: 5px 0;
 }
 #divCamere div:first-child{
-    padding: 5px;
     font-weight: 600;
 }
 .text-right {
