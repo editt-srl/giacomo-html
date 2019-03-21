@@ -9874,6 +9874,9 @@ p.date-price-quotation span{
     color: #9e9e9e;
     font-size: small;
 }
+.img-mobile-gbman{
+    display: none;
+}
 
 /* 18. Cart
  --------------------------------------------------------------------------------*/
@@ -13662,6 +13665,11 @@ footer .back-under {
     .search-form-align {
         margin: 20px 0 10px;
         text-align: center;
+    }
+    .img-mobile-gbman{
+        display: initial;
+        text-align: center;
+        background: #fff;
     }
 
 }
