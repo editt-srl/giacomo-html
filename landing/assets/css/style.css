@@ -720,6 +720,10 @@ textarea::-ms-input-placeholder{
     text-align: center;
     margin-top: 25px;
 }
+.fix-align-center-trigger{
+    text-align: center;
+    margin-top: 15px;
+}
 .button-call-landing-primary{
     padding: 15px 25px;
     -webkit-border-radius: 50px;
@@ -823,7 +827,7 @@ textarea::-ms-input-placeholder{
 .form-space{
     margin: 20px -15px;
 }
-#form-when, #form-user, #form-who{
+#form-when, #form-user, #form-who, #form-where{
     display: none;
 }
 .eta-bamb{
@@ -1519,8 +1523,43 @@ work Section style
     font-size:3rem;
 }
 
-
-
+/*Carosello prezzi
+======================*/
+.owl-carousel-landing-price .item{
+    padding: 5px;
+}
+.owl-carousel-landing-price .item div.box-price-container{
+    border: 1px dashed #6f6f6f;
+    height: 150px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+.period-sett, .price-period-sett, .period-pers-sett{
+    display: block;
+    text-align: center;
+}
+.period-sett{
+    padding: 15px 0 0;
+    color: #e62264;
+    font-size: 1.2em;
+}
+.price-period-sett{
+    font-size: 3em;
+    color: #092d40;
+    font-weight: 600;
+}
+.period-pers-sett{
+    font-size: small;
+    text-transform: uppercase;
+}
+.border-plus{
+    border-top: 1px solid #eceaea;
+    border-bottom: 1px solid #eceaea;
+}
+.h2p-center>h2, .h2p-center>p{
+    text-align: center !important;
+}
 
 
 /*call to action

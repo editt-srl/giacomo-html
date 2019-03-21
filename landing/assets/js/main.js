@@ -78,7 +78,18 @@ jQuery(document).ready(function ($) {
         return false
     });
 
+//---------------------------------------------
+// Lampeggiante
+//---------------------------------------------
 
+    function shakeThis() {
+        setTimeout(function () {
+            $('div.fix-align-center-trigger').effect("shake");
+            shakeThis();
+        }, 4000);
+    }
+
+    shakeThis(); // richiamo la prima volta
 
 
 
@@ -97,6 +108,17 @@ jQuery(document).ready(function ($) {
 
     /*===== Carousel =====*/
     $('.owl-carousel-landing').owlCarousel({
+        loop: true,
+        margin: 10,
+        autoplay: true,
+        autoplayTimeout: 1000,
+        autoplayHoverPause: true,
+        navigation: true,
+        navigationText: ['<div class="prev-collection"><i class="fa fa-chevron-left"></i></div>', '<div class="next-collection"><i class="fa fa-chevron-right"></i></div>'],
+        itemsCustom: [[320, 1], [480, 1], [768, 3], [992, 3], [1200, 3], [1600, 3]],
+    });
+
+    $('.owl-carousel-landing-price').owlCarousel({
         loop: true,
         margin: 10,
         autoplay: true,
@@ -189,6 +211,10 @@ jQuery(document).ready(function ($) {
     });
 
     /*===== Form cons =====*/
+    $(document).on("click", "#button-trigger-form", function () {
+        $(this).hide();
+        $("#form-where").slideDown('slow');
+    });
     $(document).on("focus", "#dove-andare", function () {
         $("#form-when").slideDown('slow');
     });
@@ -201,7 +227,14 @@ jQuery(document).ready(function ($) {
         }
     });
 
-    /* SISTEMAZIONI */
+    /*===== Cambio Logo =====*/
+    if ($(window).width() <= 468) {
+        $('a.navbar-brand > img.logo').attr('src', 'assets/images/logo-mobile.png');
+    } else {
+        $('a.navbar-brand > img.logo').attr('src', 'assets/images/logo.png');
+    }
+
+    /*===== Sistemazioni =====*/
 
     $("#ncamere").on('change', function () {
 
