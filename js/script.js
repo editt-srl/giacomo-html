@@ -311,7 +311,7 @@
 
                 if ($this.val() != '') {
 
-                    if ($label.hasClass('forcus') == false) {
+                    if ($label.hasClass('focus') == false) {
                         $label.addClass('focus');
                     }
                 } else {
@@ -1356,6 +1356,26 @@
             $("#scarica-preventivo-pdf").modal();
         });
 
+        /*===== Modal login =====*/
+        $(".login-all").click(function (e) {
+            e.preventDefault();
+            $("#login-panel-all").modal();
+        });
+        $(".login-login").click(function () {
+            $("#login-form-reg").hide();
+            $("#login-form-log").show();
+        });
+        $(".login-register").click(function () {
+            $("#login-form-log").hide();
+            $("#login-form-reg").show();
+        });
+        $("#user-type-select").change(function () {
+            if ($("#user-type-select").val() >= 1) {
+                $(".agency-cral").show();
+            } else {
+                $(".agency-cral").hide();
+            }
+        });
     });
 })(jQuery);
 /* OUT OF document.ready */

@@ -9877,7 +9877,51 @@ p.date-price-quotation span{
 .img-mobile-gbman{
     display: none;
 }
-
+.login-menu{
+    color: grey;
+    border-bottom: 1px dashed #e0e0e0;
+    margin: 0 0 9px;
+}
+.login-menu span{
+    color: #092d40;
+    padding: 5px 15px;
+    cursor: pointer;
+    width: 47%;
+    display: inline-block;
+}
+.login-login{
+    text-align: right;
+    padding: 10px;
+}
+.login-register{
+    text-align: left;
+    border-left: 1px dashed #e0e0e0;
+}
+.login-menu span i{
+    color: #5cb85c;
+}
+.login-hide{
+    display: none;
+}
+#login-panel-all form ol {
+    list-style: none;
+    margin: 15px 0;
+    padding-left: 0;
+}
+#login-panel-all form ol span small{
+    margin: 0 5px;
+}
+.reset-pass{
+    text-align: right;
+    padding: 10px 0 0;
+    font-size: 0.8em;
+}
+.reset-pass a{
+    color: grey;
+}
+.agency-cral{
+    display: none;
+}
 /* 18. Cart
  --------------------------------------------------------------------------------*/
 .cart-cn {
@@ -10247,6 +10291,10 @@ p.date-price-quotation span{
 .element-sc .element-cn .caneldar {
     margin-top: 15px;
 }
+.color-bar-box{
+    background-color: #e62264;
+}
+
 /* Correzioni modal */
 .modal-content {
     background-color: #fff;
@@ -10404,6 +10452,7 @@ p.date-price-quotation span{
     margin-right: 30px;
     margin-left: 30px;
     padding-bottom: 20px;
+    background: white !important;
 }
 .user-profile__header {
     background-color: #415973;
@@ -10427,13 +10476,14 @@ p.date-price-quotation span{
     margin-top: 5px;
 }
 .user-profile__header p {
-    max-width: 90px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     margin: auto;
     overflow: hidden;
     position: absolute;
-    left: 0;
-    right: 0;
+    right: 6px;
+    background: #b5b5b5;
 }
 .user-profile__header p img {
     width: 100%;
@@ -10752,6 +10802,14 @@ p.date-price-quotation span{
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
     transform: translateX(-50%);
+}
+span.number-users{
+    line-height: 75px;
+    font-size: 1.5em;
+}
+.number-small{
+    color: #f1f1f1;
+    font-weight: 600;
 }
 /* 23. Footer
  --------------------------------------------------------------------------------*/

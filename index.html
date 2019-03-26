@@ -150,10 +150,10 @@
                                             <a href="#" title="login">Area Riservata</a>
                                             <ul class="sub-menu">
                                                 <li>
-                                                    <a href="home-cruise.html" title="">Area Clienti</a>
+                                                    <a href="#" class="login-all">Area Clienti</a>
                                                 </li>
                                                 <li>
-                                                    <a href="cruise-list.html">Area Agenzie</a>
+                                                    <a href="#" class="login-all">Area Agenzie</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -1856,6 +1856,70 @@
                         </div>
                     </div>
                     <!-- Follow us -->
+
+                    <!-- Modal box login -->
+                    <div class="modal fade bs-example-modal-sm" id="login-panel-all" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content share-box-friends">
+                                <div class="segnala-amico-closer">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="login-menu">
+                                    <span class="login-login"><i class="fa fa-lock" aria-hidden="true"></i> LOGIN</span><span class="login-register"><i class="fa fa-user" aria-hidden="true"></i> REGISTRATI</span>
+                                </div>
+                                <form id="login-form-log" action="/action_page.php">
+                                    <div class="form-group">
+                                        <label for="email">Nome:</label>
+                                        <input type="text" class="form-control" id="nome-form">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pwd">Email:</label>
+                                        <input type="text" class="form-control" id="email-form">
+                                    </div>
+                                    <ol>
+                                        <li><label class="input-toggle"><input type="checkbox" name="testx"><span></span></label><span> <small> Ricordami</small></span></li>
+                                    </ol>
+                                    <button type="submit" class="btn btn-success btn-lg btn-block">Login</button>
+                                </form>
+                                <form id="login-form-reg" class="login-hide" action="/action_page.php">
+                                    <div class="form-group">
+                                        <label for="email">Nome:</label>
+                                        <input type="text" class="form-control" id="nome-form">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pwd">Email:</label>
+                                        <input type="text" class="form-control" id="email-form">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Tipo Utente:</label>
+                                        <select class="form-control" id="user-type-select">
+                                            <option value="0">Utente privato</option>
+                                            <option value="1">Agenzia</option>
+                                            <option value="2">Cral</option>
+                                        </select>
+                                    </div>
+                                    <div class="agency-cral">
+                                        <div class="form-group">
+                                            <label for="email">Ragione Sociale:</label>
+                                            <input type="text" class="form-control" id="nome-form">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">Partita IVA o C.F.</label>
+                                            <input type="text" class="form-control" id="nome-form">
+                                        </div>
+                                    </div>
+                                    <ol>
+                                        <li><label class="input-toggle"><input type="checkbox" name="testx"><span></span></label><span> <small> Ricordami</small></span></li>
+                                    </ol>
+                                    <button type="submit" class="btn btn-success btn-lg btn-block">Registrati</button>
+                                </form>
+                                <div class="reset-pass">
+                                    <a href="#" title="reset password">Non ricordi la password?</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / End Modal box login -->
 
                     <!-- Barra fixed -->
                     <div class="row-fluid action-bar">
