@@ -1376,6 +1376,39 @@
                 $(".agency-cral").hide();
             }
         });
+
+        /*===== Link Cataloglo =====*/
+        $("#catalogue-link").click(function () {
+            window.open('https://s3.amazonaws.com/online.anyflip.com/qowk/havx/mobile/index.html', '_blank');
+        });
+
+        /*===== Descrizione group offerte =====*/
+        $('span.trigger-group-description').click(function () {
+            $(this).closest('div[class^="col-"]').find('div.offer-group-description-text').slideToggle();
+        });
+
+        /*===== Countdown =====*/
+        $('[data-countdown]').each(function () {
+            var $this = $(this), finalDate = $(this).data('countdown');
+            $this.countdown(finalDate, function (event) {
+                $this.html(event.strftime('%D giorni %H:%M:%S'));
+            });
+            $this.on('finish.countdown', function (event) {
+                $this.html('Troppo tardi. Terminata!').closest('div[class^="col-"]').find('div.offer-group-button').addClass('disabled-button').html('OPSS! TEMPO SCADUTO');
+                $this.closest('div[class^="col-"]').css("opacity", "0.5");
+            });
+        });
+        // Se completati i box
+        $('div.color-bar-box').each(function () {
+            if ($(this).attr('aria-valuenow') >= 100) {
+                $(this).closest('div[class^="col-"]').find('div.offer-group-button').addClass('completed-button').html('QUI SIAMO AL COMPLETO');
+                $(this).closest('div[class^="col-"]').find('span.counter').replaceWith('<span class="counter">Gruppo al completo.</span>');
+                $(this).closest('div[class^="col-"]').find('.offer-group-p-text-color').css({"border-bottom-color": "#e62264", "border-top-color": "#e62264", "border-left-color": "#e62264"});
+                $(this).closest('div[class^="col-"]').css("opacity", "0.5");
+            }
+        });
+
+
     });
 })(jQuery);
 /* OUT OF document.ready */

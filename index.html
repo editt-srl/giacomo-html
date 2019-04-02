@@ -884,8 +884,8 @@
                 <div class="title-wrap-description">
                     <div class="container">
                         <div class="row setting-row-chisiamo">
-                            <div class="col-xs-12 col-md-4">
-                                <img src="images/catalogue-download.png" alt="Scarica catalogo gb viaggi" >
+                            <div class="col-xs-12 col-md-4" id="catalogue-link">
+                                <img src="images/catalogue-download.png" alt="Scarica catalogo gb viaggi">
                                 <span class="download-catalogue">
                                     <span class="download-catalogue-inner">
                                         Scarica il Catalogo
@@ -1798,7 +1798,7 @@
                             <div class="ul-ft">
                                 <h3 class="footer-title">utilità</h3>
                                 <ul>
-                                    <li><a href="contact.html" title="">Contatti</a></li>
+                                    <li><a href="/contacs" title="">Contatti</a></li>
                                     <li><a href="#" title="">Privacy Policy</a></li>
                                     <li><a href="#" title="">Cookies Policy</a></li>
                                 </ul>
@@ -1883,12 +1883,16 @@
                                 </form>
                                 <form id="login-form-reg" class="login-hide" action="/action_page.php">
                                     <div class="form-group">
-                                        <label for="email">Nome:</label>
+                                        <label for="nome-form">Nome:</label>
                                         <input type="text" class="form-control" id="nome-form">
                                     </div>
                                     <div class="form-group">
-                                        <label for="pwd">Email:</label>
+                                        <label for="emai-form">Email:</label>
                                         <input type="text" class="form-control" id="email-form">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pass">Password:</label>
+                                        <input type="text" class="form-control" id="pass">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleFormControlSelect1">Tipo Utente:</label>
@@ -1900,12 +1904,12 @@
                                     </div>
                                     <div class="agency-cral">
                                         <div class="form-group">
-                                            <label for="email">Ragione Sociale:</label>
-                                            <input type="text" class="form-control" id="nome-form">
+                                            <label for="rag-soc">Ragione Sociale:</label>
+                                            <input type="text" class="form-control" id="rag-soc">
                                         </div>
                                         <div class="form-group">
-                                            <label for="email">Partita IVA o C.F.</label>
-                                            <input type="text" class="form-control" id="nome-form">
+                                            <label for="pi">Partita IVA o C.F.</label>
+                                            <input type="text" class="form-control" id="pi">
                                         </div>
                                     </div>
                                     <ol>
@@ -1935,7 +1939,7 @@
                             <a href="/" onclick="gtag('event', 'generate_lead', {'event_category': 'engagement', 'event_label': 'Cerca'});" title="Cerca sistemazione"><i class="fa fa-search" style="color: #092d40;" aria-hidden="true"></i><span class="back-under">Cerca</span></a>
                         </div>
                         <div class="col-md-3 col-sm-3 col-xs-3">
-                            <a href="https://api.whatsapp.com/send?phone=+393273812905&amp;text=[Cliente-web]%20Vorrei%20avere%20maggiori%20informazioni%20su.." onclick="gtag('event', 'generate_lead', {'event_category': 'engagement', 'event_label': 'Messaggio Whatsapp'});
+                            <a href="https://api.whatsapp.com/send?phone=+390681153087&amp;text=[Cliente-web]%20Vorrei%20avere%20maggiori%20informazioni%20su.." onclick="gtag('event', 'generate_lead', {'event_category': 'engagement', 'event_label': 'Messaggio Whatsapp'});
                                     fbq('track', 'Lead');" title="Prenota ora la tua vacanza.."><i class="fa fa-comments-o" style="color: #092d40;" aria-hidden="true"></i><span class="back-under">Whatsapp</span></a>
                         </div>
                     </div>
