@@ -2953,13 +2953,13 @@ label.destinazione-ricerca{
     width: 205px;
 }
 .form-flight .field-to {
-    width: 190px;
+    width: 300px;
 }
 .form-flight .field-date {
     width: 150px;
 }
 .form-flight .field-adult {
-    width: 115px;
+    width: 155px;
 }
 .form-flight .field-children {
     width: 130px;
@@ -10516,6 +10516,24 @@ p.date-price-quotation span{
     text-transform: uppercase;
     font-weight: 600;
 }
+.user-profile__header > span.invite-user {
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    background: #91af24;
+    -webkit-border-top-right-radius: 50%;
+    -webkit-border-bottom-right-radius: 50%;
+    -moz-border-radius-topright: 50%;
+    -moz-border-radius-bottomright: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    padding: 5px 11px;
+    color: #ffffff;
+    border-top: 4px solid white;
+    border-right: 4px solid white;
+    border-bottom: 4px solid white;
+    cursor: pointer;
+}
 .user-profile__header p {
     width: 90px;
     height: 90px;
@@ -10578,7 +10596,7 @@ p.date-price-quotation span{
     font-weight: 300;
     margin-top: 25px;
     font-size: 34px;
-    margin-bottom: 0;
+    margin-bottom: 20px;
 }
 .user-profile .user-profile__count-number {
     text-align: center;
@@ -10856,7 +10874,7 @@ p.date-price-quotation span{
     transform: translateX(-50%);
 }
 span.number-users{
-    line-height: 70px;
+    line-height: 65px;
     font-size: 1.3em;
     text-align: right;
     padding: 0 6px 0 0;
@@ -10925,6 +10943,10 @@ span.trigger-group-description{
     padding: 5px 15px;
     border-radius: 50px;
     margin-left: 5px;
+    color: #fd6a6a;
+    border: 1px solid #fd6a6a;
+    font-weight: 600;
+    box-shadow: inset 1px 1px 2px #092d40;
 }
 .disabled-button{
     background: #989898 !important;
@@ -10939,6 +10961,98 @@ span.trigger-group-description{
 }
 .cumul i{
     margin: 0 11px 0 3px;
+}
+.box-chiedi-aiuto{
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.box-chiedi-aiuto > span.bar-chiedi-aiuto-left{
+    background: #e62264;
+    color: #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 10px;
+    display: inline-block;
+    width: 112px;
+}
+.box-chiedi-aiuto > span.bar-chiedi-aiuto-right{
+    color: #092d40;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    float: right;
+    display: inline-block;
+    border: 1px dashed #bdbdbd;
+    width: calc(89% - 100px);
+}
+.bar-chiedi-aiuto-sopra-left{
+    display: block;
+    font-size: 1.5em;
+    background: #2f455d;
+    padding: 3px 18px;
+    border-radius: 50px;
+    color: #ffffff;
+    border: 1px solid #7d1337;
+    font-weight: 600;
+    box-shadow: inset 1px 1px 2px #092d40;
+    text-align: center;
+}
+.bar-chiedi-aiuto-sopra-right{
+    display: block;
+    font-size: 1.6em;
+    text-align: right;
+}
+.bar-chiedi-aiuto-sopra-right a{
+    color: #092d40;
+    margin-left: 5px;
+}
+.bar-chiedi-aiuto-sotto-left{
+    text-transform: uppercase;
+    font-size: 0.7em;
+}
+.bar-chiedi-aiuto-sotto-right{
+    color: #91af24;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 10px 0;
+    float: right;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    font-weight: 600;
+}
+.bar-chiedi-aiuto-sopra-right > i{
+    margin-left: 7px;
+}
+.user-tab-display{
+    display: none;
+}
+.single-offer{
+    padding: 8px 0px;
+    border-bottom: 1px dashed #d8d7d7;
+    text-align: justify;
+    color: grey;
+}
+.download-pdf{
+    text-align: center;
+    color: #91af24;
+    cursor: pointer;
+}
+.download-pdf a{
+    color: #ea0c0c;
+}
+.period-singoff{
+    display: none;
+    padding: 5px;
+    background: #f2f2f2;
+    border-bottom: 1px dashed gainsboro;
+}
+.period-singoff > .row {
+    padding: 5px 0;
 }
 /* 23. Footer
  --------------------------------------------------------------------------------*/
@@ -12324,6 +12438,13 @@ footer .back-under {
     }
     .promo-stiker:after{
         display: none;
+    }
+    .download-pdf:not(.nostyle) {
+        border: 1px solid grey;
+        padding: 10px;
+        background: #f2f2f2;
+        width: 90%;
+        margin: 10px 5%;
     }
 }
 @media (max-width: 767px) {
