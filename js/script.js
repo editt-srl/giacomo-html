@@ -1394,10 +1394,11 @@
                 $this.html(event.strftime('%D giorni %H:%M:%S'));
             });
             $this.on('finish.countdown', function (event) {
-                $this.html('Troppo tardi. Terminata!').closest('div[class^="col-"]').find('div.offer-group-button').addClass('disabled-button').html('OPSS! TEMPO SCADUTO');
+                $this.html('Troppo tardi!').closest('div[class^="col-"]').find('div.offer-group-button').addClass('disabled-button').html('OPSS! TEMPO SCADUTO');
                 $this.closest('div[class^="col-"]').css("opacity", "0.5");
             });
         });
+
         // Se completati i box
         $('div.color-bar-box').each(function () {
             if ($(this).attr('aria-valuenow') >= 100) {
@@ -1407,6 +1408,39 @@
                 $(this).closest('div[class^="col-"]').css("opacity", "0.5");
             }
         });
+
+
+        $('div.offer-group-button').click(function () {
+            if ($(this).hasClass("disabled-button")) {
+                alert('Troppo tardi. Il tempo è scaduto prima che la maratona potesse concludersi.');
+            } else if ($(this).hasClass("completed-button")) {
+                alert('Mi spiace questa maratona è già al completo.');
+            } else {
+                $("#maratona-open").modal();
+            }
+        });
+
+
+        // Tab area agenzie - utenti
+        $('ul#profile-users > li').click(function (e) {
+            var tab = $(this).data('tab');
+            $('ul#profile-users > li').not(this).each(function () {
+                $(this).removeClass("current");
+            });
+            $(this).addClass("current");
+            if ($(this).data('tab')) {
+                e.preventDefault();
+                $('div#container-tab > div').slideUp();
+                $('div.' + tab).slideDown();
+            }
+        });
+
+        $('div.single-offer').click(function () {
+            $(this).next('div.period-singoff').slideToggle();
+            $(this).find('i').toggleClass('fa-eye').toggleClass('fa-eye-slash');
+        });
+
+
 
 
     });
