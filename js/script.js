@@ -1411,12 +1411,14 @@
 
 
         $('div.offer-group-button').click(function () {
+            var idmod = $(this).data('idpass');
+            $('#maratona-open').find('form input#boxid').val(idmod);
             if ($(this).hasClass("disabled-button")) {
                 alert('Troppo tardi. Il tempo è scaduto prima che la maratona potesse concludersi.');
             } else if ($(this).hasClass("completed-button")) {
                 alert('Mi spiace questa maratona è già al completo.');
             } else {
-                $("#maratona-open").modal();
+                $('#maratona-open').modal();
             }
         });
 
