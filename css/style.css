@@ -10498,7 +10498,7 @@ p.date-price-quotation span{
 .user-profile__header h4 {
     font-size: 30px;
     margin: 0;
-    font-weight: 300;
+    font-weight: 600;
 }
 .user-profile__header span {
     font-size: 14px;
@@ -10911,6 +10911,7 @@ span.number-users{
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
     cursor: pointer;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 .offer-group-description-text{
     background: #ececec;
@@ -10947,6 +10948,8 @@ span.trigger-group-description{
     border: 1px solid #fd6a6a;
     font-weight: 600;
     box-shadow: inset 1px 1px 2px #092d40;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
 }
 .disabled-button{
     background: #989898 !important;
