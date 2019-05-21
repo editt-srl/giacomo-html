@@ -4,121 +4,243 @@
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120823046-1"></script>
         <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'UA-120823046-1');
+        </script>
 
-          gtag('config', 'UA-120823046-1');
-        </script> 
-        
         <script>
             /* Contatti qualsiasi tipo, specificare se telefonico o mail nell'event label */
-            gtag('event', 'generate_lead', {'event_category': 'engagement','event_label': 'Telefonata / Mail'});
+            gtag('event', 'generate_lead', {'event_category': 'engagement', 'event_label': 'Telefonata / Mail / Whatsapp'});
             /* Pagamento pulsante checkout paga ora */
-            gtag('event', 'begin_checkout', {'event_category': 'ecommerce','event_label': 'Conclusione checkout'});
+            gtag('event', 'begin_checkout', {'event_category': 'ecommerce', 'event_label': 'Conclusione checkout'});
             /* Thank you page pgamento effettuato */
-            gtag('event', 'purchase', {'event_category': 'ecommerce','event_label': 'Pagamento effettuato paypal / bonifico'});
+            gtag('event', 'purchase', {'event_category': 'ecommerce', 'event_label': 'Pagamento effettuato paypal / bonifico'});
             /* Ricerca al click e poi nella pagina risultati, riportando la parola chiave da una pagina all'altra */
-            gtag('event', 'search', {'event_category': 'engagement','event_label': 'parola ricercata...'}); //da inserire dinamica parola ricercata  
-            gtag('event', 'view_search_results', {'event_category': 'engagement','event_label': 'parola ricercata...'}); //da inserire dinamica parola ricercata 
+            gtag('event', 'search', {'event_category': 'engagement', 'event_label': 'parola ricercata...'}); //da inserire dinamica parola ricercata
+            gtag('event', 'view_search_results', {'event_category': 'engagement', 'event_label': 'parola ricercata...'}); //da inserire dinamica parola ricercata
             /* Visualizzazione di contenuti, registrando in qualche modo un dettaglio della pagina visitata riconoscibile es: nome struttura / nome regione / nome offerta */
-            gtag('event', 'select_content', {'event_category': 'engagement','event_label': 'nome struttura / nome regione / nome offerta'}); //da inserire dinamicamente
+            gtag('event', 'select_content', {'event_category': 'engagement', 'event_label': 'nome struttura / nome regione / nome offerta'}); //da inserire dinamicamente
             /* Condivisione contenuti generico share button */
-            gtag('event', 'share', {'event_category': 'engagement','event_label': 'Condivisione contenuti'});
+            gtag('event', 'share', {'event_category': 'engagement', 'event_label': 'Condivisione contenuti'});
         </script>
-        
+
+
+
+        <!-- Global site tag (gtag.js) - Google Ads: 802306165 -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-802306165"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'AW-802306165');
+        </script>
+
+        <script>
+            gtag('event', 'page_view', {'send_to': 'AW-802306165', 'hrental_id': '51'});
+        </script>
+
+
         <!--
-        Documentazione google hotel ads da integrare successivamente
-        https://developers.google.com/hotels/hotel-ads/xml-reference/hotel-list-feed#review 
+           Documentazione google hotel ads da integrare succ    essivamente
+           https://developers.google.com/hotels/hotel-ads/xml-reference/hotel-list-    feed#review
         -->
-        
-        
-        <!-- Facebook Pixel Code -->
+
+
+        <!-- Facebook Pix    el Code -->
         <script>
-          !function(f,b,e,v,n,t,s)
-          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-          n.queue=[];t=b.createElement(e);t.async=!0;
-          t.src=v;s=b.getElementsByTagName(e)[0];
-          s.parentNode.insertBefore(t,s)}(window, document,'script',
-          'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', '1375369579231975');
-          fbq('track', 'PageView');
+            !function (f, b, e, v, n, t, s)
+            {
+            if (f.fbq)
+                    return;
+                    n = f.fbq = function () {
+                    n.callMethod ?
+                            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                    };
+                    if (!f._fbq)
+                    f._fbq = n;
+                    n.push = n;
+                    n.loaded = !0;
+                    n.v            ersion = '2.0';
+                    n.queue = [];
+                    t = b.cr            eateElement(e);
+                    t.async = !0;
+                    t.src = v;
+                    s = b.getElementsB            yTagName(e)[0];
+                    s.parentNode.ins        ertBefore(t, s)
+            }
+            (window, docu                ment, 'script',
+                    'https://connect.facebook.net/en_US        /fbevents.js'
+                    );
+                    fbq('init', '1375        369579231975');
+                    fbq('track', 'PageView');
         </script>
-        <noscript><img height="1" width="1" style="display:none"
-          src="https://www.facebook.com/tr?id=1375369579231975&ev=PageView&noscript=1"
-        /></noscript>
-        <!-- End Facebook Pixel Code -->
-        
-        <!-- Facebook actions INIZIO ACQUISTO BOTTONI PAYPAL + BONIFICO (al click) -->
-        <script>
-            fbq('track', 'InitiateCheckout', {
-              value: 1,
-              currency: 'EUR',
-            });
-        </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=1375369579231975&ev=PageView&noscript=1"
+                   /></noscript>
+    <!-- End FacebookPixel Code -->
 
-        <!-- Facebook actions AQUISTO PAGAMENTO EFFETTUATO ( inserire in head (thank you page) -->
-        <script>
-            fbq('track', 'Purchase', {
-              value: 1,
-              currency: 'EUR',
-              content_ids: '723',
-              content_type: 'hotel',
-              contents: [
-                  {
-                      item_price: 600,
-                      quantity: 1,
-                      id: '723'
-                  }
-              ],
-            });
-        </script>
-        
-        <!-- Facebook actions ACQUISIZIONE CONTATTI ( click su numeri, email ) -->
-        <script>
-            fbq('track', 'Lead', {
-              value: 0,
-            });
-       </script>
-       
-       <!-- Facebook actions RICERCA ( click su pulsante ricerca ) -->
-       <script>
-            fbq('track', 'Search', {
-            search_string: 'parola',
-            content_ids: '723',
-            content_type: 'hotel',
-            });
-       </script>
+    <!-- Facebook actions INIZIO ACQUISTO BOTTONI PAYPAL + BONIFICO (al click) -->
+    <script>
+                fbq('track', 'InitiateCheckout', {
+                // Fire the 'InitiateCheckout' event when the user enters the payment screen
 
-       <!-- Facebook VISUALIZZAZIONE CONTENUTO ( Click su box home page vetrina, regioni o collection e pagina dei risultati click su singola struttura ) -->
-       <script>
-            fbq('track', 'ViewContent', {
-              value: 0,
-              currency: 'EUR',
-              content_ids: '723',
-              content_type: 'hotel',
-            });
-       </script>
-       
-       <!-- Facebook INVIO FORM CONTATTO ( Click sul bottone invio form pagina contatti ) -->
-       <script>
-            fbq('track', 'Contact');
-       </script>
-       
-       <!-- Facebook iscrizione newsletter o sito ( Click sul bottone Iscriviti ) -->
-       <script>
-            fbq('track', 'CompleteRegistration', {
-              value: 0,
-            });
-        </script>
+                // IF YOU CHOOSE NOT TO USE A RECOMMENDED PARAM, THEN REMOVE IT, DON'T LEAVE IT EMPTY
+
+                // REQUIRED: DO NOT change this, must be set to 'hotel'
+                content_type: 'hotel',
+                        // HIGHLY RECOMMENDED: checkin date
+                        // Allows you to target people based on their travel dates (using a booking window)
+                        // Improves the landing experience with travel dates filled in (using template tags)
+                        // use YYYYMMDD, YYYY-MM-DD, YYYY-MM-DDThh:mmTZD or YYYY-MM-DDThh:mm:ssTZD
+                        checkin_date: '2018-04-01',
+                        // HIGHLY RECOMMENDED: checkout date
+                        // use YYYYMMDD, YYYY-MM-DD, YYYY-MM-DDThh:mmTZD or YYYY-MM-DDThh:mm:ssTZD
+                        checkout_date: '2018-04-05',
+                        // REQUIRED: content id of hotel that being booked
+                        content_ids: '123',
+                        // RECOMMENDED: city, don't use abbreviations
+                        city: 'New York',
+                        // RECOMMENDED: region, don't use abbreviations
+                        region: 'New York',
+                        // RECOMMENDED: country, don't use abbreviations
+                        country: 'United States',
+                        // RECOMMENDED: number of adults
+                        num_adults: 1,
+                        // RECOMMENDED: number of children
+                        num_children: 0
+                });
+    </script>
+
+    <!-- Facebook actions AQUISTO PAGAMENTO EFFETTUATO ( inserire in head (        thank you page) -->
+    <script>
+                fbq('track', 'Purchase', {
+                // Fire the 'Purchase' event on the booking confirmed page
+
+                // IF YOU CHOOSE NOT TO USE A RECOMMENDED PARAM, THEN REMOVE IT, DON'T LEAVE IT EMPTY
+
+                // REQUIRED: DO NOT change this, must be set to 'hotel'
+                content_type: 'hotel',
+                        // HIGHLY RECOMMENDED: checkin date
+                        // Allows you to target people based on their travel dates (using a booking window)
+                        // Improves the landing experience with travel dates filled in (using template tags)
+                        // use YYYYMMDD, YYYY-MM-DD, YYYY-MM-DDThh:mmTZD or YYYY-MM-DDThh:mm:ssTZD
+                        checkin_date: '2018-04-01',
+                        // HIGHLY RECOMMENDED: checkout date
+                        // use YYYYMMDD, YYYY-MM-DD, YYYY-MM-DDThh:mmTZD or YYYY-MM-DDThh:mm:ssTZD
+                        checkout_date: '2018-04-05',
+                        // REQUIRED: content id of hotel that was booked
+                        content_ids: '123',
+                        // RECOMMENDED: city, don't use abbreviations
+                        city: 'New York',
+                        // RECOMMENDED: region, don't use abbreviations
+                        region: 'New York',
+                        // RECOMMENDED: country
+                        country: 'United States',
+                        // RECOMMENDED: number of adults
+                        num_adults: 1,
+                        // RECOMMENDED: number of children
+                        num_children: 0,
+                        // REQUIRED: total value of booking
+                        value: 1200,
+                        // REQUIRED: currency of booking
+                        currency: 'USD'
+                        });
+    </script>
+
+    <!-- Facebook actions ACQUISIZIONE CONTATTI ( click su numeri, email ) -->
+    <script>
+                fbq('track', 'Lead', {
+                value: 0,
+                });
+    </script>
+
+    <!-- Facebook actions RICERCA ( click su pulsante ricerca ) -->
+    <script>
+                fbq('track', 'Search', {
+                // Fire the 'Search' event on the search results page
+
+                // IF YOU CHOOSE NOT TO USE A RECOMMENDED PARAM, THEN REMOVE IT, DON'T LEAVE IT EMPTY
+
+                // REQUIRED: DO NOT change this, must be set to 'hotel'
+                content_type: 'hotel',
+                        // HIGHLY RECOMMENDED: checkin date
+                        // Allows you to target people based on their travel dates (using a booking window)
+                        // Improves the landing experience with travel dates filled in (using template tags)
+                        // use YYYYMMDD, YYYY-MM-DD, YYYY-MM-DDThh:mmTZD or YYYY-MM-DDThh:mm:ssTZD
+                        checkin_date: '2018-04-01',
+                        // HIGHLY RECOMMENDED: checkout date
+                        // use YYYYMMDD, YYYY-MM-DD, YYYY-MM-DDThh:mmTZD or YYYY-MM-DDThh:mm:ssTZD
+                        checkout_date: '2018-04-05',
+                        // RECOMMENDED: content ids - include eg top 5 search results
+                        content_ids: '["123", "234", "345", "456", "567"]',
+                        // REQUIRED: city, don't use abbreviations
+                        city: 'New York',
+                        // REQUIRED: region, don't use abbreviations
+                        region: 'New York',
+                        // REQUIRED: country, don't use abbreviations
+                        country: 'United States',
+                        // RECOMMENDED: number of adults
+                        num_adults: 1,
+                        // RECOMMENDED: number of children
+                        num_children: 0
+                });
+    </script>
+
+    <!-- Facebook VISUALIZZAZIONE CONTENUTO ( Click su box home page vetrina, regioni o collection e pagina dei risultati click su singola struttura ) -->
+    <script>
+                fbq('track', 'ViewContent', {
+                // Fire the 'ViewContent' event on the hotel details page
+
+                // IF YOU CHOOSE NOT TO USE A RECOMMENDED PARAM, THEN REMOVE IT, DON'T LEAVE IT EMPTY
+
+                // REQUIRED: DO NOT change this, must be set to 'hotel'
+                content_type: 'hotel',
+                        // HIGHLY RECOMMENDED: checkin date
+                        // Allows you to target people based on their travel dates (using a booking window)
+                        // Improves the landing experience with travel dates filled in (using template tags)
+                        // use YYYYMMDD, YYYY-MM-DD, YYYY-MM-DDThh:mmTZD or YYYY-MM-DDThh:mm:ssTZD
+                        checkin_date: '2018-04-01',
+                        // HIGHLY RECOMMENDED: checkout date
+                        // use YYYYMMDD, YYYY-MM-DD, YYYY-MM-DDThh:mmTZD or YYYY-MM-DDThh:mm:ssTZD
+                        checkout_date: '2018-04-05',
+                        // REQUIRED: content id of hotel that is shown
+                        content_ids: '123',
+                        // RECOMMENDED: city, don't use abbreviations
+                        city: 'New York',
+                        // RECOMMENDED: region, don't use abbreviations
+                        region: 'New York',
+                        // RECOMMENDED: country, don't use abbreviations
+                        country: 'United States',
+                        // RECOMMENDED: number of adults
+                        num_adults: 1,
+                        // RECOMMENDED: number of children
+                        num_children: 0
+                });
+    </script>
+
+    <!-- Facebook INVIO FORM CONTATTO ( Click sul bottone invio form pagina contatti ) -->
+    <script>
+                fbq('track', 'Contact');
+    </script>
+
+    <!-- Facebook iscrizione newsletter o sito ( Click sul bottone Iscriviti ) -->
+    <script>
+                fbq('track', 'CompleteRegistration', {
+                value: 0,
+                });
+    </script>
 
 
-    </head>
+</head>
 
-    <body>
+<body>
 
 
-    </body>
+</body>
 </html>
