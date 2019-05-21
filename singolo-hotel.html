@@ -228,8 +228,8 @@
                             <div class="star-village-single"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
                             <h2>CALABRIA - Parghelia</h2>
 
-                            <!-- Search Hotel -->
-                            <div class="form-cn form-hotel tab-pane active in" id="form-hotel">
+                            <!-- Search Hotel NO AEREO-->
+                            <div class="form-cn form-hotel tab-pane active in" id="form-hotel" style="display: none;">
                                 <div class="form-search clearfix">
                                     <div class="form-field field-date fix-width">
                                         <input type="text" class="field-input calendar-input arrivocal" placeholder="Check in" readonly>
@@ -238,6 +238,43 @@
                                         <input type="text" class="field-input calendar-input partenzacal" placeholder="Check out" readonly>
                                     </div>
                                     <div class="form-field field-select fix-width">
+                                        <div class="select">
+                                            <span>Guest</span>
+                                            <select>
+                                                <option>Guest</option>
+                                                <option>1 Guest</option>
+                                                <option>2 Guest</option>
+                                                <option>3 Guest</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-submit">
+                                        <button type="submit" class="awe-btn awe-btn-lager awe-search">Search</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Search Hotel -->
+
+                            <!-- Search Hotel SI AEREO-->
+                            <div class="form-cn form-hotel tab-pane active in" id="form-hotel">
+                                <div class="form-search clearfix">
+                                    <div class="form-field field-date fix-width-fly">
+                                        <input type="text" class="field-input calendar-input arrivocal" placeholder="Check in" readonly>
+                                    </div>
+                                    <div class="form-field field-date fix-width-fly">
+                                        <input type="text" class="field-input calendar-input partenzacal" placeholder="Check out" readonly>
+                                    </div>
+                                    <div class="form-field field-select fix-width-fly">
+                                        <div class="select">
+                                            <span>Aereoporto</span>
+                                            <select>
+                                                <option>Napoli</option>
+                                                <option>Milano</option>
+                                                <option>ecc</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-field field-select fix-width-fly">
                                         <div class="select">
                                             <span>Guest</span>
                                             <select>

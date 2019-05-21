@@ -232,7 +232,9 @@
                             <!-- ENd Step -->
                         </div>
                         <!-- Payment Room -->
-                        <div class="row no-margin-row">
+
+                        <!-- Modifica ricerca NO VOLO -->
+                        <div class="row no-margin-row" style="display: none;">
                             <div class="col-md-12 col-sm-12 col-xs-12 bar-container">
                                 <div class="col-md-4 col-sm-4 col-xs-12 from-container">
                                     <input type="text" class="field-input calendar-input arrivocal" placeholder="Check in" readonly>
@@ -259,6 +261,47 @@
                                 Modifica ricerca <i class="fa fa-search" aria-hidden="true"></i>
                             </span>
                         </div>
+                        <!-- \Modifica ricerca NO VOLO -->
+
+                        <!-- Modifica ricerca SI VOLO -->
+                        <div class="row no-margin-row">
+                            <div class="col-md-12 col-sm-12 col-xs-12 bar-container">
+                                <div class="col-md-3 col-sm-3 col-xs-12 from-container">
+                                    <input type="text" class="field-input calendar-input arrivocal" placeholder="Check in" readonly>
+                                </div>
+                                <div class="col-md-3 col-sm-3 col-xs-12 to-container">
+                                    <input type="text" class="field-input calendar-input partenzacal" placeholder="Check out" readonly>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-12 person-container">
+                                    <div class="select">
+                                        <span>Aereoporto</span>
+                                        <select>
+                                            <option>Napoli</option>
+                                            <option>Roma</option>
+                                            <option>Milano</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-12 person-container">
+                                    <div class="select">
+                                        <span>Guest</span>
+                                        <select>
+                                            <option>Guest</option>
+                                            <option>1 Guest</option>
+                                            <option>2 Guest</option>
+                                            <option>3 Guest</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-12 search-form-align">
+                                    <button type="submit" class="awe-btn awe-btn-lager awe-search">Cerca</button>
+                                </div>
+                            </div>
+                            <span class="bar-container-trigger">
+                                Modifica ricerca <i class="fa fa-search" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                        <!-- \Modifica ricerca SI VOLO -->
 
                         <form>
                             <div class="payment-room">
