@@ -2222,6 +2222,17 @@ h2.title-resort-sales{
     color: #f4c604;
     font-size: 2em;
 }
+.pack-plus{
+    width: 60px;
+    height: 60px;
+    background-image: url(../images/airplane-ticket.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 66px;
+    right: 9px;
+}
 h2.Title-h2-best{
     text-transform: uppercase;
     text-align: center;
@@ -4991,6 +5002,15 @@ a.link-go-to-pay:before {
 .package-list-cn .package-item {
     padding: 30px;
     background: url('../images/bg-border-v.png') repeat-x left top;
+}
+.format-text-space{
+    padding: 0 25px;
+}
+.format-text-space .boxed-txt{
+    border: 1px solid #ccc;
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    background: #f1f1f1;
 }
 /* 11. Cruise Page
  --------------------------------------------------------------------------------*/
@@ -11825,6 +11845,9 @@ footer .back-under {
 @media screen and (min-width: 992px) {
     .form-hotel .fix-width {
         width: 27% !important;
+    }
+    .fix-width-fly{
+        width: 20% !important;
     }
 }
 @media (max-width: 991px) {
