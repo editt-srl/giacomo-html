@@ -1860,6 +1860,10 @@ footer .social-icons{
 .header .container {
     position: relative;
 }
+.logo-center{
+    text-align: center;
+    padding: 10px 0 20px;
+}
 .header .logo {
     position: relative;
     z-index: 999999;
