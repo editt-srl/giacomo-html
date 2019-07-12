@@ -1377,6 +1377,12 @@
             }
         });
 
+        /*===== Modal change password =====*/
+        $(".reset-pass-button").click(function (e) {
+            e.preventDefault();
+            $("#pass-change").modal();
+        });
+
         /*===== Link Cataloglo =====*/
         $("#catalogue-link").click(function () {
             window.open('https://s3.amazonaws.com/online.anyflip.com/qowk/havx/mobile/index.html', '_blank');
@@ -1410,7 +1416,7 @@
         });
 
 
-        $('div.offer-group-button').click(function () {
+        $('div.offer-group-button').click(function (event) {
             var idmod = $(this).data('idpass');
             $('#maratona-open').find('form input#boxid').val(idmod);
             if ($(this).hasClass("disabled-button")) {
@@ -1419,8 +1425,16 @@
                 alert('Mi spiace questa maratona è già al completo.');
             } else {
                 $('#maratona-open').modal();
+
+                $('#maratona-open').on('shown.bs.modal', function () {
+                    var trig = $(event.currentTarget);
+                    var recipient = trig.data('idpass');
+                    var modal = $(this);
+                    modal.find('form input#boxid').val(recipient);
+                });
             }
         });
+
 
 
         // Tab area agenzie - utenti
@@ -1448,31 +1462,6 @@
     });
 })(jQuery);
 /* OUT OF document.ready */
-
-/*===== Fancy box control =====*/
-$("[data-fancybox]").fancybox({
-    buttons: [
-        'zoom',
-        'share',
-        'slideShow',
-        'fullScreen',
-        'download',
-        'thumbs',
-        'close'
-    ],
-    thumbs: {
-        autoStart: false
-    }
-});
-if ($(window).width() > 768) {
-    $("[data-fancybox^='map']").fancybox({
-        iframe: {
-            css: {
-                width: '60%'
-            }
-        }
-    });
-}
 
 /*===== Deferring video =====*/
 $(window).load(function () {

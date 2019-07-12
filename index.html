@@ -1905,12 +1905,38 @@
                                     <button type="submit" class="btn btn-success btn-lg btn-block">Registrati</button>
                                 </form>
                                 <div class="reset-pass">
-                                    <a href="#" title="reset password">Non ricordi la password?</a>
+                                    <a href="#" class="reset-pass-button" title="reset password">Non ricordi la password?</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- / End Modal box login -->
+
+                    <!-- Modal box cambio password -->
+                    <div id="pass-change" class="modal fade" role="dialog">
+                        <div class="modal-dialog modal-sm">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h5 class="modal-title">Recupero Password</h5>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="inner-text-pass"><strong>Hai persoso la tua password?</strong><br> Inserisci il tuo indirizzo email, ti invieremo una nuova password temporanea, che potrai cambiare una volta effettuato l'accesso alla tua area riservata.</p>
+                                </div>
+                                <div class="form-group pad-15">
+                                    <label for="emai-form">Email:</label>
+                                    <input type="text" class="form-control" id="email-form">
+                                </div>
+                                <div class="pad-15">
+                                    <button type="submit" class="btn btn-success btn-lg btn-block pad-15 pad-last-but">Inviami nuova password</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- / End Modal box cambio password -->
 
                     <!-- Barra fixed -->
                     <div class="row-fluid action-bar">

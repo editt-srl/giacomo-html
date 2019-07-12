@@ -9970,6 +9970,20 @@ p.date-price-quotation span{
 .agency-cral{
     display: none;
 }
+.pad-15{
+    padding: 0px 15px 15px;
+}
+.pad-last-but{
+    margin: 10px 0;
+}
+.inner-text-pass{
+    font-size: 0.9em;
+    color: grey;
+    text-align: justify;
+    border: 1px solid #FF9800;
+    padding: 8px;
+    background: #fff0db;
+}
 /* 18. Cart
  --------------------------------------------------------------------------------*/
 .cart-cn {
@@ -11080,6 +11094,25 @@ span.trigger-group-description{
 }
 .period-singoff > .row {
     padding: 5px 0;
+}
+.field-input-passchange{
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #cacaca;
+    padding: 0px 5px;
+}
+.pass-update-button {
+    background-color: #e61c65;
+    color: #fff;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 20px 0 0;
+    border: 0;
 }
 /* 23. Footer
  --------------------------------------------------------------------------------*/
