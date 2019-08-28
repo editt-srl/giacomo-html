@@ -320,9 +320,9 @@
             });
         }
 
-        /*===== Calendar =====*/
+        /*===== Calendar (tranne i tour) =====*/
         function Calendar() {
-            $('.calendar-input,.caneldar').datepicker({
+            $('.calendar-input,.caneldar').not('#tourcal').datepicker({
                 showOtherMonths: true,
                 selectOtherMonths: true,
                 autoclose: true,
@@ -371,6 +371,44 @@
                 firstDay: 1
             }); //reinizializzo
         });
+
+
+
+        /* Datapiker giorni selezionabili*/
+        var availableDates = ["19-8-2019", "20-8-2019", "21-8-2019", "22-8-2019", "23-8-2019", "5-9-2019", "6-9-2019", "12-9-2019", "13-9-2019"];
+
+        /* Funzione date disponibili */
+
+        function available(date) {
+            var dmy = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
+            if (date.getDay() === 0 || date.getDay() === 6 || $.inArray(dmy, availableDates) != -1) {
+                return [true, "", "Prenotabile"];
+            } else {
+                return [false, "", "Non prenotabile"];
+            }
+        }
+
+        /* Datapiker Tour selezionabili */
+        jQuery(document).ready(function ($) {
+            // Setto come giorno di defoult la domenica
+            var giorno = new Date(),
+                    dom = giorno.getDay(),
+                    toAdd = dom === 0 ? 0 : 7 - dom;
+            // imposto il calendario
+            $("#tourcal").datepicker({
+                beforeShowDay: available,
+                "dateFormat": "dd/mm/yy",
+                "showButtonPanel": false,
+                "firstDay": 1,
+                /*"defaultDate": toAdd,*/
+                "minDate": 0, /* Impostare a  0 per partire da oggi */
+                "maxDate": new Date(2020, 9 - 1, 22), /* Imposto data max dei datepiker */
+                yearRange: "-0:+1"
+            });
+        });
+
+
+
         /* Data di nascita */
         $(document).on('focus', ".calendar-data-nascita", function () {
             $(this).datepicker({
@@ -1061,6 +1099,19 @@
             navigationText: ['<div class="prev-prezzi"><i class="fa fa-angle-left"></i></div>', '<div class="next-prezzi"><i class="fa fa-angle-right"></i></div>'],
             itemsCustom: [[320, 1], [480, 1], [768, 2], [992, 3], [1200, 3], [1600, 3]]
         });
+        /*===== Carousel Tours =====*/
+        $('.owl-carousel-tours-date').owlCarousel({
+            loop: true,
+            margin: 10,
+            autoplay: true,
+            autoplayTimeout: 1000,
+            autoplayHoverPause: true,
+            navigation: true,
+            navigationText: ['<div class="prev-days-tour"><i class="fa fa-angle-left"></i></div>', '<div class="next-days-tour"><i class="fa fa-angle-right"></i></div>'],
+            itemsCustom: [[320, 3], [480, 3], [768, 4], [992, 5], [1200, 6], [1600, 8]]
+        });
+
+
         /*===== Tagliare testo anteprima =====*/
         function anteprima(elems, length) {
             $.each($(elems), function () {
@@ -1383,6 +1434,11 @@
             $("#pass-change").modal();
         });
 
+        /*===== Modal inserisci recensione =====*/
+        $("button.review-button-big").click(function () {
+            $("#review-box").modal();
+        });
+
         /*===== Link Cataloglo =====*/
         $("#catalogue-link").click(function () {
             window.open('https://s3.amazonaws.com/online.anyflip.com/qowk/havx/mobile/index.html', '_blank');
@@ -1464,11 +1520,103 @@
 /* OUT OF document.ready */
 
 /*===== Deferring video =====*/
-$(window).load(function () {
-    var vidDefer = document.getElementsByTagName('iframe');
-    for (var i = 0; i < vidDefer.length; i++) {
-        if (vidDefer[i].getAttribute('data-src')) {
-            vidDefer[i].setAttribute('src', vidDefer[i].getAttribute('data-src'));
+/*$(window).load(function () {
+ var vidDefer = document.getElementsByTagName('iframe');
+ for (var i = 0; i < vidDefer.length; i++) {
+ if (vidDefer[i].getAttribute('data-src')) {
+ vidDefer[i].setAttribute('src', vidDefer[i].getAttribute('data-src'));
+ }
+ }
+ });*/
+
+/* ****** LAZY LOAD ***** */
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Definisco i target
+    const targetsImg = document.querySelectorAll(".lazy-image");
+    const targetsVid = document.querySelectorAll("iframe.lazy-video");
+
+    // Se il Browser non è compatibile..
+    if (!('IntersectionObserver' in window)) {
+        //Carico le immagini normalmente
+        function caricaImg(image) {
+            image.src = image.dataset.src;
         }
-    }
-});
+        targetsImg.forEach(caricaImg);
+
+        //Carico i video normalmente
+        function caricaVid(video) {
+            video.src = video.dataset.src;
+        }
+        targetsVid.forEach(caricaVid);
+
+        // Se il Browser è compatibile inizio..
+    } else {
+        const options = {
+            threshold: [0, 0.5, 1]
+        }
+
+        /* ****** IMMAGINI LAZY LOAD***** */
+
+        //Instanzio observer per immagini
+        const observerImm = new IntersectionObserver(callbackImg, options);
+        targetsImg.forEach(target => observerImm.observe(target));
+
+        // Funzioni per le immagini
+        function fetchImage(url) {
+            return new Promise((resolve, reject) => {
+                const image = new Image();
+                image.src = url;
+                image.onload = resolve;
+                image.onerror = reject;
+            });
+        }
+
+        // Funzioni di callback
+        function callbackImg(entries) {
+            entries.forEach(entry => {
+                // calcolo la percentuale di sovrapposizione
+                const ratio = entry.intersectionRatio;
+                const element = entry.target;
+                // se l'elemento è visibile
+                if (ratio > 0) {
+                    // rimuovo l'elemento dall'observer
+                    observerImm.unobserve(element);
+                    // recupero l'immagine e la carico a video
+                    const src = element.dataset.src
+
+                    fetchImage(src).then(() => {
+                        element.src = element.dataset.src;
+                    });
+                }
+            });
+        }
+
+        /* ****** VIDEO LAZY LOAD***** */
+
+        //Instanzio observer per i video
+        const observerVid = new IntersectionObserver(callbackVid, options);
+        targetsVid.forEach(target => observerVid.observe(target));
+
+        // Funzioni di callback
+        function callbackVid(entries) {
+            entries.forEach(entry => {
+                // calcolo la percentuale di sovrapposizione
+                const ratio = entry.intersectionRatio;
+                const element = entry.target;
+                // se l'elemento è visibile
+                if (ratio > 0) {
+                    // rimuovo l'elemento dall'observer
+                    observerVid.unobserve(element);
+                    // recupero l'immagine e la carico a video
+                    const src = element.dataset.src
+
+                    element.src = element.dataset.src;
+
+                }
+            });
+        }
+
+    }/*Fine else*/
+}); /*Fine event lister*/
+
