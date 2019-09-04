@@ -865,7 +865,7 @@
             if (WindowWidth > 1199) {
                 if ($('.bg-parallax').length) {
                     $('.bg-parallax').each(function () {
-                        $(this).parallax("50%", 0.1);
+                        $(this).parallax("50%", 0);
                     });
                 }
             }
