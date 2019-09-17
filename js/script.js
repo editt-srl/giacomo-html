@@ -326,6 +326,7 @@
                 showOtherMonths: true,
                 selectOtherMonths: true,
                 autoclose: true,
+                minDate: 0,
                 onClose: function (date, datepicker) {
                     if (date != "") {
                         $(".partenzacal").datepicker("show");
