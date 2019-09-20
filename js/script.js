@@ -1236,15 +1236,15 @@
             $(this).find('i.icon').remove();
         });
         /*===== Slide payment =====*/
-        // Test per intercettare i classe-box aperti e nel caso cambio icona
-        $("div.supplementi, div.assicurazione, div.servizi, div.tipocamera").each(function () {
+        // Intercetto i classe-box aperti e nel caso cambio icona
+        $("div.supplementi, div.assicurazione, div.servizi").each(function () {
             var classeSel = $(this).attr("class");
             var selector = 'div.' + classeSel + '-box';
             if ($(this).next(selector).css('display') !== 'none') {
                 $(this).find('i').toggleClass('fa-chevron-down').toggleClass("fa-chevron-up");
             }
         });
-        //Cambio icone le icone al click categoria
+        //Cambio icone al click categoria
         $(document).on("click", "div.supplementi, div.assicurazione, div.servizi, div.tipocamera", function () {
             var classeSel = $(this).attr("class");
             var selector = 'div.' + classeSel + '-box';
