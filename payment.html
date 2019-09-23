@@ -1203,6 +1203,28 @@
                     <!-- / End Modal box invia preventivo -->
 
                     <!-- Modal box invia preventivo -->
+                    <div class="modal fade bs-example-modal-sm" id="user-messages" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content share-box-friends">
+                                <div class="segnala-amico-closer">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="condividi-con-un-amico-text">
+                                    <span class="title-save-prev"><i class="fa fa-check-circle" aria-hidden="true"></i> Preventivo salvato con successo</span><br>
+                                    Grazie per aver scelto GB Viaggi.<br>
+                                    Il preventivo è stato salvato nella tua area riservata.<br>
+                                    Abbiamo inviato una mail riepilogativa al tuo indirizzo email.
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Ho capito</button>
+                                    <button onclick="apriLogin()" type="button" class="btn btn-success" data-dismiss="modal">Entra nell'area Riservata</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / End Modal box invia preventivo -->
+
+                    <!-- Modal box invia preventivo -->
                     <div class="modal fade bs-example-modal-sm" id="scarica-preventivo-pdf" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-sm">
                             <div class="modal-content share-box-friends">
@@ -1214,16 +1236,20 @@
                                 </div>
                                 <form action="/action_page.php">
                                     <div class="form-group">
-                                        <label for="email">Nome:</label>
+                                        <label for="nome-form">Nome:</label>
                                         <input type="text" class="form-control" id="nome-form">
                                     </div>
                                     <div class="form-group">
-                                        <label for="pwd">Email:</label>
+                                        <label for="cognome-form">Cognome:</label>
+                                        <input type="text" class="form-control" id="cognome-form">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email-form">Email:</label>
                                         <input type="text" class="form-control" id="email-form">
                                     </div>
                                     <div class="form-group">
-                                        <label for="email">Telefono:</label>
-                                        <input type="text" class="form-control" id="nome-form">
+                                        <label for="telefono-form">Telefono:</label>
+                                        <input type="text" class="form-control" id="telefono-form">
                                     </div>
                                     <button type="submit" class="btn btn-success btn-lg btn-block">Scarica preventivo</button>
                                 </form>
