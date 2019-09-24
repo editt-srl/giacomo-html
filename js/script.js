@@ -1428,6 +1428,10 @@
                 $(".agency-cral").hide();
             }
         });
+        //apro login da pagina pagamento
+        function apriLogin() {
+            $("#login-form-reg").show();
+        }
 
         /*===== Modal change password =====*/
         $(".reset-pass-button").click(function (e) {

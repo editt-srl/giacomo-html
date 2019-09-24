@@ -901,6 +901,9 @@ body.menu-active {
     font-weight: 600;
     border-bottom: 1px dashed #91af24;
 }
+.ui-datepicker td span, .ui-datepicker td a {
+    text-align: center !important;
+}
 /*End Calendar*/
 /*Select*/
 .select {
@@ -2801,6 +2804,12 @@ li#login-button:hover, li#login-button ul li:hover {
     background: #c7c7c7;
     border-color: #c7c7c7;
 }
+.title-save-prev{
+    color: #91af24;
+    font-size: 1.5em;
+    padding-bottom: 0;
+    display: block;
+}
 .nav ul li a[title='login'] {
     color: #333333;
 }
@@ -4471,6 +4480,32 @@ a.read-more-result:before{
     padding: 30px 30px 0 30px;
     position: relative;
 }
+.hotel-list .page-navigation-cn .content-box-list>h1{
+    font-size: 1.9em;
+    color: #e91e63;
+    font-family: 'BebasNeuewebfont' !important;
+}
+.hotel-list .page-navigation-cn .content-box-list>h1::before{
+    color: #f4c604;
+    content: "\f05a";
+    padding-right: 10px;
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+}
+.hotel-list .page-navigation-cn .content-box-list>h2{
+    font-size: 1.3em;
+    color: #082c40;
+    font-family: 'BebasNeuewebfont' !important;
+}
+.hotel-list .page-navigation-cn .content-box-list>p{
+    text-align: justify;
+}
+.content-box-list{
+    background: #f5f5f5;
+    padding: 5px 20px;
+    border: 1px solid gainsboro;
+}
 .hotel-list .page-navigation-cn:before {
     position: absolute;
     height: 1px;
@@ -5009,6 +5044,9 @@ a.link-go-to-pay:before {
 }
 .format-text-space{
     padding: 0 25px;
+}
+.who-we-are{
+    text-align: justify;
 }
 .format-text-space .boxed-txt{
     border: 1px solid #ccc;
@@ -9079,13 +9117,21 @@ ul.contact-list li span.contact-list-inner-tel:before{
     position: relative;
     cursor: pointer;
 }
-.supplementi-box, .assicurazione-box, .servizi-box, .tipocamera-box{
+.supplementi-box, .assicurazione-box, .servizi-box{
     margin-top: 10px;
     border-radius: 3px;
     border: 1px solid #ededed;
     background: #ffffff;
     position: relative;
     display: none;
+    padding: 10px;
+}
+.tipocamera-box{
+    margin-top: 10px;
+    border-radius: 3px;
+    border: 1px solid #ededed;
+    background: #ffffff;
+    position: relative;
     padding: 10px;
 }
 .supplementi span, .assicurazione span, .servizi span, .tipocamera span, .camera-edit span{
@@ -9972,6 +10018,9 @@ p.date-price-quotation span{
 }
 .pad-15{
     padding: 0px 15px 15px;
+}
+.pad-15-lat{
+    padding: 0px 15px;
 }
 .pad-last-but{
     margin: 10px 0;
@@ -14397,6 +14446,20 @@ p.title-carousel{
     font-size: 3em;
     color: #b9b7b7;
 }
+.prev-days-tour{
+    position: absolute;
+    left: -25px;
+    top: 11px;
+    font-size: 3em;
+    color: #b9b7b7;
+}
+.next-days-tour{
+    position: absolute;
+    right: -25px;
+    top: 11px;
+    font-size: 3em;
+    color: #b9b7b7;
+}
 /* 27. Recensioni
  --------------------------------------------------------------------------------*/
 
@@ -14494,12 +14557,22 @@ a.read-more-review:before{
     z-index: -1;
 }
 .inputfile + label {
-    font-size: 1.25em;
+    font-size: 1em;
     font-weight: 700;
-    color: white;
+    color: #6d6a6a;
     display: inline-block;
 }
-
+.aligncenterdiv{
+    padding: 0px 0px 20px;
+    text-align: center;
+}
+.prev-text-box{
+    font-size: 0.9em;
+    color: grey;
+    text-align: justify;
+    padding: 8px;
+    margin: 10px 10px 20px;
+}
 /* 28. Barra Prezzi
  --------------------------------------------------------------------------------*/
 .price-container{
@@ -14852,6 +14925,7 @@ h3.review-title{
     text-align: right;
     color: #092d40;
     font-size: 1.3em;
+    margin-top: 5px;
 }
 .review h5{
     text-align: right;
