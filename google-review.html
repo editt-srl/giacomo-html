@@ -1,0 +1,27 @@
+<!-- INIZIO Codice per il badge di Recensioni dei clienti su Google -->
+<script src="https://apis.google.com/js/platform.js?onload=renderBadge"
+  async defer>
+</script>
+
+<script>
+  window.renderBadge = function() {
+    var ratingBadgeContainer = document.createElement("div");
+    document.body.appendChild(ratingBadgeContainer);
+    window.gapi.load('ratingbadge', function() {
+      window.gapi.ratingbadge.render(
+        ratingBadgeContainer, {
+          "merchant_id": 141879534,
+          "position": "BOTTOM_LEFT"
+        });
+    });
+  }
+</script>
+<!-- FINE Codice per il badge di Recensioni dei clienti su Google -->
+
+<!-- INIZIO Codice per la lingua di Recensioni dei clienti su Google -->
+<script>
+  window.___gcfg = {
+    lang: 'it'
+  };
+</script>
+<!-- FINE Codice per la lingua di Recensioni dei clienti su Google -->
