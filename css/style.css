@@ -908,7 +908,15 @@ body.menu-active {
 /*Select*/
 .select {
     position: relative;
-    font-family: 'Open sans';
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    border: 0;
+    outline: none;
+    color: #092d40;
+    background-color: transparent;
+    font-weight: 600;
+    border-bottom: 0.1px dashed #91af24;
 }
 .select span {
     display: block;
@@ -1403,7 +1411,7 @@ blockquote:before {
     font-size: 14px;
     font-family: 'Open sans';
     color: #092d40;
-    line-height: 29px;
+    line-height: 31px;
 }
 .form-search .form-field label {
     position: absolute;
@@ -2895,7 +2903,7 @@ li#login-button:hover, li#login-button ul li:hover {
 }
 .form-cn .form-search .form-field {
     float: left;
-    padding: 20px 15px;
+    padding: 19px 15px;
     border-right: 1px solid #e6e6e6;
     font-size: 18px;
 }
@@ -9920,7 +9928,7 @@ p.date-price-quotation span{
     font-weight: 600;
     border-bottom: 1px dashed #91af24;
 }
-.person-container > label > div > span{
+.person-container > div > span{
     display: block;
     padding-right: 20px;
     cursor: pointer;
