@@ -7822,6 +7822,9 @@ a.link-go-to-pay:before {
 /*============= End Tour Detail ===========*/
 /* 14. Blog Page
  --------------------------------------------------------------------------------*/
+section.blog-content{
+    background: #ffffff !important;
+}
 .blog-content > .row {
     margin-left: 10px;
     margin-right: 10px;
@@ -7834,15 +7837,15 @@ a.link-go-to-pay:before {
     position: absolute;
     right: 30px;
     top: 0;
-    bottom: 1px;
+    bottom: 0px;
     padding-left: 45px;
-    border-left: 1px solid #dedede;
+    border-left: 4px solid #E91E63;
 }
 .search-blog .search-blog-input {
-    width: 170px;
+    width: 100%;
     outline: none;
     border: 0;
-    padding: 9px 0;
+    padding: 10px 0;
     background-color: white;
     color: #666666;
     font-family: Georgia;
